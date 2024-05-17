@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */; };
+		CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A822BF7DF2B0075E22E /* ContentView.swift */; };
+		CE278A852BF7DF2C0075E22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE278A842BF7DF2C0075E22E /* Assets.xcassets */; };
+		CE278A882BF7DF2C0075E22E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE278A872BF7DF2C0075E22E /* Preview Assets.xcassets */; };
+		CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9B2BF7DFA30075E22E /* HomeView.swift */; };
+		CE278A9E2BF7DFB60075E22E /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9D2BF7DFB60075E22E /* AchievementView.swift */; };
+		CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */; };
+		CE278AA22BF7DFD00075E22E /* Onboarding1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA12BF7DFD00075E22E /* Onboarding1View.swift */; };
+		CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */; };
+		CE278AA62BF7DFF40075E22E /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* UserDataManager.swift */; };
+		CE278AA92BF7DFFF0075E22E /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA72BF7DFFF0075E22E /* UserData.xcdatamodeld */; };
+		CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE278A7D2BF7DF2B0075E22E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE278A6F2BF7DF2B0075E22E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE278A7A2BF7DF2B0075E22E;
+			remoteInfo = "MiniChallange05 Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE278A8E2BF7DF2C0075E22E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallange05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallange05App.swift; sourceTree = "<group>"; };
+		CE278A822BF7DF2B0075E22E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE278A842BF7DF2C0075E22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE278A872BF7DF2C0075E22E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE278A9B2BF7DFA30075E22E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE278A9D2BF7DFB60075E22E /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
+		CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProgressView.swift; sourceTree = "<group>"; };
+		CE278AA12BF7DFD00075E22E /* Onboarding1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1View.swift; sourceTree = "<group>"; };
+		CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
+		CE278AA52BF7DFF40075E22E /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		CE278AA82BF7DFFF0075E22E /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralComponents.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE278A782BF7DF2B0075E22E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE278A6E2BF7DF2B0075E22E = {
+			isa = PBXGroup;
+			children = (
+				CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */,
+				CE278A762BF7DF2B0075E22E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE278A762BF7DF2B0075E22E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A752BF7DF2B0075E22E /* MiniChallange05.app */,
+				CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A952BF7DF470075E22E /* Settings */,
+				CE278A942BF7DF400075E22E /* Model */,
+				CE278A932BF7DF3C0075E22E /* Views */,
+				CE278A922BF7DF350075E22E /* Persistence */,
+				CE278A862BF7DF2C0075E22E /* Preview Content */,
+			);
+			path = "MiniChallange05 Watch App";
+			sourceTree = "<group>";
+		};
+		CE278A862BF7DF2C0075E22E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A872BF7DF2C0075E22E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE278A922BF7DF350075E22E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				CE278AA72BF7DFFF0075E22E /* UserData.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		CE278A932BF7DF3C0075E22E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE278AAA2BF7E0290075E22E /* GeneralComponents */,
+				CE278A9A2BF7DF8F0075E22E /* Home */,
+				CE278A992BF7DF820075E22E /* Achievements */,
+				CE278A982BF7DF790075E22E /* HealthProgress */,
+				CE278A972BF7DF700075E22E /* Onboarding */,
+				CE278A962BF7DF620075E22E /* ContentView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE278A942BF7DF400075E22E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */,
+				CE278AA52BF7DFF40075E22E /* UserDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE278A952BF7DF470075E22E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */,
+				CE278A842BF7DF2C0075E22E /* Assets.xcassets */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CE278A962BF7DF620075E22E /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A822BF7DF2B0075E22E /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		CE278A972BF7DF700075E22E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CE278AA12BF7DFD00075E22E /* Onboarding1View.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		CE278A982BF7DF790075E22E /* HealthProgress */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */,
+			);
+			path = HealthProgress;
+			sourceTree = "<group>";
+		};
+		CE278A992BF7DF820075E22E /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A9D2BF7DFB60075E22E /* AchievementView.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		CE278A9A2BF7DF8F0075E22E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE278A9B2BF7DFA30075E22E /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE278AAA2BF7E0290075E22E /* GeneralComponents */ = {
+			isa = PBXGroup;
+			children = (
+				CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */,
+			);
+			path = GeneralComponents;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE278A742BF7DF2B0075E22E /* MiniChallange05 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE278A8F2BF7DF2C0075E22E /* Build configuration list for PBXNativeTarget "MiniChallange05" */;
+			buildPhases = (
+				CE278A732BF7DF2B0075E22E /* Resources */,
+				CE278A8E2BF7DF2C0075E22E /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE278A7E2BF7DF2B0075E22E /* PBXTargetDependency */,
+			);
+			name = MiniChallange05;
+			productName = MiniChallange05;
+			productReference = CE278A752BF7DF2B0075E22E /* MiniChallange05.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		CE278A7A2BF7DF2B0075E22E /* MiniChallange05 Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE278A8B2BF7DF2C0075E22E /* Build configuration list for PBXNativeTarget "MiniChallange05 Watch App" */;
+			buildPhases = (
+				CE278A772BF7DF2B0075E22E /* Sources */,
+				CE278A782BF7DF2B0075E22E /* Frameworks */,
+				CE278A792BF7DF2B0075E22E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MiniChallange05 Watch App";
+			productName = "MiniChallange05 Watch App";
+			productReference = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE278A6F2BF7DF2B0075E22E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					CE278A742BF7DF2B0075E22E = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					CE278A7A2BF7DF2B0075E22E = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "MiniChallange05" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE278A6E2BF7DF2B0075E22E;
+			productRefGroup = CE278A762BF7DF2B0075E22E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE278A742BF7DF2B0075E22E /* MiniChallange05 */,
+				CE278A7A2BF7DF2B0075E22E /* MiniChallange05 Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE278A732BF7DF2B0075E22E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE278A792BF7DF2B0075E22E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE278A882BF7DF2C0075E22E /* Preview Assets.xcassets in Resources */,
+				CE278A852BF7DF2C0075E22E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE278A772BF7DF2B0075E22E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE278AA92BF7DFFF0075E22E /* UserData.xcdatamodeld in Sources */,
+				CE278A9E2BF7DFB60075E22E /* AchievementView.swift in Sources */,
+				CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */,
+				CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */,
+				CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */,
+				CE278AA62BF7DFF40075E22E /* UserDataManager.swift in Sources */,
+				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
+				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
+				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,
+				CE278AA22BF7DFD00075E22E /* Onboarding1View.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE278A7E2BF7DF2B0075E22E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE278A7A2BF7DF2B0075E22E /* MiniChallange05 Watch App */;
+			targetProxy = CE278A7D2BF7DF2B0075E22E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CE278A892BF7DF2C0075E22E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE278A8A2BF7DF2C0075E22E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CE278A8C2BF7DF2C0075E22E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PL64AUG55;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		CE278A8D2BF7DF2C0075E22E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PL64AUG55;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
+		CE278A902BF7DF2C0075E22E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE278A912BF7DF2C0075E22E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
+				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "MiniChallange05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE278A892BF7DF2C0075E22E /* Debug */,
+				CE278A8A2BF7DF2C0075E22E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE278A8B2BF7DF2C0075E22E /* Build configuration list for PBXNativeTarget "MiniChallange05 Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE278A8C2BF7DF2C0075E22E /* Debug */,
+				CE278A8D2BF7DF2C0075E22E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE278A8F2BF7DF2C0075E22E /* Build configuration list for PBXNativeTarget "MiniChallange05" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE278A902BF7DF2C0075E22E /* Debug */,
+				CE278A912BF7DF2C0075E22E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE278AA72BF7DFFF0075E22E /* UserData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE278AA82BF7DFFF0075E22E /* UserData.xcdatamodel */,
+			);
+			currentVersion = CE278AA82BF7DFFF0075E22E /* UserData.xcdatamodel */;
+			name = UserData.xcdatamodeld;
+			path = "/Users/kauamiguel/Documents/AcademyLab/Challanges/MiniChallenge05/MiniChallange05/MiniChallange05 Watch App/Persistence/UserData.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE278A6F2BF7DF2B0075E22E /* Project object */;
+}
