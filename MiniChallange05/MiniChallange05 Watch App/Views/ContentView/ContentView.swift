@@ -8,18 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var estados = AllViews.onboarding1
-    
+        
     var body: some View {
         
-        switch estados {
-        case .onboarding1:
-            Onboarding1View(estados: $estados)
-                
-        case .onboarding2:
-            Onboarding2View(estados: $estados)
-                
+        VStack {
+            
         }
     }
     
@@ -28,8 +21,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
-enum AllViews {
-    case onboarding1, onboarding2
-}
-
