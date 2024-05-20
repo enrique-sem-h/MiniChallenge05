@@ -9,21 +9,40 @@ import SwiftUI
 
 struct VapeCostView: View {
     @Environment(PageManager.self) var pageManager
+    @State var tempVar: Int = 1
+    @Binding var defVar: Int
+    
+    static let screenSize = WKInterfaceDevice.current().screenBounds.size
+    let screenWidth = screenSize.width
+    let screenHeight = screenSize.height
     
     var body: some View {
         VStack {
-            Text("VapeCost")
-                .padding()
+            Text("Quanto você gasta por mês com cigarro eletrônico?")
+                .padding(.bottom, 10)
+                .minimumScaleFactor(0.5)
+                .frame(width: screenWidth * 0.9, height: screenHeight * 0.2)
             
-            Button("SmokingHours") {
-                pageManager.page = .smokingHours
+            OnboardingPicker(selectedNumber: $tempVar)
+                .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
+            
+            HStack {
+                Button("SmokingType") {
+                    defVar = tempVar
+                    pageManager.page = .vapeFrequency
+                }
+                .padding()
+                Button("VapeFrequency") {
+                    defVar = tempVar
+                    pageManager.page = .smokingHours
+                }
+                .padding()
             }
-            .padding()
         }
     }
 }
 
 #Preview {
-    VapeCostView()
+    VapeCostView(defVar: .constant(1))
         .environment(PageManager())
 }

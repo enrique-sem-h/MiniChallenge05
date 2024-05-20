@@ -40,13 +40,13 @@ struct Onboard: View {
         case .cigaretteCount:
             CigaretteCountView(defVar: $defnumero)
         case .vapeFrequency:
-            VapeFrequencyView()
+            VapeFrequencyView(defVar: $defnumero)
         case .cigarettesPerPack:
-            CigarettesPerPackView()
+            CigarettesPerPackView(defVar: $defnumero)
         case .packCost:
-            PackCostView()
+            PackCostView(defVar: $defnumero)
         case .vapeCost:
-            VapeCostView()
+            VapeCostView(defVar: $defnumero)
         case .smokingHours:
             SmokingHoursView()
         case .createSmokingHour:
