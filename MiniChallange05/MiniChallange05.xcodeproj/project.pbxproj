@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9BA0E9F02BFA923200EED743 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0E9EE2BFA923200EED743 /* UserData.xcdatamodeld */; };
-		9BA0E9F22BFA969900EED743 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0E9F12BFA969900EED743 /* DataController.swift */; };
 		9BA0E9F42BFAB4ED00EED743 /* Onboarding2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA0E9F32BFAB4ED00EED743 /* Onboarding2View.swift */; };
 		CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */; };
@@ -50,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		9BA0E9EF2BFA923200EED743 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
-		9BA0E9F12BFA969900EED743 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		9BA0E9F32BFAB4ED00EED743 /* Onboarding2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2View.swift; sourceTree = "<group>"; };
 		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallange05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				9BA0E9EE2BFA923200EED743 /* UserData.xcdatamodeld */,
-				9BA0E9F12BFA969900EED743 /* DataController.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -308,7 +305,6 @@
 				CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */,
 				CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */,
 				CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */,
-				9BA0E9F22BFA969900EED743 /* DataController.swift in Sources */,
 				CE278AA62BF7DFF40075E22E /* UserDataManager.swift in Sources */,
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
 				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
