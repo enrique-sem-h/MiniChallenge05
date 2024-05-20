@@ -31,7 +31,7 @@ struct Onboard: View {
     @State var defnumero: Int = 1
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
         switch pageManager.page {
         case .presentation:
             PresentationView(defVar: $defnumero)
