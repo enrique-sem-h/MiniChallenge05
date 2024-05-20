@@ -34,7 +34,7 @@ struct Onboard: View {
         
         switch pageManager.page {
         case .presentation:
-            PresentationView(defVar: $defnumero)
+            PresentationView()
         case .smokingType:
             SmokingTypeView()
         case .cigaretteCount:

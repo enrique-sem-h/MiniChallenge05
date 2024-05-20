@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PresentationView: View {
     @Environment(PageManager.self) var pageManager
-    @Binding var defVar : Int
     
     var body: some View {
         VStack {
@@ -25,6 +24,6 @@ struct PresentationView: View {
 }
 
 #Preview {
-    PresentationView(defVar: .constant(1))
+    PresentationView()
         .environment(PageManager())
 }
