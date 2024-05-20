@@ -8,17 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var estados = AllViews.onboarding1
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        switch estados {
+        case .onboarding1:
+            Onboarding1View(estados: $estados)
+                
+        case .onboarding2:
+            Onboarding2View(estados: $estados)
+                
         }
-        .padding()
     }
+    
 }
 
 #Preview {
     ContentView()
 }
+
+enum AllViews {
+    case onboarding1, onboarding2
+}
+
