@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		B89C05032BF7F9AF00D49274 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B89C05012BF7F9AF00D49274 /* UserData.xcdatamodeld */; };
+		B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05062BF7FB4500D49274 /* PresentationView.swift */; };
+		B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05082BF7FB4D00D49274 /* SmokingTypeView.swift */; };
+		B89C050B2BF7FB5500D49274 /* CigaretteCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C050A2BF7FB5500D49274 /* CigaretteCountView.swift */; };
+		B89C050D2BF7FB5C00D49274 /* VapeFrequencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C050C2BF7FB5C00D49274 /* VapeFrequencyView.swift */; };
+		B89C050F2BF7FB6400D49274 /* CigarettesPerPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C050E2BF7FB6400D49274 /* CigarettesPerPackView.swift */; };
+		B89C05112BF7FB6B00D49274 /* PackCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05102BF7FB6B00D49274 /* PackCostView.swift */; };
+		B89C05132BF7FB7200D49274 /* VapeCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05122BF7FB7200D49274 /* VapeCostView.swift */; };
+		B89C05152BF7FB7900D49274 /* SmokingHoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05142BF7FB7900D49274 /* SmokingHoursView.swift */; };
+		B89C05172BF7FB8000D49274 /* CreateSmokingHourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05162BF7FB8000D49274 /* CreateSmokingHourView.swift */; };
 		CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */; };
 		CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A822BF7DF2B0075E22E /* ContentView.swift */; };
@@ -16,7 +25,7 @@
 		CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9B2BF7DFA30075E22E /* HomeView.swift */; };
 		CE278A9E2BF7DFB60075E22E /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9D2BF7DFB60075E22E /* AchievementView.swift */; };
 		CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */; };
-		CE278AA22BF7DFD00075E22E /* Onboarding1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA12BF7DFD00075E22E /* Onboarding1View.swift */; };
+		CE278AA22BF7DFD00075E22E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA12BF7DFD00075E22E /* Onboarding.swift */; };
 		CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */; };
 		CE278AA62BF7DFF40075E22E /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* UserDataManager.swift */; };
 		CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */; };
@@ -48,6 +57,15 @@
 
 /* Begin PBXFileReference section */
 		B89C05022BF7F9AF00D49274 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		B89C05062BF7FB4500D49274 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
+		B89C05082BF7FB4D00D49274 /* SmokingTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingTypeView.swift; sourceTree = "<group>"; };
+		B89C050A2BF7FB5500D49274 /* CigaretteCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigaretteCountView.swift; sourceTree = "<group>"; };
+		B89C050C2BF7FB5C00D49274 /* VapeFrequencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VapeFrequencyView.swift; sourceTree = "<group>"; };
+		B89C050E2BF7FB6400D49274 /* CigarettesPerPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigarettesPerPackView.swift; sourceTree = "<group>"; };
+		B89C05102BF7FB6B00D49274 /* PackCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCostView.swift; sourceTree = "<group>"; };
+		B89C05122BF7FB7200D49274 /* VapeCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VapeCostView.swift; sourceTree = "<group>"; };
+		B89C05142BF7FB7900D49274 /* SmokingHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHoursView.swift; sourceTree = "<group>"; };
+		B89C05162BF7FB8000D49274 /* CreateSmokingHourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSmokingHourView.swift; sourceTree = "<group>"; };
 		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallange05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallange05App.swift; sourceTree = "<group>"; };
@@ -57,7 +75,7 @@
 		CE278A9B2BF7DFA30075E22E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE278A9D2BF7DFB60075E22E /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
 		CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProgressView.swift; sourceTree = "<group>"; };
-		CE278AA12BF7DFD00075E22E /* Onboarding1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1View.swift; sourceTree = "<group>"; };
+		CE278AA12BF7DFD00075E22E /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		CE278AA52BF7DFF40075E22E /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralComponents.swift; sourceTree = "<group>"; };
@@ -74,6 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B89C05052BF7FB3100D49274 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B89C05062BF7FB4500D49274 /* PresentationView.swift */,
+				B89C05082BF7FB4D00D49274 /* SmokingTypeView.swift */,
+				B89C050A2BF7FB5500D49274 /* CigaretteCountView.swift */,
+				B89C050C2BF7FB5C00D49274 /* VapeFrequencyView.swift */,
+				B89C050E2BF7FB6400D49274 /* CigarettesPerPackView.swift */,
+				B89C05102BF7FB6B00D49274 /* PackCostView.swift */,
+				B89C05122BF7FB7200D49274 /* VapeCostView.swift */,
+				B89C05142BF7FB7900D49274 /* SmokingHoursView.swift */,
+				B89C05162BF7FB8000D49274 /* CreateSmokingHourView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CE278A6E2BF7DF2B0075E22E = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +195,8 @@
 		CE278A972BF7DF700075E22E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				CE278AA12BF7DFD00075E22E /* Onboarding1View.swift */,
+				B89C05052BF7FB3100D49274 /* Components */,
+				CE278AA12BF7DFD00075E22E /* Onboarding.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -296,16 +331,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89C05172BF7FB8000D49274 /* CreateSmokingHourView.swift in Sources */,
+				B89C05112BF7FB6B00D49274 /* PackCostView.swift in Sources */,
 				B89C05032BF7F9AF00D49274 /* UserData.xcdatamodeld in Sources */,
 				CE278A9E2BF7DFB60075E22E /* AchievementView.swift in Sources */,
 				CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */,
+				B89C050D2BF7FB5C00D49274 /* VapeFrequencyView.swift in Sources */,
+				B89C050F2BF7FB6400D49274 /* CigarettesPerPackView.swift in Sources */,
 				CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */,
 				CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */,
 				CE278AA62BF7DFF40075E22E /* UserDataManager.swift in Sources */,
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
+				B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */,
+				B89C05152BF7FB7900D49274 /* SmokingHoursView.swift in Sources */,
+				B89C05132BF7FB7200D49274 /* VapeCostView.swift in Sources */,
+				B89C050B2BF7FB5500D49274 /* CigaretteCountView.swift in Sources */,
 				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
+				B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */,
 				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,
-				CE278AA22BF7DFD00075E22E /* Onboarding1View.swift in Sources */,
+				CE278AA22BF7DFD00075E22E /* Onboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
