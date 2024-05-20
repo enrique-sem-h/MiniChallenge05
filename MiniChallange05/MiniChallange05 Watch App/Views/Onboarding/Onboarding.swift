@@ -34,11 +34,11 @@ struct Onboard: View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         switch pageManager.page {
         case .presentation:
-            PresentationView(defVar: $defnumero)
+            PresentationView()
         case .smokingType:
             SmokingTypeView()
         case .cigaretteCount:
-            CigaretteCountView()
+            CigaretteCountView(defVar: $defnumero)
         case .vapeFrequency:
             VapeFrequencyView()
         case .cigarettesPerPack:

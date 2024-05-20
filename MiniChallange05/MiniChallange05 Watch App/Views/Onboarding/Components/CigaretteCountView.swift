@@ -9,13 +9,18 @@ import SwiftUI
 
 struct CigaretteCountView: View {
     @Environment(PageManager.self) var pageManager
+    @State var tempVar: Int = 1
+    @Binding var defVar: Int
     
     var body: some View {
         VStack {
-            Text("CigaretteCount")
+            Text("Quantos cigarros por dia você costuma fumar?")
                 .padding()
             
+            OnboardingPicker(selectedNumber: $tempVar)
+            
             Button("VapeFrequency") {
+                defVar = tempVar
                 pageManager.page = .vapeFrequency
             }
             .padding()
@@ -24,6 +29,6 @@ struct CigaretteCountView: View {
 }
 
 #Preview {
-    CigaretteCountView()
+    CigaretteCountView(defVar: .constant(1))
         .environment(PageManager())
 }
