@@ -28,12 +28,13 @@ enum Page {
 
 struct Onboard: View {
     @Environment(PageManager.self) var pageManager
+    @State var defnumero: Int = 1
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         switch pageManager.page {
         case .presentation:
-            PresentationView()
+            PresentationView(defVar: $defnumero)
         case .smokingType:
             SmokingTypeView()
         case .cigaretteCount:
