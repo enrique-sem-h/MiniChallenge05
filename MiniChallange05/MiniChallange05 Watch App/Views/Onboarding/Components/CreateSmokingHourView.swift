@@ -10,15 +10,28 @@ import SwiftUI
 struct CreateSmokingHourView: View {
     @Environment(PageManager.self) var pageManager
     
+    @State var selectedHour = 12
+    @State var selectedMinute = 00
+    
     var body: some View {
-        VStack {
-            Text("CreateSmokingHour")
-                .padding()
+        VStack(alignment: .leading){
+            Button{
+                pageManager.page = .smokingHours
+            } label: {
+                Text("Cancelar")
+                    .bold()
+            }.buttonStyle(PlainButtonStyle())
+            Spacer()
             
-            Button("VapeFrequency") {
-                pageManager.page = .vapeFrequency
+            HStack {
+                OnboardingPicker(selectedNumber: $selectedHour, label: "Hora", range: 0..<25)
+                Text(":")
+                OnboardingPicker(selectedNumber: $selectedMinute, label: "Minutos", range: 0..<60)
+            }.frame(height: 120)
+            
+            Button("Confirmar"){
+                
             }
-            .padding()
         }
     }
 }
