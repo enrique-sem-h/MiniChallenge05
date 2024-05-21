@@ -9,21 +9,29 @@ import SwiftUI
 
 struct SmokingHoursView: View {
     @Environment(PageManager.self) var pageManager
+    @Binding var viewAnterior:Page
     
     var body: some View {
         VStack {
             Text("SmokingHours")
                 .padding()
             
-            Button("CreateSmokingHour") {
-                pageManager.page = .createSmokingHour
+            
+            HStack {
+                Button("voltar") {
+                    pageManager.page = viewAnterior
+                }
+                .padding()
+                Button("finalizar") {
+                    pageManager.page = .createSmokingHour
+                }
+                .padding()
             }
-            .padding()
         }
     }
 }
 
 #Preview {
-    SmokingHoursView()
+    SmokingHoursView(viewAnterior: .constant(.packCost))
         .environment(PageManager())
 }
