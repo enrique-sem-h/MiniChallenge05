@@ -22,6 +22,8 @@ enum Page {
     case createSmokingHour
 }
 
+
+
 @Observable class PageManager {
     var page: Page = .presentation
 }
@@ -29,26 +31,26 @@ enum Page {
 struct Onboard: View {
     @Environment(PageManager.self) var pageManager
     @State var defnumero: Int = 1
+    @State var viewAnterior:Page = .packCost
     
     var body: some View {
-        
         switch pageManager.page {
         case .presentation:
             PresentationView()
         case .smokingType:
             SmokingTypeView()
         case .cigaretteCount:
-            CigaretteCountView()
+            CigaretteCountView(defVar: $defnumero)
         case .vapeFrequency:
-            VapeFrequencyView()
+            VapeFrequencyView(defVar: $defnumero)
         case .cigarettesPerPack:
-            CigarettesPerPackView()
+            CigarettesPerPackView(defVar: $defnumero)
         case .packCost:
-            PackCostView()
+            PackCostView(defVar: $defnumero, viewAtual: $viewAnterior)
         case .vapeCost:
-            VapeCostView()
+            VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior)
         case .smokingHours:
-            SmokingHoursView()
+            SmokingHoursView(viewAnterior: $viewAnterior)
         case .createSmokingHour:
             CreateSmokingHourView()
         }
