@@ -46,7 +46,6 @@ struct GenericBackAndNextButton : View{
             defVar = tempVar
             pageManager.page = fowardView
         }
-        
     }
 }
 

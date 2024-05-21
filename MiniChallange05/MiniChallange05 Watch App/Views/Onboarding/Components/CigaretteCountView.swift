@@ -28,8 +28,7 @@ struct CigaretteCountView: View {
                 .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
             
             HStack {
-                
-                GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
+                GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: Binding(projectedValue: .constant(tempVar)), defVar: Binding(projectedValue: .constant(defVar)))
             }
         }
     }
