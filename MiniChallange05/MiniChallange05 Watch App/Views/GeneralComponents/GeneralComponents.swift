@@ -7,15 +7,17 @@
 
 import SwiftUI
 
+//Button with in the onboarding2 View with the same interface and just a different navigation behavior
 struct CigaretteTypeButton : View{
     
     @Environment(PageManager.self) var pageManager : PageManager
     let width = WKInterfaceDevice.current().screenBounds.width
     let heigth = WKInterfaceDevice.current().screenBounds.height
+    let cigarretTypeView : Page
     
     var body: some View{
         Button(action: {
-            pageManager.page = .cigaretteCount
+            pageManager.page = cigarretTypeView
         }, label: {
             Rectangle()
                 .frame(width: width / 2.2)
@@ -25,5 +27,27 @@ struct CigaretteTypeButton : View{
     }
 }
 
-//struct GenericForward
+//Generic button that push forward and backwards the flow of the onboarding
+struct GenericBackAndNextButton : View{
+    
+    @Environment(PageManager.self) var pageManager
+    let fowardView : Page
+    let backwardsView : Page
+    @Binding var tempVar: Int
+    @Binding var defVar: Int
+    
+    var body: some View{
+        Button("Voltar") {
+            defVar = tempVar
+            pageManager.page = backwardsView
+        }
+        
+        Button("Próximo") {
+            defVar = tempVar
+            pageManager.page = fowardView
+        }
+        
+    }
+}
+
 

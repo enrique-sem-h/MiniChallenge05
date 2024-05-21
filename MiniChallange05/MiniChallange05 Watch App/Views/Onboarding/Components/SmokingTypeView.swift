@@ -28,7 +28,7 @@ struct SmokingTypeView: View {
                 VStack{
                     
                     //Component with the button style in this screen
-                    CigaretteTypeButton()
+                    CigaretteTypeButton(cigarretTypeView: .cigaretteCount)
                         .environment(pageManager)
                     
                     Text("Cigarro Convencional")
@@ -38,7 +38,7 @@ struct SmokingTypeView: View {
                 }
                 
                 VStack{
-                    CigaretteTypeButton()
+                    CigaretteTypeButton(cigarretTypeView: .vapeFrequency)
                         .environment(pageManager)
                     
                     Text("Cigarro eletronico")

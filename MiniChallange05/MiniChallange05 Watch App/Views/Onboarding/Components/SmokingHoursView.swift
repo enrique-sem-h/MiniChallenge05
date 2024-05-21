@@ -52,6 +52,7 @@ struct SmokingHoursView: View {
                     pageManager.page = .createSmokingHour
                 }
                 .padding()
+                
             }
         }
     }

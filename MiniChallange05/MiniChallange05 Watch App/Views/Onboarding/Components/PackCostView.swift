@@ -30,17 +30,8 @@ struct PackCostView: View {
             }.frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
             
             HStack {
-                Button("SmokingType") {
-                    defVar = tempVar
-                    pageManager.page = .cigarettesPerPack
-                }
-                .padding()
-                Button("VapeFrequency") {
-                    defVar = tempVar
-                    pageManager.page = .smokingHours
-                    viewAtual = .packCost
-                }
-                .padding()
+
+                GenericBackAndNextButton(fowardView: .smokingHours, backwardsView: .cigarettesPerPack, tempVar: $tempVar, defVar: $defVar)
             }
         }
     }

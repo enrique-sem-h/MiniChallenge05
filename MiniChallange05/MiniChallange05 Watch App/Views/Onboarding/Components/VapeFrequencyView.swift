@@ -27,16 +27,8 @@ struct VapeFrequencyView: View {
                 .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
             
             HStack {
-                Button("SmokingType") {
-                    defVar = tempVar
-                    pageManager.page = .smokingType
-                }
-                .padding()
-                Button("VapeFrequency") {
-                    defVar = tempVar
-                    pageManager.page = .vapeCost
-                }
-                .padding()
+                
+                GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
             }
         }
     }
