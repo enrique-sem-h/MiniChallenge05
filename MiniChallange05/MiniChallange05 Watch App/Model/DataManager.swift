@@ -17,7 +17,12 @@ class DataManager {
     var userEntity: User?
     var userModel : UserModel?
     
-    private init() {
+    init() {
+        
+        ValueTransformer.setValueTransformer(UUIDArrayTransformer(), forName: NSValueTransformerName("UUIDArrayTransformer"))
+        ValueTransformer.setValueTransformer(DateArrayTransformer(), forName: NSValueTransformerName("DateArrayTransformer"))
+        ValueTransformer.setValueTransformer(DateIntervalTransformer(), forName: NSValueTransformerName("DateIntervalTransformer"))
+        
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")
@@ -48,13 +53,12 @@ class DataManager {
         }
     }
     
-    func createUser(userCreate: User) {
-        self.userEntity = User(context: container.viewContext)
-        guard let user = self.userEntity else { return }
-        user.id = UUID()
+    func createUser(userCreate: UserModel) {
+        let user = User(context: container.viewContext)
+//        guard let user = self.userEntity else { return }
         user.achievementsList = userCreate.achievementsList
-        user.cigarettesInPack = userCreate.cigarettesInPack
-        user.cigarsPerDay = userCreate.cigarsPerDay
+        user.cigarettesInPack = userCreate.cigarettesInPack ?? 0
+        user.cigarsPerDay = userCreate.cigarsPerDay ?? 0
         user.cigarsType = userCreate.cigarsType
         user.hourSmoke = userCreate.hourSmoke
         user.quitDay = userCreate.quitDay
@@ -64,15 +68,16 @@ class DataManager {
         user.streakPast = userCreate.streakPast
         
         saveData()
+    
     }
     
     func parseData() {
         guard let userModel = self.userModel, let userEntity = self.userEntity else { return }
         
         userModel.achievementsList = userEntity.achievementsList ?? [UUID()]
-        userModel.cigarettesInPack = Int(userEntity.cigarettesInPack)
-        userModel.cigarsPerDay = Int(userEntity.cigarsPerDay)
-        userModel.cigarsType = userEntity.cigarsType ?? "cigarette"
+        userModel.cigarettesInPack = userEntity.cigarettesInPack
+        userModel.cigarsPerDay = userEntity.cigarsPerDay
+        userModel.cigarsType = userEntity.cigarsType ?? UserModel.SmokeType.cigarette.rawValue
         userModel.hourSmoke = userEntity.hourSmoke ?? [Date()]
         userModel.quitDay = userEntity.quitDay ?? Date()
         userModel.recordDate = userEntity.recordDate ?? DateInterval()

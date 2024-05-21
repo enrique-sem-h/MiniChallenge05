@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct MiniChallange05_Watch_AppApp: App {
-        
+            
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Onboard()
+                .environment(PageManager())
         }
     }
 }
