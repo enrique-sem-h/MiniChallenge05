@@ -10,16 +10,17 @@ import SwiftUI
 //Colocar entre 1 e 20
 struct OnboardingPicker: View {
     @Binding var selectedNumber: Int
+    @State var label: String?
+    @State var range: Range<Int>?
     
     var body: some View {
         VStack {
-            Picker("Number", selection: $selectedNumber) {
-                ForEach(1..<21) { number in
+            Picker(label ?? "", selection: $selectedNumber) {
+                ForEach(range ?? 1..<21) { number in
                     Text("\(number)").tag(number)
                 }
             }
             .pickerStyle(WheelPickerStyle())
-            .labelsHidden()
         }
     }
 }
