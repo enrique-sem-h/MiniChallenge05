@@ -10,8 +10,7 @@ import WatchKit
 
 struct SmokingTypeView: View {
     @Environment(PageManager.self) var pageManager
-    let width = WKInterfaceDevice.current().screenBounds.width
-    let heigth = WKInterfaceDevice.current().screenBounds.height
+    
     
     var body: some View {
         VStack {
@@ -27,14 +26,10 @@ struct SmokingTypeView: View {
                 
                 //Container with one button and one text
                 VStack{
-                    Button(action: {
-                        pageManager.page = .cigaretteCount
-                    }, label: {
-                        Rectangle()
-                            .frame(width: width / 2.2)
-                            .cornerRadius(8.0)
-                    })
-                    .buttonStyle(PlainButtonStyle())
+                    
+                    //Component with the button style in this screen
+                    CigaretteTypeButton()
+                        .environment(pageManager)
                     
                     Text("Cigarro Convencional")
                         .font(.system(size: 12))
@@ -43,14 +38,8 @@ struct SmokingTypeView: View {
                 }
                 
                 VStack{
-                    Button(action: {
-                        pageManager.page = .cigaretteCount
-                    }, label: {
-                        Rectangle()
-                            .frame(width: width / 2.2)
-                            .cornerRadius(8.0)
-                    })
-                    .buttonStyle(PlainButtonStyle())
+                    CigaretteTypeButton()
+                        .environment(pageManager)
                     
                     Text("Cigarro eletronico")
                         .multilineTextAlignment(.center)
