@@ -11,6 +11,7 @@ struct VapeCostView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
+    @Binding var viewAtual: Page
     
     static let screenSize = WKInterfaceDevice.current().screenBounds.size
     let screenWidth = screenSize.width
@@ -35,6 +36,7 @@ struct VapeCostView: View {
                 Button("VapeFrequency") {
                     defVar = tempVar
                     pageManager.page = .smokingHours
+                    viewAtual = .vapeCost
                 }
                 .padding()
             }
@@ -43,6 +45,6 @@ struct VapeCostView: View {
 }
 
 #Preview {
-    VapeCostView(defVar: .constant(1))
+    VapeCostView(defVar: .constant(1), viewAtual: .constant(.packCost))
         .environment(PageManager())
 }
