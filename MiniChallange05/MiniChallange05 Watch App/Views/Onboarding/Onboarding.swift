@@ -31,7 +31,6 @@ struct Onboard: View {
     @State var defnumero: Int = 1
     
     var body: some View {
-        
         switch pageManager.page {
         case .presentation:
             PresentationView()
