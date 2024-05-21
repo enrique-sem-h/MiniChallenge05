@@ -60,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31A8772D2BFD2E4600707129 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		9B711D262BFBE8F9003CF148 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9B711D272BFBE8F9003CF148 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -164,7 +165,7 @@
 		CE278A922BF7DF350075E22E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				CE2BF2F92BFD2F3900555FBC /* UserData.xcdatamodeld */,
+				31A8772C2BFD2E4600707129 /* UserData.xcdatamodeld */,
 				9B711D262BFBE8F9003CF148 /* User+CoreDataClass.swift */,
 				9B711D272BFBE8F9003CF148 /* User+CoreDataProperties.swift */,
 			);
@@ -629,12 +630,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE2BF2F92BFD2F3900555FBC /* UserData.xcdatamodeld */ = {
+		31A8772C2BFD2E4600707129 /* UserData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE2BF2FA2BFD2F3900555FBC /* UserData.xcdatamodel */,
+				31A8772D2BFD2E4600707129 /* UserData.xcdatamodel */,
 			);
-			currentVersion = CE2BF2FA2BFD2F3900555FBC /* UserData.xcdatamodel */;
+			currentVersion = 31A8772D2BFD2E4600707129 /* UserData.xcdatamodel */;
 			path = UserData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
