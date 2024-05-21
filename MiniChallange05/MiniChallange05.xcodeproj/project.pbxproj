@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3153D5382BFBBFB400FD08EB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3153D5372BFBBFB400FD08EB /* UserModel.swift */; };
+		9B711D252BFBE887003CF148 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D232BFBE887003CF148 /* UserData.xcdatamodeld */; };
+		9B711D282BFBE8F9003CF148 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D262BFBE8F9003CF148 /* User+CoreDataClass.swift */; };
+		9B711D292BFBE8F9003CF148 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D272BFBE8F9003CF148 /* User+CoreDataProperties.swift */; };
+		9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D2A2BFBE9CF003CF148 /* UserModel.swift */; };
 		B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05062BF7FB4500D49274 /* PresentationView.swift */; };
 		B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05082BF7FB4D00D49274 /* SmokingTypeView.swift */; };
 		B89C050B2BF7FB5500D49274 /* CigaretteCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C050A2BF7FB5500D49274 /* CigaretteCountView.swift */; };
@@ -18,8 +21,6 @@
 		B89C05152BF7FB7900D49274 /* SmokingHoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05142BF7FB7900D49274 /* SmokingHoursView.swift */; };
 		B89C05172BF7FB8000D49274 /* CreateSmokingHourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05162BF7FB8000D49274 /* CreateSmokingHourView.swift */; };
 		B89C051C2BFBC06100D49274 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		B8F671B92BFC26FA005DE68E /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8F671B72BFC26FA005DE68E /* UserData.xcdatamodeld */; };
-		B8F671BA2BFC2723005DE68E /* OnboardingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05182BFBC01400D49274 /* OnboardingPicker.swift */; };
 		CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */; };
 		CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A822BF7DF2B0075E22E /* ContentView.swift */; };
@@ -30,7 +31,7 @@
 		CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */; };
 		CE278AA22BF7DFD00075E22E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA12BF7DFD00075E22E /* Onboarding.swift */; };
 		CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */; };
-		CE278AA62BF7DFF40075E22E /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* UserDataManager.swift */; };
+		CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* DataManager.swift */; };
 		CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +60,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3153D5372BFBBFB400FD08EB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9B711D242BFBE887003CF148 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		9B711D262BFBE8F9003CF148 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9B711D272BFBE8F9003CF148 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B89C05062BF7FB4500D49274 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		B89C05082BF7FB4D00D49274 /* SmokingTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingTypeView.swift; sourceTree = "<group>"; };
 		B89C050A2BF7FB5500D49274 /* CigaretteCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CigaretteCountView.swift; sourceTree = "<group>"; };
@@ -70,7 +74,6 @@
 		B89C05142BF7FB7900D49274 /* SmokingHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHoursView.swift; sourceTree = "<group>"; };
 		B89C05162BF7FB8000D49274 /* CreateSmokingHourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSmokingHourView.swift; sourceTree = "<group>"; };
 		B89C05182BFBC01400D49274 /* OnboardingPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPicker.swift; sourceTree = "<group>"; };
-		B8F671B82BFC26FA005DE68E /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallange05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallange05App.swift; sourceTree = "<group>"; };
@@ -82,7 +85,7 @@
 		CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProgressView.swift; sourceTree = "<group>"; };
 		CE278AA12BF7DFD00075E22E /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
-		CE278AA52BF7DFF40075E22E /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		CE278AA52BF7DFF40075E22E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +100,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B711D222BFBE855003CF148 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		B89C05052BF7FB3100D49274 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 			children = (
 				CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */,
 				CE278A762BF7DF2B0075E22E /* Products */,
+				9B711D222BFBE855003CF148 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,7 +164,9 @@
 		CE278A922BF7DF350075E22E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				B8F671B72BFC26FA005DE68E /* UserData.xcdatamodeld */,
+				9B711D262BFBE8F9003CF148 /* User+CoreDataClass.swift */,
+				9B711D272BFBE8F9003CF148 /* User+CoreDataProperties.swift */,
+				9B711D232BFBE887003CF148 /* UserData.xcdatamodeld */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -174,9 +187,9 @@
 		CE278A942BF7DF400075E22E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B711D2A2BFBE9CF003CF148 /* UserModel.swift */,
 				CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */,
-				CE278AA52BF7DFF40075E22E /* UserDataManager.swift */,
-				3153D5372BFBBFB400FD08EB /* UserModel.swift */,
+				CE278AA52BF7DFF40075E22E /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,18 +351,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8F671BA2BFC2723005DE68E /* OnboardingPicker.swift in Sources */,
+				9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */,
 				B89C05172BF7FB8000D49274 /* CreateSmokingHourView.swift in Sources */,
 				B89C05112BF7FB6B00D49274 /* PackCostView.swift in Sources */,
 				CE278A9E2BF7DFB60075E22E /* AchievementView.swift in Sources */,
 				CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */,
-				B8F671B92BFC26FA005DE68E /* UserData.xcdatamodeld in Sources */,
+				9B711D252BFBE887003CF148 /* UserData.xcdatamodeld in Sources */,
 				B89C050D2BF7FB5C00D49274 /* VapeFrequencyView.swift in Sources */,
 				B89C051C2BFBC06100D49274 /* (null) in Sources */,
+				9B711D282BFBE8F9003CF148 /* User+CoreDataClass.swift in Sources */,
+				9B711D292BFBE8F9003CF148 /* User+CoreDataProperties.swift in Sources */,
 				B89C050F2BF7FB6400D49274 /* CigarettesPerPackView.swift in Sources */,
 				CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */,
 				CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */,
-				CE278AA62BF7DFF40075E22E /* UserDataManager.swift in Sources */,
+				CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */,
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
 				B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */,
 				B89C05152BF7FB7900D49274 /* SmokingHoursView.swift in Sources */,
@@ -358,7 +373,6 @@
 				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
 				B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */,
 				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,
-				3153D5382BFBBFB400FD08EB /* UserModel.swift in Sources */,
 				CE278AA22BF7DFD00075E22E /* Onboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,14 +629,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B8F671B72BFC26FA005DE68E /* UserData.xcdatamodeld */ = {
+		9B711D232BFBE887003CF148 /* UserData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B8F671B82BFC26FA005DE68E /* UserData.xcdatamodel */,
+				9B711D242BFBE887003CF148 /* UserData.xcdatamodel */,
 			);
-			currentVersion = B8F671B82BFC26FA005DE68E /* UserData.xcdatamodel */;
+			currentVersion = 9B711D242BFBE887003CF148 /* UserData.xcdatamodel */;
 			name = UserData.xcdatamodeld;
-			path = "/Users/giovannifavorin/Documents/Academy/MINI/Mini 5/MiniChallenge05/MiniChallange05/MiniChallange05 Watch App/Persistence/UserData.xcdatamodeld";
+			path = "/Users/vhparaujo/Documents/Academy/MiniChallenge05/MiniChallange05/MiniChallange05 Watch App/Persistence/UserData.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

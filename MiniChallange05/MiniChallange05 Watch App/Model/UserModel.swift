@@ -7,39 +7,39 @@
 
 import Foundation
 
-struct UserModel {
-    var streakStart: Date
-    var lastStreak: DateInterval
+class UserModel {
+    var startStreak: Date
+    var streakPast: DateInterval
     var recordDate: DateInterval
-    var smokeType: String
-    var dailyCigaretteAmount: Int?
+    var cigarsType: String
+    var cigarsPerDay: Int?
     var cigarettesInPack: Int?
     var smokeCost: Double
-    var smokingTimes: [Date]
+    var hourSmoke: [Date]
     var quitDay: Date
     var achievementsList: [UUID]
     
     // MARK: smoker init
-    init(streakStart: Date, smokeType: SmokeType, dailyCigaretteAmount: Int? = nil, cigarettesInPack: Int? = nil, smokeCost: Double, smokingTimes: [Date], quitDay: Date) {
-        self.streakStart = streakStart
-        self.lastStreak = DateInterval()
+    init(startStreak: Date, cigarsType: SmokeType, cigarsPerDay: Int? = nil, cigarettesInPack: Int? = nil, smokeCost: Double, hourSmoke: [Date], quitDay: Date) {
+        self.startStreak = startStreak
+        self.streakPast = DateInterval()
         self.recordDate = DateInterval()
-        self.smokeType = smokeType.rawValue
+        self.cigarsType = cigarsType.rawValue
         
-        if smokeType == SmokeType.cigarette{
-            self.dailyCigaretteAmount = dailyCigaretteAmount
+        if cigarsType == SmokeType.cigarette{
+            self.cigarsPerDay = cigarsPerDay
         } else {
-            self.dailyCigaretteAmount = nil
+            self.cigarsPerDay = nil
         }
         
-        if smokeType == SmokeType.cigarette{
+        if cigarsType == SmokeType.cigarette{
             self.cigarettesInPack = cigarettesInPack
         } else {
             self.cigarettesInPack = nil
         }
         
         self.smokeCost = smokeCost
-        self.smokingTimes = smokingTimes
+        self.hourSmoke = hourSmoke
         self.quitDay = quitDay
         self.achievementsList = []
     }
@@ -48,4 +48,6 @@ struct UserModel {
         case eCigarette
         case cigarette
     }
+    
+    
 }
