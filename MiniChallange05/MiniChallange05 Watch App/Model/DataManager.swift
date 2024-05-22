@@ -107,4 +107,9 @@ class DataManager {
         saveData()
     }
     
+    func editData(cigarsPerDay: Int16 = 0) {
+        guard let userEntity = self.userEntity else { return }
+        userEntity.cigarsPerDay = cigarsPerDay
+    }
+    
 }
