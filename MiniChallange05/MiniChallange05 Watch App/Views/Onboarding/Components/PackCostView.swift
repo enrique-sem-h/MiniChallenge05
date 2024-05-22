@@ -24,7 +24,7 @@ struct PackCostView: View {
                 .minimumScaleFactor(0.5)
                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.2)
             
-            HStack(alignment: .bottom){
+            HStack(alignment: .center){
                 Text(Locale.current.currencySymbol ?? "R$")
                 OnboardingPicker(selectedNumber: $tempVar)
             }.frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
