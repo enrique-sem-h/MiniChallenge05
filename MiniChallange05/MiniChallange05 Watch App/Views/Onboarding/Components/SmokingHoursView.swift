@@ -55,13 +55,13 @@ struct SmokingHoursView: View {
                         guard let cigarsPerDay = userPreferences.cigarsPerDay else { return }
                         guard let cigarettesInPack = userPreferences.cigarettesInPack else { return }
                         
-                        let user = UserModel(startStreak: .now, cigarsType: userPreferences.smokingType, cigarsPerDay: Int16(cigarsPerDay), cigarettesInPack: Int16(cigarettesInPack), smokeCost: userPreferences.smokeCost, hourSmoke: userPreferences.hourSmoke, quitDay: .now)
-                        DataManager.shared.createUser(userCreate: user)
+                        DataManager.shared.userModel = UserModel(startStreak: .now, cigarsType: userPreferences.smokingType, cigarsPerDay: Int16(cigarsPerDay), cigarettesInPack: Int16(cigarettesInPack), smokeCost: userPreferences.smokeCost, hourSmoke: userPreferences.hourSmoke, quitDay: .now)
+                        DataManager.shared.createUser()
                     } else {
                         guard let vapePerDay = userPreferences.vapePerDay else { return }
                         
-                        let user = UserModel(startStreak: .now, cigarsType: userPreferences.smokingType, vapePerDay: Int16(vapePerDay), smokeCost: userPreferences.smokeCost, hourSmoke: userPreferences.hourSmoke, quitDay: .now)
-                        DataManager.shared.createUser(userCreate: user)
+                        DataManager.shared.userModel = UserModel(startStreak: .now, cigarsType: userPreferences.smokingType, vapePerDay: Int16(vapePerDay), smokeCost: userPreferences.smokeCost, hourSmoke: userPreferences.hourSmoke, quitDay: .now)
+                        DataManager.shared.createUser()
                     }
                     pageManager.page = .createSmokingHour
                 }

@@ -28,6 +28,7 @@ class DataManager {
                 print("Core Data failed to load: \(error.localizedDescription)")
             }
         }
+        self.fetchUser()
     }
     
     // MARK: - Basics operations
@@ -53,37 +54,44 @@ class DataManager {
         }
     }
     
-    func createUser(userCreate: UserModel) {
+    func createUser() {
         self.userEntity = User(context: container.viewContext)
         guard let user = self.userEntity else { return }
-        user.achievementsList = userCreate.achievementsList
-        user.cigarettesInPack = userCreate.cigarettesInPack ?? 0
-        user.cigarsPerDay = userCreate.cigarsPerDay ?? 0
-        user.cigarsType = userCreate.cigarsType
-        user.hourSmoke = userCreate.hourSmoke
-        user.quitDay = userCreate.quitDay
-        user.recordDate = userCreate.recordDate
-        user.smokeCost = userCreate.smokeCost
-        user.startStreak = userCreate.startStreak
-        user.streakPast = userCreate.streakPast
+        guard let userModel else { return }
+        user.achievementsList = userModel.achievementsList
+        user.cigarettesInPack = userModel.cigarettesInPack ?? 0
+        user.cigarsPerDay = userModel.cigarsPerDay ?? 0
+        user.cigarsType = userModel.cigarsType
+        user.hourSmoke = userModel.hourSmoke
+        user.quitDay = userModel.quitDay
+        user.recordDate = userModel.recordDate
+        user.smokeCost = userModel.smokeCost
+        user.startStreak = userModel.startStreak
+        user.streakPast = userModel.streakPast
+        user.vapePerDay = userModel.vapePerDay ?? 0
         
         saveData()
     
     }
     
     func parseData() {
-        guard let userModel = self.userModel, let userEntity = self.userEntity else { return }
+        guard let userEntity = self.userEntity else { return }
         
-        userModel.achievementsList = userEntity.achievementsList ?? [UUID()]
-        userModel.cigarettesInPack = userEntity.cigarettesInPack
-        userModel.cigarsPerDay = userEntity.cigarsPerDay
-        userModel.cigarsType = userEntity.cigarsType ?? UserModel.SmokeType.cigarette.rawValue
-        userModel.hourSmoke = userEntity.hourSmoke ?? [Date()]
-        userModel.quitDay = userEntity.quitDay ?? Date()
-        userModel.recordDate = userEntity.recordDate ?? DateInterval()
-        userModel.smokeCost = userEntity.smokeCost
-        userModel.startStreak = userEntity.startStreak ?? Date()
-        userModel.streakPast = userEntity.streakPast ?? DateInterval()
+        if userModel == nil{
+            userModel = UserModel(startStreak: userEntity.startStreak ?? Date(), streakPast: userEntity.streakPast ?? DateInterval(), recordDate: userEntity.recordDate ?? DateInterval(), cigarsType: UserModel.SmokeType(rawValue: userEntity.cigarsType ?? "cigarette") ?? .cigarette, cigarsPerDay: userEntity.cigarsPerDay, vapePerDay: userEntity.vapePerDay, cigarettesInPack: userEntity.cigarettesInPack, smokeCost: userEntity.smokeCost, hourSmoke: userEntity.hourSmoke ?? [], quitDay: userEntity.quitDay ?? Date(), achievementsList: userEntity.achievementsList ?? [])
+        } else {
+            userModel?.achievementsList = userEntity.achievementsList ?? [UUID()]
+            userModel?.cigarettesInPack = userEntity.cigarettesInPack
+            userModel?.cigarsPerDay = userEntity.cigarsPerDay
+            userModel?.cigarsType = userEntity.cigarsType ?? "cigarette"
+            userModel?.hourSmoke = userEntity.hourSmoke ?? [Date()]
+            userModel?.quitDay = userEntity.quitDay ?? Date()
+            userModel?.recordDate = userEntity.recordDate ?? DateInterval()
+            userModel?.smokeCost = userEntity.smokeCost
+            userModel?.startStreak = userEntity.startStreak ?? Date()
+            userModel?.streakPast = userEntity.streakPast ?? DateInterval()
+            userModel?.vapePerDay = userEntity.vapePerDay
+        }
     }
     
     
