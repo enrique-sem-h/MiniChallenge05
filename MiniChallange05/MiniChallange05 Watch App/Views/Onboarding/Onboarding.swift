@@ -32,27 +32,28 @@ struct Onboard: View {
     @Environment(PageManager.self) var pageManager
     @State var defnumero: Int = 1
     @State var viewAnterior:Page = .packCost
+    var userPreferences = UserPreferences()
     
     var body: some View {
         switch pageManager.page {
         case .presentation:
             PresentationView()
         case .smokingType:
-            SmokingTypeView()
+            SmokingTypeView(userPreferences: userPreferences)
         case .cigaretteCount:
-            CigaretteCountView(defVar: $defnumero)
+            CigaretteCountView(defVar: $defnumero, userPreferences: userPreferences)
         case .vapeFrequency:
-            VapeFrequencyView(defVar: $defnumero)
+            VapeFrequencyView(defVar: $defnumero, userPreferences: userPreferences)
         case .cigarettesPerPack:
-            CigarettesPerPackView(defVar: $defnumero)
+            CigarettesPerPackView(defVar: $defnumero, userPreferences: userPreferences)
         case .packCost:
-            PackCostView(defVar: $defnumero, viewAtual: $viewAnterior)
+            PackCostView(defVar: $defnumero, viewAtual: $viewAnterior, userPreferences: userPreferences)
         case .vapeCost:
-            VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior)
+            VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior, userPreferences: userPreferences)
         case .smokingHours:
-            SmokingHoursView(viewAnterior: $viewAnterior)
+            SmokingHoursView(viewAnterior: $viewAnterior, userPreferences: userPreferences)
         case .createSmokingHour:
-            CreateSmokingHourView()
+            HomeView()
         }
     }
 }

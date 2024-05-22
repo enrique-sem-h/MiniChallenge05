@@ -10,6 +10,7 @@ import WatchKit
 
 struct SmokingTypeView: View {
     @Environment(PageManager.self) var pageManager
+    var userPreferences: UserPreferences
     
     
     var body: some View {
@@ -28,7 +29,7 @@ struct SmokingTypeView: View {
                 VStack{
                     
                     //Component with the button style in this screen
-                    CigaretteTypeButton(cigarretTypeView: .cigaretteCount)
+                    CigaretteTypeButton(cigarretTypeView: .cigaretteCount, userPreferences: userPreferences, type: .cigarette)
                         .environment(pageManager)
                     
                     Text("Cigarro Convencional")
@@ -38,7 +39,7 @@ struct SmokingTypeView: View {
                 }
                 
                 VStack{
-                    CigaretteTypeButton(cigarretTypeView: .vapeFrequency)
+                    CigaretteTypeButton(cigarretTypeView: .vapeFrequency, userPreferences: userPreferences, type: .eCigarette)
                         .environment(pageManager)
                     
                     Text("Cigarro eletronico")
@@ -52,8 +53,8 @@ struct SmokingTypeView: View {
         }
     }
 }
-
-#Preview {
-    SmokingTypeView()
-        .environment(PageManager())
-}
+//
+//#Preview {
+//    SmokingTypeView()
+//        .environment(PageManager())
+//}

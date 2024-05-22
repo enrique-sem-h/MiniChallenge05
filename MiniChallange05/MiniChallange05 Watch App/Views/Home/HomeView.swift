@@ -8,29 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var user = UserModel(startStreak: .now, cigarsType: .cigarette, smokeCost: 1, hourSmoke: [.now], quitDay: .now)
+    @State var user = DataManager.shared.userModel
     
     var body: some View {
         VStack{
-            Text(user.streakPast)
-            Text(DateComponentsFormatter().string(from: user.streakPast.duration) ?? "oi")
-            Text(user.quitDay.description(with: .current))
-            Text(user.recordDate)
-            Text(user.cigarsType)
-            Text(user.startStreak.description)
-            Text("\(user.cigarettesInPack)")
-            Text(user.achievementsList.debugDescription)
-            Text("\(user.cigarsPerDay)")
-            Text(user.smokeCost.debugDescription)
-            Text(user.hourSmoke.debugDescription)
+//            Text(user?.streakPast.debugDescription ?? "notfound")
+//            Text(DateComponentsFormatter().string(from: (user?.streakPast.duration)!)!)
+//            Text((user?.quitDay.description(with: .current))!)
+//            Text(user?.recordDate ?? "error")
+//            Text(user?.cigarsType ?? "error")
+//            Text(user?.startStreak.description ?? "error")
+//            Text("\(user?.cigarettesInPack ?? 1)")
+//            Text(user.achievementsList.debugDescription)
+//            Text("\(user.cigarsPerDay)")
+//            Text(user.smokeCost.debugDescription)
+//            Text(user.hourSmoke.debugDescription)
         }.onAppear{
-            let format = DateFormatter()
-            format.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            let dateString = "2025-11-13 09:12:22"
-            if let date = format.date(from: dateString) {
-                user.streakPast.end = date
-                print(user.streakPast)
-            }
+            DataManager.shared.fetchUser()
         }
     }
 }

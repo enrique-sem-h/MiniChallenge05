@@ -54,8 +54,8 @@ class DataManager {
     }
     
     func createUser(userCreate: UserModel) {
-        let user = User(context: container.viewContext)
-//        guard let user = self.userEntity else { return }
+        self.userEntity = User(context: container.viewContext)
+        guard let user = self.userEntity else { return }
         user.achievementsList = userCreate.achievementsList
         user.cigarettesInPack = userCreate.cigarettesInPack ?? 0
         user.cigarsPerDay = userCreate.cigarsPerDay ?? 0

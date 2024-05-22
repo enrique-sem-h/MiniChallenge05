@@ -12,6 +12,7 @@ struct CigaretteCountView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
+    var userPreferences: UserPreferences
     
     static let screenSize = WKInterfaceDevice.current().screenBounds.size
     let screenWidth = screenSize.width
@@ -30,11 +31,8 @@ struct CigaretteCountView: View {
             HStack {
                 GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: Binding(projectedValue: .constant(tempVar)), defVar: Binding(projectedValue: .constant(defVar)))
             }
+        }.onDisappear{
+            userPreferences.cigarsPerDay = defVar
         }
     }
-}
-
-#Preview {
-    CigaretteCountView(defVar: .constant(1))
-        .environment(PageManager())
 }

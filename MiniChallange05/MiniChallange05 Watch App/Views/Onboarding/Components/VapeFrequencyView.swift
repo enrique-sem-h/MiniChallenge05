@@ -15,6 +15,7 @@ struct VapeFrequencyView: View {
     static let screenSize = WKInterfaceDevice.current().screenBounds.size
     let screenWidth = screenSize.width
     let screenHeight = screenSize.height
+    var userPreferences: UserPreferences
     
     var body: some View {
         VStack {
@@ -30,11 +31,8 @@ struct VapeFrequencyView: View {
                 
                 GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
             }
+        }.onDisappear{
+            userPreferences.vapePerDay = defVar
         }
     }
-}
-
-#Preview {
-    VapeFrequencyView(defVar: .constant(1))
-        .environment(PageManager())
 }

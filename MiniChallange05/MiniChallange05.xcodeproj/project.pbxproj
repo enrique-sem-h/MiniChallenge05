@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3193190D2BFE627C001A1C40 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193190C2BFE627C001A1C40 /* UserPreferences.swift */; };
 		9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D2A2BFBE9CF003CF148 /* UserModel.swift */; };
-		9BD619852BFD2D54004EF522 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619832BFD2D54004EF522 /* UserData.xcdatamodeld */; };
 		9BD619872BFD2EF3004EF522 /* UUIDArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */; };
 		9BD619892BFD3018004EF522 /* DateArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */; };
 		9BD6198B2BFD30E0004EF522 /* DateIntervalTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD6198A2BFD30E0004EF522 /* DateIntervalTransformer.swift */; };
@@ -35,7 +35,7 @@
 		CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */; };
 		CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* DataManager.swift */; };
 		CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */; };
-		CE2BF2FB2BFD2F3900555FBC /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2BF2F92BFD2F3900555FBC /* UserData.xcdatamodeld */; };
+		CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3193190B2BFE61C4001A1C40 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		3193190C2BFE627C001A1C40 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		9BD619842BFD2D54004EF522 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDArrayTransformer.swift; sourceTree = "<group>"; };
 		9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateArrayTransformer.swift; sourceTree = "<group>"; };
 		9BD6198A2BFD30E0004EF522 /* DateIntervalTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalTransformer.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		CE278AA52BF7DFF40075E22E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralComponents.swift; sourceTree = "<group>"; };
-		CE2BF2FA2BFD2F3900555FBC /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 		CE278A922BF7DF350075E22E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				9BD619832BFD2D54004EF522 /* UserData.xcdatamodeld */,
+				3193190A2BFE61C4001A1C40 /* UserData.xcdatamodeld */,
 				9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */,
 				9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */,
 				9BD6198A2BFD30E0004EF522 /* DateIntervalTransformer.swift */,
@@ -224,6 +224,7 @@
 			children = (
 				B89C05052BF7FB3100D49274 /* Components */,
 				CE278AA12BF7DFD00075E22E /* Onboarding.swift */,
+				3193190C2BFE627C001A1C40 /* UserPreferences.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -359,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2BF2FB2BFD2F3900555FBC /* UserData.xcdatamodeld in Sources */,
+				CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */,
 				B8F671BE2BFD0F8E005DE68E /* OnboardingPicker.swift in Sources */,
 				9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */,
 				B89C05172BF7FB8000D49274 /* CreateSmokingHourView.swift in Sources */,
@@ -370,8 +371,6 @@
 				9BD619872BFD2EF3004EF522 /* UUIDArrayTransformer.swift in Sources */,
 				CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */,
 				B89C050D2BF7FB5C00D49274 /* VapeFrequencyView.swift in Sources */,
-				9BD619852BFD2D54004EF522 /* UserData.xcdatamodeld in Sources */,
-				B89C051C2BFBC06100D49274 /* (null) in Sources */,
 				B89C050F2BF7FB6400D49274 /* CigarettesPerPackView.swift in Sources */,
 				CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */,
 				CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */,
@@ -386,6 +385,7 @@
 				B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */,
 				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,
 				CE278AA22BF7DFD00075E22E /* Onboarding.swift in Sources */,
+				3193190D2BFE627C001A1C40 /* UserPreferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,14 +641,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9BD619832BFD2D54004EF522 /* UserData.xcdatamodeld */ = {
+		3193190A2BFE61C4001A1C40 /* UserData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9BD619842BFD2D54004EF522 /* UserData.xcdatamodel */,
+				3193190B2BFE61C4001A1C40 /* UserData.xcdatamodel */,
 			);
-			currentVersion = 9BD619842BFD2D54004EF522 /* UserData.xcdatamodel */;
-			name = UserData.xcdatamodeld;
-			path = "/Users/vhparaujo/Documents/Academy/MiniChallenge05/MiniChallange05/MiniChallange05 Watch App/Persistence/UserData.xcdatamodeld";
+			currentVersion = 3193190B2BFE61C4001A1C40 /* UserData.xcdatamodel */;
+			path = UserData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

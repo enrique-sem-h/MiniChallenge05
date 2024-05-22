@@ -14,6 +14,7 @@ struct SmokingHoursView: View {
     static let screenSize = WKInterfaceDevice.current().screenBounds.size
     let screenWidth = screenSize.width
     let screenHeight = screenSize.height
+    var userPreferences: UserPreferences
     
     @State var items: [Date] = [
         Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!,
@@ -49,10 +50,22 @@ struct SmokingHoursView: View {
                 }
                 .padding()
                 Button("finalizar") {
+                    userPreferences.hourSmoke = Array(selectedItems)
+                    if userPreferences.smokingType.rawValue == UserModel.SmokeType.cigarette.rawValue {
+                        guard let cigarsPerDay = userPreferences.cigarsPerDay else { return }
+                        guard let cigarettesInPack = userPreferences.cigarettesInPack else { return }
+                        
+                        let user = UserModel(startStreak: .now, cigarsType: userPreferences.smokingType, cigarsPerDay: Int16(cigarsPerDay), cigarettesInPack: Int16(cigarettesInPack), smokeCost: userPreferences.smokeCost, hourSmoke: userPreferences.hourSmoke, quitDay: .now)
+                        DataManager.shared.createUser(userCreate: user)
+                    } else {
+                        guard let vapePerDay = userPreferences.vapePerDay else { return }
+                        
+                        let user = UserModel(startStreak: .now, cigarsType: userPreferences.smokingType, vapePerDay: Int16(vapePerDay), smokeCost: userPreferences.smokeCost, hourSmoke: userPreferences.hourSmoke, quitDay: .now)
+                        DataManager.shared.createUser(userCreate: user)
+                    }
                     pageManager.page = .createSmokingHour
                 }
                 .padding()
-                GenericBackAndNextButton(fowardView: .cigaretteCount, backwardsView: .cigaretteCount, tempVar: Binding(projectedValue: .constant(0)), defVar: Binding(projectedValue: .constant(0)))
             }
         }
     }
@@ -101,9 +114,4 @@ struct RowRectangle: View {
         formatter.dateFormat = "h:mm a"
         return formatter.string(from: date)
     }
-}
-
-#Preview {
-    SmokingHoursView(viewAnterior: .constant(.packCost))
-        .environment(PageManager())
 }
