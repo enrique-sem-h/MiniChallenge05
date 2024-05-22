@@ -19,20 +19,21 @@ struct VapeCostView: View {
     var userPreferences: UserPreferences
     
     var body: some View {
-        VStack {
-            Text("Quanto você gasta por mês com cigarro eletrônico?")
-                .padding(.bottom, 10)
-                .minimumScaleFactor(0.5)
-                .frame(width: screenWidth * 0.9, height: screenHeight * 0.2)
-            
-            HStack(alignment: .bottom){
-                Text(Locale.current.currencySymbol ?? "R$")
-                OnboardingPicker(selectedNumber: $tempVar)
-            }.frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
-            
-            HStack {
+        ScrollView {
+            VStack {
+                Text("Quanto você gasta por mês com cigarro eletrônico?")
+                    .padding(.bottom, 5)
+                    .minimumScaleFactor(0.5)
+                    .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
+                
+                HStack(alignment: .bottom){
+                    Text(Locale.current.currencySymbol ?? "R$")
+                    OnboardingPicker(selectedNumber: $tempVar)
+                }.frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
+                    .padding(.bottom,10)
 
-                GenericBackAndNextButton(fowardView: .smokingHours, backwardsView: .vapeFrequency , tempVar: $tempVar, defVar: $defVar)
+                    GenericBackAndNextButton(fowardView: .smokingHours, backwardsView: .vapeFrequency , tempVar: $tempVar, defVar: $defVar)
+
             }
         }.onDisappear{
             userPreferences.smokeCost = Double(defVar)

@@ -84,7 +84,19 @@ class DataManager {
         userModel.smokeCost = userEntity.smokeCost
         userModel.startStreak = userEntity.startStreak ?? Date()
         userModel.streakPast = userEntity.streakPast ?? DateInterval()
-
+    }
+    
+    
+    func updatePackCost(smokeCost : Double){
+        self.userEntity?.smokeCost = smokeCost
+        self.userModel?.smokeCost = smokeCost
+        saveData()
+    }
+    
+    func updateCigarreteCount(count : Int){
+        self.userEntity?.cigarsPerDay = Int16(count)
+        self.userModel?.cigarsPerDay = Int16(count)
+        saveData()
     }
     
 }

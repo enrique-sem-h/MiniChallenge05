@@ -36,6 +36,7 @@
 		CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* DataManager.swift */; };
 		CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */; };
 		CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */ = {isa = PBXBuildFile; };
+		CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		CE278AA52BF7DFF40075E22E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralComponents.swift; sourceTree = "<group>"; };
+		CE69264D2BFE60A300ABE06B /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +172,7 @@
 		CE278A922BF7DF350075E22E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				3193190A2BFE61C4001A1C40 /* UserData.xcdatamodeld */,
+				CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */,
 				9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */,
 				9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */,
 				9BD6198A2BFD30E0004EF522 /* DateIntervalTransformer.swift */,
@@ -360,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */,
 				CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */,
 				B8F671BE2BFD0F8E005DE68E /* OnboardingPicker.swift in Sources */,
 				9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */,
@@ -641,12 +644,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3193190A2BFE61C4001A1C40 /* UserData.xcdatamodeld */ = {
+		CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3193190B2BFE61C4001A1C40 /* UserData.xcdatamodel */,
+				CE69264D2BFE60A300ABE06B /* UserData.xcdatamodel */,
 			);
-			currentVersion = 3193190B2BFE61C4001A1C40 /* UserData.xcdatamodel */;
+			currentVersion = CE69264D2BFE60A300ABE06B /* UserData.xcdatamodel */;
 			path = UserData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
