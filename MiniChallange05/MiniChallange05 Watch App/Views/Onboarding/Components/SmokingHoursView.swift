@@ -43,29 +43,24 @@ struct SmokingHoursView: View {
             
             Spacer()
             
-            HStack {
-                Button("voltar") {
-                    pageManager.page = viewAnterior
-                }
-                .padding()
-                Button("finalizar") {
-                    pageManager.page = .createSmokingHour
-                }
-                .padding()
-                GenericBackAndNextButton(fowardView: .cigaretteCount, backwardsView: .cigaretteCount, tempVar: Binding(projectedValue: .constant(0)), defVar: Binding(projectedValue: .constant(0)))
-            }
+            GenericBackAndNextButton(fowardView: .cigaretteCount, backwardsView: .cigaretteCount, tempVar: Binding(projectedValue: .constant(0)), defVar: Binding(projectedValue: .constant(0)))
+                .padding(.top,10)
         }
     }
 }
 
 struct HeaderView: View {
     @Environment(PageManager.self) var pageManager
+    static let screenSize = WKInterfaceDevice.current().screenBounds.size
+    let screenWidth = screenSize.width
+    let screenHeight = screenSize.height
     
     var body: some View {
         HStack {
             Text("Em que horários você fuma?")
                 .padding(.bottom, 10)
                 .minimumScaleFactor(0.5)
+                .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
             
             Spacer()
             

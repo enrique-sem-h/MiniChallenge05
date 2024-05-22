@@ -17,18 +17,19 @@ struct CigarettesPerPackView: View {
     let screenHeight = screenSize.height
     
     var body: some View {
-        VStack {
-            Text("Quantos cigarros tem no maço que você compra?")
-                .padding(.bottom, 10)
-                .minimumScaleFactor(0.5)
-                .frame(width: screenWidth * 0.9, height: screenHeight * 0.2)
-            
-            OnboardingPicker(selectedNumber: $tempVar)
-                .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
-            
-            HStack {
-
+        ScrollView {
+            VStack {
+                Text("Quantos cigarros tem no maço que você compra?")
+                    .padding(.bottom, 5)
+                    .minimumScaleFactor(0.5)
+                    .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
+                
+                OnboardingPicker(selectedNumber: $tempVar)
+                    .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
+                    .padding(.bottom, 10)
+                
                 GenericBackAndNextButton(fowardView: .packCost, backwardsView: .cigaretteCount , tempVar: $tempVar, defVar: $defVar)
+                
             }
         }
     }

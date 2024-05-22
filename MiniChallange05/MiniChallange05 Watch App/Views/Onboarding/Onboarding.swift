@@ -22,8 +22,6 @@ enum Page {
     case createSmokingHour
 }
 
-
-
 @Observable class PageManager {
     var page: Page = .presentation
 }
