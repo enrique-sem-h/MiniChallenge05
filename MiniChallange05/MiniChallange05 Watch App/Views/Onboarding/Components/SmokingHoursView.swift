@@ -52,7 +52,6 @@ struct SmokingHoursView: View {
                     pageManager.page = .createSmokingHour
                 }
                 .padding()
-                GenericBackAndNextButton(fowardView: .cigaretteCount, backwardsView: .cigaretteCount, tempVar: Binding(projectedValue: .constant(0)), defVar: Binding(projectedValue: .constant(0)))
             }
         }
     }

@@ -12,6 +12,7 @@ struct CreateSmokingHourView: View {
     
     @State var selectedHour = 12
     @State var selectedMinute = 00
+    @State var data:Date = .now
     
     var body: some View {
         VStack(alignment: .leading){
@@ -23,11 +24,15 @@ struct CreateSmokingHourView: View {
             }.buttonStyle(PlainButtonStyle())
             Spacer()
             
-            HStack {
-                OnboardingPicker(selectedNumber: $selectedHour, label: "Hora", range: 0..<25)
-                Text(":")
-                OnboardingPicker(selectedNumber: $selectedMinute, label: "Minutos", range: 0..<60)
-            }.frame(height: 120)
+            DatePicker(" ", selection: $data, displayedComponents: [.hourAndMinute])
+                .overlay {
+                    HStack {
+                        Spacer()
+                        Rectangle()
+                            .frame(width: 7, height: 40)
+                            .foregroundStyle(.black)
+                    }
+                }
             
             Button("Confirmar"){
                 
