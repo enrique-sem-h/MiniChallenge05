@@ -60,7 +60,7 @@ struct HeaderView: View {
             Text("Em que horários você fuma?")
                 .padding(.bottom, 10)
                 .minimumScaleFactor(0.5)
-                .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
+                .frame(width: screenWidth * 0.9, height: screenHeight * 0.22)
             
             Spacer()
             
