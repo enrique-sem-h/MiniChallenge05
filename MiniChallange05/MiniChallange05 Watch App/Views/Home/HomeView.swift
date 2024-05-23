@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     @State var user = DataManager.shared.userModel
     
-
     var body: some View {
         ScrollView {
             VStack {
@@ -20,8 +19,8 @@ struct HomeView: View {
                 
                 ConquestHomeView()
             }.onAppear{
-            DataManager.shared.fetchUser()
-        }
+                DataManager.shared.fetchUser()
+            }
         }
     }
 }
