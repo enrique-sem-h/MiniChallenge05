@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var user = DataManager.shared.userModel
     
 
     var body: some View {
@@ -18,7 +19,9 @@ struct HomeView: View {
                 HealthHomeView()
                 
                 ConquestHomeView()
-            }
+            }.onAppear{
+            DataManager.shared.fetchUser()
+        }
         }
     }
 }

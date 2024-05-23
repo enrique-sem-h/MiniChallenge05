@@ -14,13 +14,14 @@ class UserModel {
     var cigarsType: String
     var cigarsPerDay: Int16?
     var cigarettesInPack: Int16?
+    var vapePerDay: Int16?
     var smokeCost: Double
     var hourSmoke: [Date]
     var quitDay: Date
     var achievementsList: [UUID]
     
     // MARK: smoker init
-    init(startStreak: Date, streakPast: DateInterval = DateInterval(), recordDate: DateInterval = DateInterval(), cigarsType: SmokeType, cigarsPerDay: Int16? = nil, cigarettesInPack: Int16? = nil, smokeCost: Double, hourSmoke: [Date], quitDay: Date, achievementsList: [UUID] = []) {
+    init(startStreak: Date, streakPast: DateInterval = DateInterval(), recordDate: DateInterval = DateInterval(), cigarsType: SmokeType, cigarsPerDay: Int16? = nil, vapePerDay: Int16? = nil, cigarettesInPack: Int16? = nil, smokeCost: Double, hourSmoke: [Date], quitDay: Date, achievementsList: [UUID] = []) {
         self.startStreak = startStreak
         self.streakPast = streakPast
         self.recordDate = recordDate
@@ -40,6 +41,7 @@ class UserModel {
         
         self.cigarsPerDay = cigarsPerDay
         self.cigarettesInPack = cigarettesInPack
+        self.vapePerDay = vapePerDay
         self.smokeCost = smokeCost
         self.hourSmoke = hourSmoke
         self.quitDay = quitDay

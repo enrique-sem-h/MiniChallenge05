@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CreateSmokingHourView: View {
     @Environment(PageManager.self) var pageManager
+
+    @State var data: Date = .now
     
-    @State var selectedHour = 12
-    @State var selectedMinute = 00
+    @Binding var items: [Date]
+    @Binding var selectedItems: Set<Date>
     
     var body: some View {
         VStack(alignment: .leading){
@@ -23,20 +25,33 @@ struct CreateSmokingHourView: View {
             }.buttonStyle(PlainButtonStyle())
             Spacer()
             
-            HStack {
-                OnboardingPicker(selectedNumber: $selectedHour, label: "Hora", range: 0..<25)
-                Text(":")
-                OnboardingPicker(selectedNumber: $selectedMinute, label: "Minutos", range: 0..<60)
-            }.frame(height: 120)
-            
-            Button("Confirmar"){
-                
+            if Locale.current.language.region == "US" && Locale.current.language.languageCode == "en" {
+                DatePicker("", selection: $data, displayedComponents: [.hourAndMinute])
+            } else {
+                DatePicker("", selection: $data, displayedComponents: [.hourAndMinute])
+                    .overlay {
+                        HStack {
+                            Spacer()
+                            Rectangle()
+                                .frame(width: 7, height: 40)
+                                .foregroundStyle(.black)
+                        }
+                    }
             }
+            
+            Button("Confirmar") {
+                items.append(data)
+                selectedItems.insert(data)
+                pageManager.page = .smokingHours
+            }
+            
         }
     }
 }
 
 #Preview {
-    CreateSmokingHourView()
+    CreateSmokingHourView(
+        items: .constant([.now]), selectedItems: .constant([.now])
+    )
         .environment(PageManager())
 }

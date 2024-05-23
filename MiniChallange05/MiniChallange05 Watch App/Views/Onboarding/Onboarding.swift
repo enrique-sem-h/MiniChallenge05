@@ -20,6 +20,7 @@ enum Page {
     case vapeCost
     case smokingHours
     case createSmokingHour
+    case homeView
 }
 
 @Observable class PageManager {
@@ -30,28 +31,51 @@ struct Onboard: View {
     @Environment(PageManager.self) var pageManager
     @State var defnumero: Int = 1
     @State var viewAnterior:Page = .packCost
+    var userPreferences = UserPreferences()
+    
+    // Serve to pass the date to all dates.
+    @State var items: [Date] = [
+        Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!,
+        Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!,
+        Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: Date())!,
+        Calendar.current.date(bySettingHour: 16, minute: 0, second: 0, of: Date())!,
+        Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!,
+        Calendar.current.date(bySettingHour: 22, minute: 0, second: 0, of: Date())!
+    ]
+    @State var selectedItems: Set<Date> = []
     
     var body: some View {
         switch pageManager.page {
         case .presentation:
             PresentationView()
+            
+            Text(DataManager.shared.userModel?.cigarsType ?? "a")
+            
         case .smokingType:
-            SmokingTypeView()
+            SmokingTypeView(userPreferences: userPreferences)
         case .cigaretteCount:
-            CigaretteCountView(defVar: $defnumero)
+            CigaretteCountView(defVar: $defnumero, userPreferences: userPreferences)
         case .vapeFrequency:
-            VapeFrequencyView(defVar: $defnumero)
+            VapeFrequencyView(defVar: $defnumero, userPreferences: userPreferences)
         case .cigarettesPerPack:
-            CigarettesPerPackView(defVar: $defnumero)
+            CigarettesPerPackView(defVar: $defnumero, userPreferences: userPreferences)
         case .packCost:
-            PackCostView(defVar: $defnumero, viewAtual: $viewAnterior)
+            PackCostView(defVar: $defnumero, viewAtual: $viewAnterior, userPreferences: userPreferences)
         case .vapeCost:
-            VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior)
+            VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior, userPreferences: userPreferences)
         case .smokingHours:
-            SmokingHoursView(viewAnterior: $viewAnterior)
+            SmokingHoursView(viewAnterior: $viewAnterior, userPreferences: userPreferences,
+                            items: $items, selectedItems: $selectedItems
+            )
         case .createSmokingHour:
-            CreateSmokingHourView()
+            CreateSmokingHourView(
+                items: $items, selectedItems: $selectedItems
+            )
+            
+        case .homeView:
+            HomeView()
         }
+   
     }
 }
 

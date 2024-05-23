@@ -15,26 +15,25 @@ struct VapeFrequencyView: View {
     static let screenSize = WKInterfaceDevice.current().screenBounds.size
     let screenWidth = screenSize.width
     let screenHeight = screenSize.height
+    var userPreferences: UserPreferences
     
     var body: some View {
-        VStack {
-            Text("Quantas vezes por dia você costuma fumar?")
-                .padding(.bottom, 10)
-                .minimumScaleFactor(0.5)
-                .frame(width: screenWidth * 0.9, height: screenHeight * 0.2)
-            
-            OnboardingPicker(selectedNumber: $tempVar)
-                .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
-            
-            HStack {
+        ScrollView {
+            VStack {
+                Text("Quantas vezes por dia você costuma fumar?")
+                    .padding(.bottom, 5)
+                    .minimumScaleFactor(0.5)
+                    .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
                 
-                GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
+                OnboardingPicker(selectedNumber: $tempVar)
+                    .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
+                    .padding(.bottom, 10)
+                    
+                
+                    GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
             }
+        }.onDisappear{
+            userPreferences.vapePerDay = defVar
         }
     }
-}
-
-#Preview {
-    VapeFrequencyView(defVar: .constant(1))
-        .environment(PageManager())
 }
