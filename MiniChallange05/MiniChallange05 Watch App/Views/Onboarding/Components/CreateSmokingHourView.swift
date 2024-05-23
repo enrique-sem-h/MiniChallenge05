@@ -9,10 +9,11 @@ import SwiftUI
 
 struct CreateSmokingHourView: View {
     @Environment(PageManager.self) var pageManager
-    
-    @State var selectedHour = 12
-    @State var selectedMinute = 00
+
     @State var data: Date = .now
+    
+    @Binding var items: [Date]
+    @Binding var selectedItems: Set<Date>
     
     var body: some View {
         VStack(alignment: .leading){
@@ -39,7 +40,8 @@ struct CreateSmokingHourView: View {
             }
             
             Button("Confirmar") {
-                
+                items.append(data)
+                selectedItems.insert(data)
                 pageManager.page = .smokingHours
             }
             
@@ -48,6 +50,8 @@ struct CreateSmokingHourView: View {
 }
 
 #Preview {
-    CreateSmokingHourView()
+    CreateSmokingHourView(
+        items: .constant([.now]), selectedItems: .constant([.now])
+    )
         .environment(PageManager())
 }

@@ -16,15 +16,8 @@ struct SmokingHoursView: View {
     let screenHeight = screenSize.height
     var userPreferences: UserPreferences
     
-    @State var items: [Date] = [
-        Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!,
-        Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!,
-        Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: Date())!,
-        Calendar.current.date(bySettingHour: 16, minute: 0, second: 0, of: Date())!,
-        Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!,
-        Calendar.current.date(bySettingHour: 22, minute: 0, second: 0, of: Date())!
-    ]
-    @State private var selectedItems: Set<Date> = []
+    @Binding var items: [Date]
+    @Binding var selectedItems: Set<Date>
     
     var body: some View {
         ScrollView {
@@ -50,7 +43,9 @@ struct SmokingHoursView: View {
                 }
                 .padding()
                 Button("finalizar") {
+                    
                     userPreferences.hourSmoke = Array(selectedItems)
+                    
                     if userPreferences.smokingType.rawValue == UserModel.SmokeType.cigarette.rawValue {
                         guard let cigarsPerDay = userPreferences.cigarsPerDay else { return }
                         guard let cigarettesInPack = userPreferences.cigarettesInPack else { return }
@@ -63,7 +58,9 @@ struct SmokingHoursView: View {
                         DataManager.shared.userModel = UserModel(startStreak: .now, cigarsType: userPreferences.smokingType, vapePerDay: Int16(vapePerDay), smokeCost: userPreferences.smokeCost, hourSmoke: userPreferences.hourSmoke, quitDay: .now)
                         DataManager.shared.createUser()
                     }
-                    pageManager.page = .createSmokingHour
+                    
+                    pageManager.page = .homeView
+                    
                 }
                 .frame(height: 40)
                 .padding()
