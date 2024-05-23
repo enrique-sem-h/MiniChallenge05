@@ -1,18 +1,18 @@
 //
-//  AchievementView.swift
+//  HealthDetailComponent.swift
 //  MiniChallange05 Watch App
 //
-//  Created by Kaua Miguel on 17/05/24.
+//  Created by Giovanni Favorin de Melo on 22/05/24.
 //
 
 import SwiftUI
 
-struct AchievementView: View {
+struct HealthDetailComponent: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    AchievementView()
+    HealthDetailComponent()
 }

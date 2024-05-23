@@ -10,7 +10,10 @@ import SwiftUI
 struct HealthProgressView: View {
     
     var body: some View {
-        Text("s")
+        ScrollView {
+            Text("Progresso da Saúde")
+            
+        }
     }
 
 }
