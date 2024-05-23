@@ -12,7 +12,7 @@ struct CreateSmokingHourView: View {
     
     @State var selectedHour = 12
     @State var selectedMinute = 00
-    @State var data:Date = .now
+    @State var data: Date = .now
     
     var body: some View {
         VStack(alignment: .leading){
@@ -24,19 +24,25 @@ struct CreateSmokingHourView: View {
             }.buttonStyle(PlainButtonStyle())
             Spacer()
             
-            DatePicker(" ", selection: $data, displayedComponents: [.hourAndMinute])
-                .overlay {
-                    HStack {
-                        Spacer()
-                        Rectangle()
-                            .frame(width: 7, height: 40)
-                            .foregroundStyle(.black)
+            if Locale.current.language.region == "US" && Locale.current.language.languageCode == "en" {
+                DatePicker("", selection: $data, displayedComponents: [.hourAndMinute])
+            } else {
+                DatePicker("", selection: $data, displayedComponents: [.hourAndMinute])
+                    .overlay {
+                        HStack {
+                            Spacer()
+                            Rectangle()
+                                .frame(width: 7, height: 40)
+                                .foregroundStyle(.black)
+                        }
                     }
-                }
-            
-            Button("Confirmar"){
-                
             }
+            
+            Button("Confirmar") {
+                
+                pageManager.page = .smokingHours
+            }
+            
         }
     }
 }

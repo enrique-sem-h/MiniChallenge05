@@ -121,7 +121,10 @@ struct RowRectangle: View {
     
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
+        formatter.locale = .autoupdatingCurrent
+        formatter.timeStyle = .short
+        formatter.timeZone = .autoupdatingCurrent
         return formatter.string(from: date)
     }
+    
 }
