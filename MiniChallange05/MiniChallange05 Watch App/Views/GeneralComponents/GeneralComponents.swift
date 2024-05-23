@@ -14,10 +14,13 @@ struct CigaretteTypeButton : View{
     let width = WKInterfaceDevice.current().screenBounds.width
     let heigth = WKInterfaceDevice.current().screenBounds.height
     let cigarretTypeView : Page
+    var userPreferences: UserPreferences
+    var type: UserModel.SmokeType
     
     var body: some View{
         Button(action: {
             pageManager.page = cigarretTypeView
+            userPreferences.smokingType = type
         }, label: {
             Rectangle()
                 .frame(width: width / 2.2)
@@ -37,14 +40,16 @@ struct GenericBackAndNextButton : View{
     @Binding var defVar: Int
     
     var body: some View{
-        Button("Voltar") {
-            defVar = tempVar
-            pageManager.page = backwardsView
-        }
-        
-        Button("Próximo") {
-            defVar = tempVar
-            pageManager.page = fowardView
+        VStack{
+            Button("Voltar") {
+                defVar = tempVar
+                pageManager.page = backwardsView
+            }
+            
+            Button("Próximo") {
+                defVar = tempVar
+                pageManager.page = fowardView
+            }
         }
     }
 }

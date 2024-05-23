@@ -25,5 +25,6 @@ class User: NSManagedObject {
     @NSManaged public var smokeCost: Double
     @NSManaged public var startStreak: Date?
     @NSManaged public var streakPast: DateInterval?
+    @NSManaged public var vapePerDay: Int16
     
 }
