@@ -11,8 +11,10 @@ struct ContentView: View {
         
     var body: some View {
         
-        VStack {
-            
+        TabView {
+            HomeView()
+            HealthProgressView()
+            AchievementsView()
         }
     }
     

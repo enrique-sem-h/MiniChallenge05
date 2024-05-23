@@ -10,14 +10,26 @@ import SwiftUI
 struct HealthProgressView: View {
     
     var body: some View {
-        ScrollView {
-            Text("Progresso da Saúde")
+        ZStack {
+            Rectangle()
+                .foregroundStyle( .background)
+                .ignoresSafeArea()
             
+            ScrollView {
+                Text("Progresso da Saúde")
+                
+            }
         }
+        
+        
     }
 
 }
 
 #Preview {
     HealthProgressView()
+}
+
+#Preview {
+    ContentView()
 }
