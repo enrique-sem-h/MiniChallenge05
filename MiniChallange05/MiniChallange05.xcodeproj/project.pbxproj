@@ -577,7 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = K559Z2V9Q2;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
@@ -588,7 +588,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -607,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = K559Z2V9Q2;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
@@ -618,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -636,10 +636,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PL64AUG55;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -652,10 +652,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PL64AUG55;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
