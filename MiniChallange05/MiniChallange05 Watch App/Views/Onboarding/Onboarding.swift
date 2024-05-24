@@ -48,9 +48,6 @@ struct Onboard: View {
         switch pageManager.page {
         case .presentation:
             PresentationView()
-            
-            Text(DataManager.shared.userModel?.cigarsType ?? "a")
-            
         case .smokingType:
             SmokingTypeView(userPreferences: userPreferences)
         case .cigaretteCount:
