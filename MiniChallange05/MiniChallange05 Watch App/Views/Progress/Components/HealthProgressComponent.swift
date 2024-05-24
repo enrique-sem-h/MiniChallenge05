@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct HealthProgressComponent: View {
+    var title: String = "Title"
+    var porcentagem: Float = 0.5
     
     static let screenSize = WKInterfaceDevice.current().screenBounds.size
     let screenWidth = screenSize.width
     let screenHeight = screenSize.height
-    
-    @State private var porcentagem = 0.5
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
@@ -26,34 +26,18 @@ struct HealthProgressComponent: View {
                         
                         Spacer()
                         
-                        Text("\(porcentagem)%") // Mostrar a porcentagem
+                        let p = Int(porcentagem * 100)
+                        Text("\(Int(p))%")
                     }
                     .padding()
                     
-                    Spacer()
-                    
                     HStack {
-                        Text("Title")
+                        Text(title)
                         Spacer()
                     }
                     .padding()
                     
                     ProgressView(value: porcentagem)
-                        
-                    
-//                    GeometryReader { geometry in
-//                        ZStack(alignment: .leading) {
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .frame(height: screenHeight * 0.03)
-//                                .clipShape(.rect(cornerRadii: .init(topLeading: 0, bottomLeading: 10, bottomTrailing: 10, topTrailing: 0)))
-//                            
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .frame(width: geometry.size.width * CGFloat(porcentagem) / 100, height: screenHeight * 0.03)
-//                                .foregroundColor(.blue) // Barra azul que carrega de acordo com a porcentagem
-//                                .clipShape(.rect(cornerRadii: .init(topLeading: 0, bottomLeading: 0, bottomTrailing: 0, topTrailing: 0)))
-//                        }
-//                    }
-
                 }
             }
     }

@@ -18,6 +18,10 @@ struct UserProgressView: View {
             ScrollView {
                 Text("Progresso")
                 
+                ForEach( 0..<20) {_ in 
+                    HealthProgressComponent(title: "pepinos", porcentagem: 0.7)
+                }
+                
             }
         }
         
