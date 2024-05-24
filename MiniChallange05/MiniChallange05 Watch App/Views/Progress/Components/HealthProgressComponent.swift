@@ -38,6 +38,7 @@ struct HealthProgressComponent: View {
                     .padding()
                     
                     ProgressView(value: porcentagem)
+                        .scaleEffect(CGSize(width: 1, height: 0.5))
                 }
             }
     }
