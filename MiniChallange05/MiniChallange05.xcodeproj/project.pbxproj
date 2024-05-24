@@ -571,7 +571,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Mini05.watchkit;
+				PRODUCT_BUNDLE_IDENTIFIER = MiniChallenge05.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -601,7 +601,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Mini05.watchkit;
+				PRODUCT_BUNDLE_IDENTIFIER = MiniChallenge05.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -622,7 +622,7 @@
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Mini05;
+				PRODUCT_BUNDLE_IDENTIFIER = MiniChallenge05;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -638,7 +638,7 @@
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Mini05;
+				PRODUCT_BUNDLE_IDENTIFIER = MiniChallenge05;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
