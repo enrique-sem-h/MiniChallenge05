@@ -7,12 +7,13 @@
 
 import SwiftUI
 
+let screenWidth = WKInterfaceDevice.current().screenBounds.width
+let screenHeight = WKInterfaceDevice.current().screenBounds.height
+
 //Button with in the onboarding2 View with the same interface and just a different navigation behavior
 struct CigaretteTypeButton : View{
     
     @Environment(PageManager.self) var pageManager : PageManager
-    let width = WKInterfaceDevice.current().screenBounds.width
-    let heigth = WKInterfaceDevice.current().screenBounds.height
     let cigarretTypeView : Page
     var userPreferences: UserPreferences
     var type: UserModel.SmokeType
@@ -23,7 +24,7 @@ struct CigaretteTypeButton : View{
             userPreferences.smokingType = type
         }, label: {
             Rectangle()
-                .frame(width: width / 2.2)
+                .frame(width: screenWidth / 2.2)
                 .cornerRadius(8.0)
         })
         .buttonStyle(PlainButtonStyle())

@@ -11,9 +11,6 @@ struct SmokingHoursView: View {
     @Environment(PageManager.self) var pageManager
     @Binding var viewAnterior: Page
     
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
     var userPreferences: UserPreferences
     
     @Binding var items: [Date]
@@ -76,9 +73,6 @@ struct SmokingHoursView: View {
 
 struct HeaderView: View {
     @Environment(PageManager.self) var pageManager
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
     
     var body: some View {
         HStack {

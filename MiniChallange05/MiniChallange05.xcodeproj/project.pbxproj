@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315CDEEF2C012B950067061F /* AchievementDetail.swift */; };
 		3193190D2BFE627C001A1C40 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193190C2BFE627C001A1C40 /* UserPreferences.swift */; };
 		9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D2A2BFBE9CF003CF148 /* UserModel.swift */; };
 		9BD619872BFD2EF3004EF522 /* UUIDArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */; };
@@ -28,6 +29,8 @@
 		B89F2B5B2BFF83B1004EED57 /* ConquestHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B572BFF83B1004EED57 /* ConquestHomeView.swift */; };
 		B89F2B5C2BFF83B1004EED57 /* HealthHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B582BFF83B1004EED57 /* HealthHomeView.swift */; };
 		B89F2B5D2BFF83B1004EED57 /* StreakHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B592BFF83B1004EED57 /* StreakHomeView.swift */; };
+		B89F2B622C0105A9004EED57 /* HealthDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B5F2C0105A9004EED57 /* HealthDetailComponent.swift */; };
+		B89F2B632C0105A9004EED57 /* HealthProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B602C0105A9004EED57 /* HealthProgressComponent.swift */; };
 		B8F671BE2BFD0F8E005DE68E /* OnboardingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05182BFBC01400D49274 /* OnboardingPicker.swift */; };
 		CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */; };
@@ -35,7 +38,7 @@
 		CE278A852BF7DF2C0075E22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE278A842BF7DF2C0075E22E /* Assets.xcassets */; };
 		CE278A882BF7DF2C0075E22E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE278A872BF7DF2C0075E22E /* Preview Assets.xcassets */; };
 		CE278A9C2BF7DFA30075E22E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9B2BF7DFA30075E22E /* HomeView.swift */; };
-		CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */; };
+		CE278AA02BF7DFC00075E22E /* UserProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A9F2BF7DFC00075E22E /* UserProgressView.swift */; };
 		CE278AA22BF7DFD00075E22E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA12BF7DFD00075E22E /* Onboarding.swift */; };
 		CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */; };
 		CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* DataManager.swift */; };
@@ -69,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		315CDEEF2C012B950067061F /* AchievementDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetail.swift; sourceTree = "<group>"; };
 		3193190C2BFE627C001A1C40 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDArrayTransformer.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		B89F2B572BFF83B1004EED57 /* ConquestHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConquestHomeView.swift; sourceTree = "<group>"; };
 		B89F2B582BFF83B1004EED57 /* HealthHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthHomeView.swift; sourceTree = "<group>"; };
 		B89F2B592BFF83B1004EED57 /* StreakHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreakHomeView.swift; sourceTree = "<group>"; };
+		B89F2B5F2C0105A9004EED57 /* HealthDetailComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthDetailComponent.swift; sourceTree = "<group>"; };
+		B89F2B602C0105A9004EED57 /* HealthProgressComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthProgressComponent.swift; sourceTree = "<group>"; };
 		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallange05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallange05App.swift; sourceTree = "<group>"; };
@@ -98,7 +104,7 @@
 		CE278A842BF7DF2C0075E22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE278A872BF7DF2C0075E22E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE278A9B2BF7DFA30075E22E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProgressView.swift; sourceTree = "<group>"; };
+		CE278A9F2BF7DFC00075E22E /* UserProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgressView.swift; sourceTree = "<group>"; };
 		CE278AA12BF7DFD00075E22E /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
 		CE278AA52BF7DFF40075E22E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -159,6 +165,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		B89F2B612C0105A9004EED57 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B89F2B5F2C0105A9004EED57 /* HealthDetailComponent.swift */,
+				B89F2B602C0105A9004EED57 /* HealthProgressComponent.swift */,
+			);
+			name = Components;
+			path = "MiniChallange05 Watch App/Views/Progress/Components";
+			sourceTree = SOURCE_ROOT;
+		};
 		CE278A6E2BF7DF2B0075E22E = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +231,7 @@
 				CE278AAA2BF7E0290075E22E /* GeneralComponents */,
 				CE278A9A2BF7DF8F0075E22E /* Home */,
 				CE278A992BF7DF820075E22E /* Achievements */,
-				CE278A982BF7DF790075E22E /* HealthProgress */,
+				CE278A982BF7DF790075E22E /* Progress */,
 				CE278A972BF7DF700075E22E /* Onboarding */,
 				CE278A962BF7DF620075E22E /* ContentView */,
 			);
@@ -259,12 +275,13 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		CE278A982BF7DF790075E22E /* HealthProgress */ = {
+		CE278A982BF7DF790075E22E /* Progress */ = {
 			isa = PBXGroup;
 			children = (
-				CE278A9F2BF7DFC00075E22E /* HealthProgressView.swift */,
+				B89F2B612C0105A9004EED57 /* Components */,
+				CE278A9F2BF7DFC00075E22E /* UserProgressView.swift */,
 			);
-			path = HealthProgress;
+			path = Progress;
 			sourceTree = "<group>";
 		};
 		CE278A992BF7DF820075E22E /* Achievements */ = {
@@ -272,6 +289,7 @@
 			children = (
 				B89F2B522BFF839C004EED57 /* Components */,
 				B89F2B552BFF83A5004EED57 /* AchievementsView.swift */,
+				315CDEEF2C012B950067061F /* AchievementDetail.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -394,6 +412,7 @@
 			files = (
 				CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */,
 				CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */,
+				B89F2B632C0105A9004EED57 /* HealthProgressComponent.swift in Sources */,
 				B8F671BE2BFD0F8E005DE68E /* OnboardingPicker.swift in Sources */,
 				9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */,
 				B89C05172BF7FB8000D49274 /* CreateSmokingHourView.swift in Sources */,
@@ -406,9 +425,11 @@
 				B89C050D2BF7FB5C00D49274 /* VapeFrequencyView.swift in Sources */,
 				B89C050F2BF7FB6400D49274 /* CigarettesPerPackView.swift in Sources */,
 				CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */,
-				CE278AA02BF7DFC00075E22E /* HealthProgressView.swift in Sources */,
+				CE278AA02BF7DFC00075E22E /* UserProgressView.swift in Sources */,
+				B89F2B622C0105A9004EED57 /* HealthDetailComponent.swift in Sources */,
 				CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */,
 				9BD6198B2BFD30E0004EF522 /* DateIntervalTransformer.swift in Sources */,
+				315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */,
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
 				B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */,
 				B89F2B542BFF839C004EED57 /* AchievementsDetailView.swift in Sources */,
@@ -560,7 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = K559Z2V9Q2;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
@@ -571,7 +592,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -590,7 +611,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = K559Z2V9Q2;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
@@ -601,7 +622,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -619,10 +640,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PL64AUG55;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -635,10 +656,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PL64AUG55;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MindMath.MiniChallange05;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
