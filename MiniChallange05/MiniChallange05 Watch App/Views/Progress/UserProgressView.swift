@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HealthProgressView: View {
+struct UserProgressView: View {
     
     var body: some View {
         ZStack {
@@ -16,7 +16,7 @@ struct HealthProgressView: View {
                 .ignoresSafeArea()
             
             ScrollView {
-                Text("Progresso da Saúde")
+                Text("Progresso")
                 
             }
         }
@@ -27,9 +27,5 @@ struct HealthProgressView: View {
 }
 
 #Preview {
-    HealthProgressView()
-}
-
-#Preview {
-    ContentView()
+    UserProgressView()
 }
