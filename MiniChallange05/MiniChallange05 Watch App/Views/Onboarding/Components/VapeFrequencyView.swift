@@ -12,9 +12,6 @@ struct VapeFrequencyView: View {
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
     var userPreferences: UserPreferences
     
     var body: some View {
