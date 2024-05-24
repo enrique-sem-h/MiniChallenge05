@@ -25,6 +25,7 @@ struct CigaretteCountView: View {
                 OnboardingPicker(selectedNumber: $tempVar)
                     .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
                     .padding(.bottom,10)
+                    
                 
                 
                 GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: Binding(projectedValue: .constant(tempVar)), defVar: Binding(projectedValue: .constant(defVar)))
