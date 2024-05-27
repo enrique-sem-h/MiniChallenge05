@@ -46,8 +46,6 @@
 		CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */; };
 		CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */; };
-		CEA1E49D2C04FD72005D9F0D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E49C2C04FD72005D9F0D /* NotificationController.swift */; };
-		CEA1E49F2C04FDA3005D9F0D /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E49E2C04FDA3005D9F0D /* NotificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,8 +124,6 @@
 		CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
 		CE7CE6C22C013263002E4001 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		CE7CE6C42C013263002E4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEA1E49C2C04FD72005D9F0D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		CEA1E49E2C04FDA3005D9F0D /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,8 +332,6 @@
 			isa = PBXGroup;
 			children = (
 				CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */,
-				CEA1E49C2C04FD72005D9F0D /* NotificationController.swift */,
-				CEA1E49E2C04FDA3005D9F0D /* NotificationView.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -467,14 +461,12 @@
 				CE278AA42BF7DFDE0075E22E /* AchievementModel.swift in Sources */,
 				CE278AA02BF7DFC00075E22E /* UserProgressView.swift in Sources */,
 				B89F2B622C0105A9004EED57 /* HealthDetailComponent.swift in Sources */,
-				CEA1E49F2C04FDA3005D9F0D /* NotificationView.swift in Sources */,
 				CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */,
 				9BD6198B2BFD30E0004EF522 /* DateIntervalTransformer.swift in Sources */,
 				315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */,
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
 				B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */,
 				B89F2B542BFF839C004EED57 /* AchievementsDetailView.swift in Sources */,
-				CEA1E49D2C04FD72005D9F0D /* NotificationController.swift in Sources */,
 				B89C05152BF7FB7900D49274 /* SmokingHoursView.swift in Sources */,
 				B89F2B562BFF83A5004EED57 /* AchievementsView.swift in Sources */,
 				B89C05132BF7FB7200D49274 /* VapeCostView.swift in Sources */,

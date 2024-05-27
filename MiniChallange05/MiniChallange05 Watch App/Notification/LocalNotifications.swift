@@ -11,6 +11,7 @@ import Foundation
 final class LocalNotifications: NSObject {
     
     let smokeHours = DataManager.shared.userModel?.hourSmoke
+    
     private let smokedActionIdentifier: String = "SmokedID"
     private let notSmokedActionIdentifier: String = "NotSmokedID"
     private let categoryIdentifier: String = "categoryID"
@@ -48,24 +49,28 @@ final class LocalNotifications: NSObject {
     func schedule() {
         let current = UNUserNotificationCenter.current()
         
-        current.getNotificationSettings { settings in
+        current.getNotificationSettings { [self] settings in
             guard settings.alertSetting == .enabled else { return }
             
-            let content = UNMutableNotificationContent()
-            content.title = "Notificação da pitada"
-            content.subtitle = "Responda: "
-            content.body = "Você fumou ? :((("
-            content.categoryIdentifier = self.categoryIdentifier
+            guard let smokedHours = smokeHours else {return}
             
-            let components = DateComponents(second: 3)
-            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-            
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-            
-            
-            current.add(request) { error in
-                if let error = error {
-                    print("Error adding notification: \(error.localizedDescription)")
+            for smokeHour in smokedHours {
+                let content = UNMutableNotificationContent()
+                content.title = "Notificação da pitada"
+                content.subtitle = "Responda: "
+                content.body = "Você fumou ? :((("
+                content.categoryIdentifier = self.categoryIdentifier
+                
+                let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour, .minute, .second], from: smokeHour)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                
+                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                
+                
+                current.add(request) { error in
+                    if let error = error {
+                        print("Error adding notification: \(error.localizedDescription)")
+                    }
                 }
             }
         }
@@ -74,7 +79,7 @@ final class LocalNotifications: NSObject {
 
 extension LocalNotifications: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) -> UNNotificationPresentationOptions {
-        return [.list, .sound]
+        return [.banner, .sound]
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
