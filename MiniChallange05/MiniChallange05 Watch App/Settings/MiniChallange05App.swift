@@ -9,16 +9,13 @@ import SwiftUI
 
 @main
 struct MiniChallange05_Watch_AppApp: App {
-<<<<<<< HEAD
             
     private let localNotification = LocalNotifications()
-=======
     var isOnboarding: Bool {
         get {
             UserDefaults.standard.bool(forKey: "isOnboarding")
         }
     }
->>>>>>> Developer
     
     var body: some Scene {
         WindowGroup {

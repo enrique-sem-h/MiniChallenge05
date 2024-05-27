@@ -50,10 +50,6 @@ struct Onboard: View {
         switch pageManager.page {
         case .presentation:
             PresentationView()
-<<<<<<< HEAD
-=======
-            
->>>>>>> Developer
         case .smokingType:
             SmokingTypeView(userPreferences: userPreferences)
         case .cigaretteCount:
