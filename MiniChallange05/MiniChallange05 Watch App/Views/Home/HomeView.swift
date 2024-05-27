@@ -12,16 +12,15 @@ struct HomeView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                StreakComponents()
-                
-                HealthHomeView()
-                
-                ConquestHomeView()
-            }.onAppear{
-                DataManager.shared.fetchUser()
-            }
+            
+            StreakComponents()
+            
+            HealthHomeView()
+            
+            ConquestHomeView()
+            
         }
+        .scenePadding(.horizontal)
     }
 }
 

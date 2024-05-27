@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315CDEEF2C012B950067061F /* AchievementDetail.swift */; };
 		3193190D2BFE627C001A1C40 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193190C2BFE627C001A1C40 /* UserPreferences.swift */; };
 		9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D2A2BFBE9CF003CF148 /* UserModel.swift */; };
 		9BD619872BFD2EF3004EF522 /* UUIDArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		315CDEEF2C012B950067061F /* AchievementDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetail.swift; sourceTree = "<group>"; };
 		3193190C2BFE627C001A1C40 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDArrayTransformer.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			children = (
 				B89F2B522BFF839C004EED57 /* Components */,
 				B89F2B552BFF83A5004EED57 /* AchievementsView.swift */,
+				315CDEEF2C012B950067061F /* AchievementDetail.swift */,
 			);
 			path = Achievements;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				B89F2B622C0105A9004EED57 /* ProgressDetailComponent.swift in Sources */,
 				CE278AA62BF7DFF40075E22E /* DataManager.swift in Sources */,
 				9BD6198B2BFD30E0004EF522 /* DateIntervalTransformer.swift in Sources */,
+				315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */,
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
 				B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */,
 				B89F2B542BFF839C004EED57 /* AchievementsDetailView.swift in Sources */,

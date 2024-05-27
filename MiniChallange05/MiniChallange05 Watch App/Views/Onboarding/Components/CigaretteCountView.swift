@@ -14,10 +14,6 @@ struct CigaretteCountView: View {
     @Binding var defVar: Int
     var userPreferences: UserPreferences
     
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
-    
     var body: some View {
         ScrollView {
             VStack {
