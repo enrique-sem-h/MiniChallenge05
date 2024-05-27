@@ -8,66 +8,87 @@
 import UserNotifications
 import Foundation
 
-final class LocalNotifications : NSObject{
+final class LocalNotifications: NSObject {
+    
     let smokeHours = DataManager.shared.userModel?.hourSmoke
-    private let actionIdentifier : String = "actionID"
-    private let categoryIdentifier : String = "categoryID"
+    private let smokedActionIdentifier: String = "SmokedID"
+    private let notSmokedActionIdentifier: String = "NotSmokedID"
+    private let categoryIdentifier: String = "categoryID"
     
     override init() {
         super.init()
         
-        Task{
-            do{
-                requestPermission()
-                try await schedule()
-            }catch{
-                print("\(error.localizedDescription)")
+        requestPermission { [weak self] granted in
+            if granted {
+                self?.schedule()
             }
         }
     }
     
-    
-    func requestPermission(){
+    func requestPermission(completion: @escaping (Bool) -> Void) {
         let current = UNUserNotificationCenter.current()
-        current.requestAuthorization(options: [.alert,.badge,.sound]) { success, error in
+        current.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
-                print("Succsess in notiicatino authorization")
-            }else{
-                print("Failure in notiicatino authorization")
+                print("Success in notification authorization")
+                completion(true)
+            } else {
+                print("Failure in notification authorization")
+                completion(false)
             }
         }
         
-        let action = UNNotificationAction(identifier: actionIdentifier, title: "teste")
-        let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [action], intentIdentifiers: [])
+        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: "Fumei")
+        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: "Não Fumei")
+        let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [smokedButton, notSmokedButton], intentIdentifiers: [])
         
         current.setNotificationCategories([category])
         current.delegate = self
-        
     }
     
-    func schedule() async throws{
+    func schedule() {
         let current = UNUserNotificationCenter.current()
-        let settings = await current.notificationSettings()
         
-        guard settings.alertSetting == .enabled else {return}
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Teste titulo"
-        content.subtitle = "Teste subtitle"
-        content.body = "Teste de body"
-        
-        let components = DateComponents(second: 3)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        try await current.add(request)
+        current.getNotificationSettings { settings in
+            guard settings.alertSetting == .enabled else { return }
+            
+            let content = UNMutableNotificationContent()
+            content.title = "Notificação da pitada"
+            content.subtitle = "Responda: "
+            content.body = "Você fumou ? :((("
+            content.categoryIdentifier = self.categoryIdentifier
+            
+            let components = DateComponents(second: 3)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            
+            
+            current.add(request) { error in
+                if let error = error {
+                    print("Error adding notification: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+}
+
+extension LocalNotifications: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) -> UNNotificationPresentationOptions {
+        return [.list, .sound]
     }
     
-}
-
-
-extension LocalNotifications : UNUserNotificationCenterDelegate{
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        return [.list, .sound ]
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.actionIdentifier == smokedActionIdentifier {
+            //Colocar a ação do usuário quando ele fumar
+        } else if response.actionIdentifier == notSmokedActionIdentifier {
+            //Colocar as ações a serem feitas quando ele não fumar
+        }
+        
+        completionHandler()
     }
 }
+
+
+
+
+
