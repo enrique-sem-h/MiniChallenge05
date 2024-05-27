@@ -13,7 +13,7 @@ struct Updater: Codable { // a simple struct to validate if the health message h
 }
 
 struct HealthHomeView: View {
-    @State var text = "this shouldnt appear"
+    @State var text = ""
     
     var body: some View {
         VStack {
@@ -28,12 +28,12 @@ struct HealthHomeView: View {
                         .padding()
                 }
         }.onAppear{
-            updateMessage()
+            checkUpdate()
         }
     }
     
     // checks if the message has been updated today
-    mutating func checkUpdate(){
+    func checkUpdate(){
         let calendar = Calendar.current
         
         guard var updater = getUpdater() else { return }
@@ -57,12 +57,12 @@ struct HealthHomeView: View {
         ]
          
          guard var updater = getUpdater() else { return }
-//         if updater.canUpdate {
+         if updater.canUpdate {
             text = messages[Int.random(in: 0..<messages.count)]
             updater.date = .now
             updater.canUpdate = false
             setUpdater(newValue: updater)
-//        }
+        }
     }
     
     // retrieving updater from UserDefaults
