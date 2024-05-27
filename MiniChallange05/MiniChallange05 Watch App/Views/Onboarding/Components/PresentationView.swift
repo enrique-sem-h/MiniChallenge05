@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PresentationView: View {
     @Environment(PageManager.self) var pageManager
-    let notification = NotificationHandler()
     
     var body: some View {
         VStack {
@@ -39,9 +38,6 @@ struct PresentationView: View {
             .clipShape(Capsule())
             .frame(maxWidth: .infinity, alignment: .center)
             
-        }
-        .task {
-            notification.setNotifications()
         }
     }
 }
