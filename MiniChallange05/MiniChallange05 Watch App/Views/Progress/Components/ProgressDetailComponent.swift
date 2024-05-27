@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct HealthDetailComponent: View {
+struct ProgressDetailComponent: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+        }
     }
 }
 
 #Preview {
-    HealthDetailComponent()
+    ProgressDetailComponent()
 }

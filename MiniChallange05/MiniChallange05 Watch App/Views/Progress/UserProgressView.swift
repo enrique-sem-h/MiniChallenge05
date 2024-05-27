@@ -10,24 +10,27 @@ import SwiftUI
 struct UserProgressView: View {
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundStyle( .background)
-                .ignoresSafeArea()
-            
-            ScrollView {
-                Text("Progresso")
+        NavigationStack {
+            ZStack {
+                Rectangle()
+                    .foregroundStyle( .background)
+                    .ignoresSafeArea()
                 
-                ForEach( 0..<20) {_ in 
-                    HealthProgressComponent(title: "pepinos", porcentagem: 0.7)
+                ScrollView {
+                    Text("Progresso")
+                    
+                    ForEach( 0..<20) {_ in 
+                        NavigationLink {
+                            ProgressDetailComponent()
+                        } label: {
+                            ProgressComponent(title: "pepinos", porcentagem: 0.7)
+                        }//Tá tendo bug com a navigationLink
+                        
+                    }
                 }
-                
             }
         }
-        
-        
     }
-
 }
 
 #Preview {

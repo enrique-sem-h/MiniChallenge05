@@ -7,13 +7,9 @@
 
 import SwiftUI
 
-struct HealthProgressComponent: View {
+struct ProgressComponent: View {
     var title: String = "Title"
     var porcentagem: Float = 0.5
-    
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
@@ -45,5 +41,5 @@ struct HealthProgressComponent: View {
 }
 
 #Preview {
-    HealthProgressComponent()
+    ProgressComponent()
 }
