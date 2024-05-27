@@ -73,7 +73,7 @@ struct Onboard: View {
             )
             
         case .homeView:
-            HomeView()
+            ContentView()
         }
    
     }
