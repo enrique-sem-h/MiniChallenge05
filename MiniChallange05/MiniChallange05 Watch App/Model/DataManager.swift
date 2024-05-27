@@ -107,6 +107,12 @@ class DataManager {
         saveData()
     }
     
+    func updateHourSmoke(hourSmoke: [Date]){
+        self.userEntity?.hourSmoke = hourSmoke
+        self.userModel?.hourSmoke = hourSmoke
+        saveData()
+    }
+    
     func editData(cigarsPerDay: Int16 = 0) {
         guard let userEntity = self.userEntity else { return }
         userEntity.cigarsPerDay = cigarsPerDay
