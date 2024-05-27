@@ -45,6 +45,7 @@
 		CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */; };
 		CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */; };
+		CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,16 @@
 				CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7CE6CB2C013263002E4001 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -110,6 +121,9 @@
 		CE278AA52BF7DFF40075E22E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralComponents.swift; sourceTree = "<group>"; };
 		CE69264D2BFE60A300ABE06B /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		CE7CE6C22C013263002E4001 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		CE7CE6C42C013263002E4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */,
+				CE7CE6C12C013263002E4001 /* NotificationService */,
 				CE278A762BF7DF2B0075E22E /* Products */,
 				9B711D222BFBE855003CF148 /* Recovered References */,
 			);
@@ -196,6 +211,7 @@
 		CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CE6B92C01275E002E4001 /* Notification */,
 				CE278A952BF7DF470075E22E /* Settings */,
 				CE278A942BF7DF400075E22E /* Model */,
 				CE278A932BF7DF3C0075E22E /* Views */,
@@ -312,6 +328,23 @@
 			path = GeneralComponents;
 			sourceTree = "<group>";
 		};
+		CE7CE6B92C01275E002E4001 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		CE7CE6C12C013263002E4001 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				CE7CE6C22C013263002E4001 /* NotificationService.swift */,
+				CE7CE6C42C013263002E4001 /* Info.plist */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +372,7 @@
 				CE278A772BF7DF2B0075E22E /* Sources */,
 				CE278A782BF7DF2B0075E22E /* Frameworks */,
 				CE278A792BF7DF2B0075E22E /* Resources */,
+				CE7CE6CB2C013263002E4001 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -356,7 +390,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					CE278A742BF7DF2B0075E22E = {
@@ -438,6 +472,7 @@
 				B89C05132BF7FB7200D49274 /* VapeCostView.swift in Sources */,
 				B89C050B2BF7FB5500D49274 /* CigaretteCountView.swift in Sources */,
 				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
+				CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */,
 				B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */,
 				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,
 				B89F2B5C2BFF83B1004EED57 /* HealthHomeView.swift in Sources */,
@@ -576,6 +611,7 @@
 		CE278A8C2BF7DF2C0075E22E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -606,6 +642,7 @@
 		CE278A8D2BF7DF2C0075E22E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -640,7 +677,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
@@ -656,7 +693,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;

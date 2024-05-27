@@ -94,7 +94,6 @@ class DataManager {
         }
     }
     
-    
     func updatePackCost(smokeCost : Double){
         self.userEntity?.smokeCost = smokeCost
         self.userModel?.smokeCost = smokeCost

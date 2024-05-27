@@ -49,9 +49,8 @@ struct ProgressDetailComponent: View {
             .padding(.top)
             
             Text(sourceText)
-        
+            
         }.scenePadding(.horizontal)
-        
     }
 }
 
