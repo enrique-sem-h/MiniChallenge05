@@ -32,6 +32,7 @@ struct Onboard: View {
     @State var defnumero: Int = 1
     @State var viewAnterior:Page = .packCost
     var userPreferences = UserPreferences()
+    var isOnboarding: Bool
     
     // Serve to pass the date to all dates.
     @State var items: [Date] = [
@@ -49,6 +50,10 @@ struct Onboard: View {
         switch pageManager.page {
         case .presentation:
             PresentationView()
+<<<<<<< HEAD
+=======
+            
+>>>>>>> Developer
         case .smokingType:
             SmokingTypeView(userPreferences: userPreferences)
         case .cigaretteCount:
@@ -72,12 +77,14 @@ struct Onboard: View {
             
         case .homeView:
             ContentView()
+                .onAppear{
+                    UserDefaults.standard.setValue(true, forKey: "isOnboarding")
+            }
         }
-   
     }
 }
 
 #Preview {
-    Onboard()
+    Onboard(isOnboarding: true)
         .environment(PageManager())
 }
