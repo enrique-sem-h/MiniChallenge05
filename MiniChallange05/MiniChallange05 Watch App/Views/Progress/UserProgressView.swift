@@ -17,9 +17,8 @@ struct UserProgressView: View {
                     .ignoresSafeArea()
                 
                 ScrollView {
-                    Text("Progresso")
                     
-                    ForEach( 0..<20) {_ in 
+                    ForEach( 0..<20) {_ in
                         NavigationLink {
                             ProgressDetailComponent()
                         } label: {
@@ -28,7 +27,9 @@ struct UserProgressView: View {
                         
                     }
                 }
+                
             }
+            .navigationTitle("Progresso")
         }
     }
 }

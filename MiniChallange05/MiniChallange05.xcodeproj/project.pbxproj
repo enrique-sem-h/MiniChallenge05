@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315CDEEF2C012B950067061F /* AchievementDetail.swift */; };
 		3193190D2BFE627C001A1C40 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193190C2BFE627C001A1C40 /* UserPreferences.swift */; };
+		9B5C8A6E2C05283D00416DE0 /* SavingsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C8A6D2C05283D00416DE0 /* SavingsComponent.swift */; };
 		9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D2A2BFBE9CF003CF148 /* UserModel.swift */; };
 		9BD619872BFD2EF3004EF522 /* UUIDArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */; };
 		9BD619892BFD3018004EF522 /* DateArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		315CDEEF2C012B950067061F /* AchievementDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetail.swift; sourceTree = "<group>"; };
 		3193190C2BFE627C001A1C40 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		9B5C8A6D2C05283D00416DE0 /* SavingsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsComponent.swift; sourceTree = "<group>"; };
 		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDArrayTransformer.swift; sourceTree = "<group>"; };
 		9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateArrayTransformer.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				B89F2B5F2C0105A9004EED57 /* ProgressDetailComponent.swift */,
 				B89F2B602C0105A9004EED57 /* ProgressComponent.swift */,
+				9B5C8A6D2C05283D00416DE0 /* SavingsComponent.swift */,
 			);
 			name = Components;
 			path = "MiniChallange05 Watch App/Views/Progress/Components";
@@ -433,6 +436,7 @@
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
 				B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */,
 				B89F2B542BFF839C004EED57 /* AchievementsDetailView.swift in Sources */,
+				9B5C8A6E2C05283D00416DE0 /* SavingsComponent.swift in Sources */,
 				B89C05152BF7FB7900D49274 /* SmokingHoursView.swift in Sources */,
 				B89F2B562BFF83A5004EED57 /* AchievementsView.swift in Sources */,
 				B89C05132BF7FB7200D49274 /* VapeCostView.swift in Sources */,
