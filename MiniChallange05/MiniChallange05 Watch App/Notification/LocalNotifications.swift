@@ -49,6 +49,10 @@ final class LocalNotifications: NSObject {
     func schedule() {
         let current = UNUserNotificationCenter.current()
         
+        //Remove all notifications
+        current.removeAllPendingNotificationRequests()
+        current.removeAllDeliveredNotifications()
+        
         current.getNotificationSettings { [self] settings in
             guard settings.alertSetting == .enabled else { return }
             
@@ -75,6 +79,7 @@ final class LocalNotifications: NSObject {
             }
         }
     }
+    
 }
 
 extension LocalNotifications: UNUserNotificationCenterDelegate {
