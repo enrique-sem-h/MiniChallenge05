@@ -8,33 +8,43 @@
 import SwiftUI
 
 struct ConquestHomeView: View {
+    
+    @State var porcentagem: Float = 0.8
+    @State var achievementText: String = "Complete seu primeiro ano sem fumar"
+    
     var body: some View {
         VStack {
             Text("Próxima conquista")
+                .lineLimit(1)
+                .font(.title3)
                 .padding(.bottom)
+                .minimumScaleFactor(0.6)
             
-            HStack {
-                Ellipse()
-                    .frame(width: 60, height: 60)
+            HStack(alignment: .top) {
+                
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(maxWidth: screenWidth * 0.35, maxHeight: screenHeight * 0.3)
                 
                 VStack {
-                    Text("Conquista")
-                        .font(.system(size: 14))
                     
-                    Text("Complete seu primeiro ano sem fumar")
+                    Text(achievementText)
+                        .padding(.leading)
+                        .padding(.bottom)
                     
                     HStack {
-                        Text("Progresso")
                         Spacer()
-                        Text("86%")
+                        let p = Int(porcentagem * 100)
+                        Text("\(Int(p))%")
                     }
-                    RoundedRectangle(cornerRadius: 6)
-                        .frame(height: 50)
+                    
+                    ProgressView(value: porcentagem)
+                        .scaleEffect(CGSize(width: 1, height: 0.5))
+            
                 }
+                
             }
         }
-        .padding(.horizontal)
-        .background(.purple.opacity(0.8))
+        
     }
 }
 
