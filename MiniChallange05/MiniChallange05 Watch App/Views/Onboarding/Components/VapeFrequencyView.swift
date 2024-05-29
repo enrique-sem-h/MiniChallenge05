@@ -22,9 +22,9 @@ struct VapeFrequencyView: View {
                     .minimumScaleFactor(0.5)
                     .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
                 
-//                OnboardingPicker(selectedNumber: $tempVar)
-//                    .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
-//                    .padding(.bottom, 10)
+                OnboardingPicker(selectedNumber: $tempVar)
+                    .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
+                    .padding(.bottom, 10)
                     
                 
                     GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
