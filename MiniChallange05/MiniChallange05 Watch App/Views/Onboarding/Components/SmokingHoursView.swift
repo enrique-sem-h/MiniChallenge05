@@ -55,7 +55,6 @@ struct SmokingHoursView: View {
                     pageManager.page = .homeView
                     
                 }
-//                .frame(height: 40)
                 
                 Button("Voltar") {
                     pageManager.page = viewAnterior

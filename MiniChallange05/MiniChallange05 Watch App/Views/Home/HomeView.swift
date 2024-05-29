@@ -22,7 +22,7 @@ struct HomeView: View {
                 
                 HealthHomeView()
                 
-                ConquestHomeView()
+//                ConquestHomeView()
                 
             }
             .scenePadding(.horizontal)

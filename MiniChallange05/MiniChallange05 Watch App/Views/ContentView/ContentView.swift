@@ -13,8 +13,8 @@ struct ContentView: View {
         
         TabView {
             HomeView()
-            UserProgressView()
-            AchievementsView()
+//            UserProgressView()
+//            AchievementsView()
         }
     }
     
