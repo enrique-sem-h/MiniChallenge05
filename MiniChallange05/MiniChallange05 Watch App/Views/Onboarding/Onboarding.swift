@@ -43,13 +43,13 @@ struct Onboard: View {
         Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 22, minute: 0, second: 0, of: Date())!
     ]
+    
     @State var selectedItems: Set<Date> = []
     
     var body: some View {
         switch pageManager.page {
         case .presentation:
             PresentationView()
-            
         case .smokingType:
             SmokingTypeView(userPreferences: userPreferences)
         case .cigaretteCount:

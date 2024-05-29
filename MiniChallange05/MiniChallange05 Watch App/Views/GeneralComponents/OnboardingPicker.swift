@@ -14,14 +14,13 @@ struct OnboardingPicker: View {
     @State var range: Range<Int>?
     
     var body: some View {
-        VStack {
-            Picker(label ?? "", selection: $selectedNumber) {
-                ForEach(range ?? 1..<21) { number in
-                    Text("\(number)").tag(number)
-                }
+        
+        Picker(label ?? "", selection: $selectedNumber) {
+            ForEach(range ?? 1..<21) { number in
+                Text("\(number)").tag(number)
             }
-            .pickerStyle(WheelPickerStyle())
         }
+        .pickerStyle(WheelPickerStyle())
     }
 }
 
