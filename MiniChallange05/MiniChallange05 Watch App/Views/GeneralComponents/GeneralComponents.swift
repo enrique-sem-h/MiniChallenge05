@@ -24,7 +24,7 @@ struct CigaretteTypeButton : View{
             userPreferences.smokingType = type
         }, label: {
             Rectangle()
-                .frame(width: screenWidth / 2.2)
+                .frame(height: 64)
                 .cornerRadius(8.0)
         })
         .buttonStyle(PlainButtonStyle())

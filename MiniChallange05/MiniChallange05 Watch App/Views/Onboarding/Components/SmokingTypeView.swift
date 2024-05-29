@@ -12,49 +12,52 @@ struct SmokingTypeView: View {
     @Environment(PageManager.self) var pageManager
     var userPreferences: UserPreferences
     
-    
     var body: some View {
-        VStack {
+        ScrollView {
             
-            Text("O que você fuma atualmente?")
-                .font(.headline)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-                .padding(.bottom, 10)
+            Text("O que você \nfuma \natualmente?")
+                .font(.title2)
+                .frame(maxWidth: .infinity, maxHeight: 80, alignment: .leading)
+                .padding(.bottom)
                 .minimumScaleFactor(0.7)
             
             //Container with both buttons and texts
-            HStack{
+            HStack {
                 
                 //Container with one button and one text
-                VStack{
+                VStack {
                     
                     //Component with the button style in this screen
                     CigaretteTypeButton(cigarretTypeView: .cigaretteCount, userPreferences: userPreferences, type: .cigarette)
                         .environment(pageManager)
                     
                     Text("Cigarro Convencional")
-                        .font(.system(size: 12))
+                        .font(.caption)
                         .multilineTextAlignment(.center)
+                        .lineLimit(2)
                         .minimumScaleFactor(0.7)
+                        .frame(height: 30)
                 }
                 
-                VStack{
+                VStack {
                     CigaretteTypeButton(cigarretTypeView: .vapeFrequency, userPreferences: userPreferences, type: .eCigarette)
                         .environment(pageManager)
                     
                     Text("Cigarro eletronico")
                         .multilineTextAlignment(.center)
-                        .font(.system(size: 12))
-                        .minimumScaleFactor(0.7)
+                        .font(.caption)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                        .frame(height: 30)
                 }
             }
-            
-            
-        }
+    
+        }.scenePadding(.horizontal)
+        
     }
 }
-//
-//#Preview {
-//    SmokingTypeView()
-//        .environment(PageManager())
-//}
+
+#Preview {
+    SmokingTypeView(userPreferences: UserPreferences())
+        .environment(PageManager())
+}
