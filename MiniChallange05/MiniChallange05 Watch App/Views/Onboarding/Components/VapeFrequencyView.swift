@@ -16,21 +16,37 @@ struct VapeFrequencyView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                Text("Quantas vezes por dia você costuma fumar?")
-                    .padding(.bottom, 5)
-                    .minimumScaleFactor(0.5)
-                    .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
-                
-                OnboardingPicker(selectedNumber: $tempVar)
-                    .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
-                    .padding(.bottom, 10)
-                    
-                
-                    GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
+            
+            Text("Quantas vezes por dia você costuma fumar?")
+                .font(.title2)
+                .minimumScaleFactor(0.7)
+                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+            
+            OnboardingPicker(selectedNumber: $tempVar)
+                .frame(height: 85)
+            
+            if tempVar > 1 {
+                Text("\(tempVar) vezes por dia")
+                    .italic()
+            } else {
+                Text("\(tempVar) vezes por dia")
+                    .italic()
             }
-        }.onDisappear{
+            
+            GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
+                .padding(.top)
+            
+        }
+        .padding(.horizontal)
+        
+        .onDisappear{
             userPreferences.vapePerDay = defVar
         }
+        
     }
+}
+
+#Preview {
+    VapeFrequencyView(tempVar: 2, defVar: .constant(200), userPreferences: UserPreferences())
+        .environment(PageManager())
 }
