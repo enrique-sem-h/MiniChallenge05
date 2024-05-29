@@ -30,9 +30,12 @@ struct CigaretteCountView: View {
                 GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: Binding(projectedValue: .constant(tempVar)), defVar: Binding(projectedValue: .constant(defVar)))
             }
             
-        }.onDisappear{
+        }
+        .onDisappear{
             userPreferences.cigarsPerDay = defVar
         }
         
+        
     }
 }
+
