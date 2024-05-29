@@ -19,13 +19,21 @@ struct CigaretteTypeButton : View{
     var type: UserModel.SmokeType
     
     var body: some View{
+        
         Button(action: {
             pageManager.page = cigarretTypeView
             userPreferences.smokingType = type
         }, label: {
-            Rectangle()
-                .frame(width: screenWidth / 2.2)
-                .cornerRadius(8.0)
+            switch type {
+            case .cigarette:
+                Rectangle()
+                    .frame(width: screenWidth / 2.2)
+                    .cornerRadius(8.0)
+            case .eCigarette:
+                Rectangle()
+                    .frame(width: screenWidth / 2.2)
+                    .cornerRadius(8.0)
+            }
         })
         .buttonStyle(PlainButtonStyle())
     }

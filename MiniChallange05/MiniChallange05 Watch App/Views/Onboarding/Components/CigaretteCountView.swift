@@ -13,7 +13,6 @@ struct CigaretteCountView: View {
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     var userPreferences: UserPreferences
-    @FocusState var isPickerSelected : Bool
     
     var body: some View {
         
@@ -27,7 +26,7 @@ struct CigaretteCountView: View {
                 OnboardingPicker(selectedNumber: $tempVar)
                     .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
                     .padding(.bottom,10)
-                    .focused($isPickerSelected)
+                    
                 
                 GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: Binding(projectedValue: .constant(tempVar)), defVar: Binding(projectedValue: .constant(defVar)))
             }
@@ -36,7 +35,6 @@ struct CigaretteCountView: View {
         .onDisappear{
             userPreferences.cigarsPerDay = defVar
         }
-        .disabled(!isPickerSelected)
         
         
     }
