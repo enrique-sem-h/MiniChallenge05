@@ -58,16 +58,20 @@ struct GenericBackAndNextButton : View{
                 defVar = tempVar
                 pageManager.page = fowardView
             }
+            .background(Color.gray)
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
             
             Button("Voltar") {
                 defVar = tempVar
                 pageManager.page = backwardsView
             }
+            
         }
     }
 }
 
 #Preview {
-    Onboard(isOnboarding: true)
+    GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType, tempVar: .constant(2), defVar: .constant(200))
         .environment(PageManager())
 }

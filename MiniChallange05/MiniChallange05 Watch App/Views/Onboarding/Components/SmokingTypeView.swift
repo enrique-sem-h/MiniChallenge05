@@ -15,7 +15,7 @@ struct SmokingTypeView: View {
     var body: some View {
         ScrollView {
             
-            Text("O que você \nfuma \natualmente?")
+            Text("O que você fuma atualmente?")
                 .font(.title2)
                 .frame(maxWidth: .infinity, maxHeight: 80, alignment: .leading)
                 .padding(.bottom)
@@ -47,7 +47,7 @@ struct SmokingTypeView: View {
                         .multilineTextAlignment(.center)
                         .font(.caption)
                         .lineLimit(2)
-                        .minimumScaleFactor(0.5)
+                        .minimumScaleFactor(0.7)
                         .frame(height: 30)
                 }
             }
