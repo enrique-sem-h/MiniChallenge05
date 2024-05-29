@@ -40,6 +40,7 @@ struct HealthHomeView: View {
         if !calendar.isDateInToday(updater.date) {
             updater.date = .now
             updater.canUpdate = true
+            setUpdater(newValue: updater)
             updateMessage()
         } else if updater.canUpdate {
             updateMessage()
@@ -68,7 +69,7 @@ struct HealthHomeView: View {
     // retrieving updater from UserDefaults
     private func getUpdater() -> Updater? {
         if let data = UserDefaults.standard.object(forKey: "dailyMotivation") as? Data {
-            return (try? JSONDecoder().decode(Updater.self, from: data))
+            return try? JSONDecoder().decode(Updater.self, from: data)
         }
         return nil
     }
