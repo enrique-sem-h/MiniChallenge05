@@ -26,13 +26,17 @@ struct CigaretteTypeButton : View{
         }, label: {
             switch type {
             case .cigarette:
-                Rectangle()
-                    .frame(width: screenWidth / 2.2)
-                    .cornerRadius(8.0)
+                Image("CigaretteImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: screenWidth * 0.4)
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
             case .eCigarette:
-                Rectangle()
-                    .frame(width: screenWidth / 2.2)
-                    .cornerRadius(8.0)
+                Image("VapeImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: screenWidth * 0.4)
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
             }
         })
         .buttonStyle(PlainButtonStyle())
@@ -63,4 +67,7 @@ struct GenericBackAndNextButton : View{
     }
 }
 
-
+#Preview {
+    Onboard(isOnboarding: true)
+        .environment(PageManager())
+}
