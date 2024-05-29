@@ -42,14 +42,14 @@ struct GenericBackAndNextButton : View{
     
     var body: some View{
         VStack{
-            Button("Voltar") {
-                defVar = tempVar
-                pageManager.page = backwardsView
-            }
-            
             Button("Próximo") {
                 defVar = tempVar
                 pageManager.page = fowardView
+            }
+            
+            Button("Voltar") {
+                defVar = tempVar
+                pageManager.page = backwardsView
             }
         }
     }

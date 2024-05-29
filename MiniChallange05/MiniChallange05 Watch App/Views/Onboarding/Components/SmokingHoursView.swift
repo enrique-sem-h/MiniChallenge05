@@ -34,12 +34,8 @@ struct SmokingHoursView: View {
             
             Spacer()
             
-            HStack {
-                Button("voltar") {
-                    pageManager.page = viewAnterior
-                }
-                .padding()
-                Button("finalizar") {
+            VStack {
+                Button("Finalizar") {
                     
                     userPreferences.hourSmoke = Array(selectedItems)
                     
@@ -59,14 +55,15 @@ struct SmokingHoursView: View {
                     pageManager.page = .homeView
                     
                 }
-                .frame(height: 40)
-                .padding()
+//                .frame(height: 40)
+                
+                Button("Voltar") {
+                    pageManager.page = viewAnterior
+                }
+                
+                
             }
-            
-            Spacer()
-            
-            GenericBackAndNextButton(fowardView: .cigaretteCount, backwardsView: .cigaretteCount, tempVar: Binding(projectedValue: .constant(0)), defVar: Binding(projectedValue: .constant(0)))
-                .padding(.top,10)
+            .padding()
         }
     }
 }
