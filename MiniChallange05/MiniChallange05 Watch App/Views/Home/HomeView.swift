@@ -11,16 +11,22 @@ struct HomeView: View {
     @State var user = DataManager.shared.userModel
     
     var body: some View {
-        ScrollView {
+        ZStack {
+            Rectangle()
+                .foregroundStyle( .background)
+                .ignoresSafeArea()
             
-            StreakComponents()
-            
-            HealthHomeView()
-            
-            ConquestHomeView()
-            
+            ScrollView {
+                
+                StreakComponents()
+                
+                HealthHomeView()
+                
+                ConquestHomeView()
+                
+            }
+            .scenePadding(.horizontal)
         }
-        .scenePadding(.horizontal)
     }
 }
 

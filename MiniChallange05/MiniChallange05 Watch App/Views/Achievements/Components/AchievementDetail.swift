@@ -28,13 +28,14 @@ struct AchievementDetail: View {
                     Text(achievement.title)
                         .font(.title)
                         .fontWeight(.light)
-                        .padding(.bottom, 20)
+                        .padding()
                     Text("About")
                         .font(.title3)
                         .bold()
-                        .padding(.bottom, 8)
+                        .padding()
                     Text(achievement.description)
                         .fontWeight(.light)
+                        .padding()
                 }.frame(width: screenWidth, alignment: .leading)
             }
         }
