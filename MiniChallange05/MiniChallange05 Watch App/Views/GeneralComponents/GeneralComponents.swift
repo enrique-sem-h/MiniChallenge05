@@ -19,13 +19,25 @@ struct CigaretteTypeButton : View{
     var type: UserModel.SmokeType
     
     var body: some View{
+        
         Button(action: {
             pageManager.page = cigarretTypeView
             userPreferences.smokingType = type
         }, label: {
-            Rectangle()
-                .frame(height: 64)
-                .cornerRadius(8.0)
+            switch type {
+            case .cigarette:
+                Image("CigaretteImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: screenWidth * 0.4)
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+            case .eCigarette:
+                Image("VapeImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: screenWidth * 0.4)
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+            }
         })
         .buttonStyle(PlainButtonStyle())
     }
@@ -55,4 +67,7 @@ struct GenericBackAndNextButton : View{
     }
 }
 
-
+#Preview {
+    Onboard(isOnboarding: true)
+        .environment(PageManager())
+}

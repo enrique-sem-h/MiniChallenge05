@@ -21,6 +21,7 @@ struct OnboardingPicker: View {
             }
         }
         .pickerStyle(WheelPickerStyle())
+        
     }
 }
 
