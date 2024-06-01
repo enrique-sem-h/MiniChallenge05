@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE278A7A2BF7DF2B0075E22E"
-               BuildableName = "MiniChallange05 Watch App.app"
+               BuildableName = "QuitBuddy.app"
                BlueprintName = "MiniChallange05 Watch App"
-               ReferencedContainer = "container:MiniChallange05.xcodeproj">
+               ReferencedContainer = "container:Quit Buddy!.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -32,7 +32,7 @@
                BlueprintIdentifier = "CE278A742BF7DF2B0075E22E"
                BuildableName = "MiniChallange05.app"
                BlueprintName = "MiniChallange05"
-               ReferencedContainer = "container:MiniChallange05.xcodeproj">
+               ReferencedContainer = "container:Quit Buddy!.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -60,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE278A7A2BF7DF2B0075E22E"
-            BuildableName = "MiniChallange05 Watch App.app"
+            BuildableName = "QuitBuddy.app"
             BlueprintName = "MiniChallange05 Watch App"
-            ReferencedContainer = "container:MiniChallange05.xcodeproj">
+            ReferencedContainer = "container:Quit Buddy!.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
@@ -81,9 +81,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE278A7A2BF7DF2B0075E22E"
-            BuildableName = "MiniChallange05 Watch App.app"
+            BuildableName = "QuitBuddy.app"
             BlueprintName = "MiniChallange05 Watch App"
-            ReferencedContainer = "container:MiniChallange05.xcodeproj">
+            ReferencedContainer = "container:Quit Buddy!.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

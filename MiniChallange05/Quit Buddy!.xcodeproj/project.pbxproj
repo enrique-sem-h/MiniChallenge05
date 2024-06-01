@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315CDEEF2C012B950067061F /* AchievementDetail.swift */; };
 		3193190D2BFE627C001A1C40 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193190C2BFE627C001A1C40 /* UserPreferences.swift */; };
+		31E71D112C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */; };
+		31E71D122C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */; };
 		9B5C8A6E2C05283D00416DE0 /* SavingsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C8A6D2C05283D00416DE0 /* SavingsComponent.swift */; };
 		9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D2A2BFBE9CF003CF148 /* UserModel.swift */; };
 		9BD619872BFD2EF3004EF522 /* UUIDArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */; };
@@ -32,7 +34,7 @@
 		B89F2B622C0105A9004EED57 /* ProgressDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B5F2C0105A9004EED57 /* ProgressDetailComponent.swift */; };
 		B89F2B632C0105A9004EED57 /* ProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B602C0105A9004EED57 /* ProgressComponent.swift */; };
 		B8F671BE2BFD0F8E005DE68E /* OnboardingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05182BFBC01400D49274 /* OnboardingPicker.swift */; };
-		CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE278A7C2BF7DF2B0075E22E /* Quit Buddy!.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */; };
 		CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A822BF7DF2B0075E22E /* ContentView.swift */; };
 		CE278A852BF7DF2C0075E22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE278A842BF7DF2C0075E22E /* Assets.xcassets */; };
@@ -65,7 +67,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				CE278A7C2BF7DF2B0075E22E /* MiniChallange05 Watch App.app in Embed Watch Content */,
+				CE278A7C2BF7DF2B0075E22E /* Quit Buddy!.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +87,8 @@
 /* Begin PBXFileReference section */
 		315CDEEF2C012B950067061F /* AchievementDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetail.swift; sourceTree = "<group>"; };
 		3193190C2BFE627C001A1C40 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniChallange05-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		9B5C8A6D2C05283D00416DE0 /* SavingsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsComponent.swift; sourceTree = "<group>"; };
 		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDArrayTransformer.swift; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 		B89F2B5F2C0105A9004EED57 /* ProgressDetailComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDetailComponent.swift; sourceTree = "<group>"; };
 		B89F2B602C0105A9004EED57 /* ProgressComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressComponent.swift; sourceTree = "<group>"; };
 		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniChallange05 Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quit Buddy!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallange05App.swift; sourceTree = "<group>"; };
 		CE278A822BF7DF2B0075E22E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE278A842BF7DF2C0075E22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				CE278A752BF7DF2B0075E22E /* MiniChallange05.app */,
-				CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */,
+				CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +216,8 @@
 		CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */,
+				31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */,
 				CE7CE6B92C01275E002E4001 /* Notification */,
 				CE278A952BF7DF470075E22E /* Settings */,
 				CE278A942BF7DF400075E22E /* Model */,
@@ -380,7 +386,7 @@
 			);
 			name = "MiniChallange05 Watch App";
 			productName = "MiniChallange05 Watch App";
-			productReference = CE278A7B2BF7DF2B0075E22E /* MiniChallange05 Watch App.app */;
+			productReference = CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -401,7 +407,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "MiniChallange05" */;
+			buildConfigurationList = CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "Quit Buddy!" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -425,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E71D112C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E71D122C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */,
 				CE278A882BF7DF2C0075E22E /* Preview Assets.xcassets in Resources */,
 				CE278A852BF7DF2C0075E22E /* Assets.xcassets in Resources */,
 			);
@@ -552,6 +560,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "";
 			};
 			name = Debug;
 		};
@@ -605,6 +614,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				TARGETED_DEVICE_FAMILY = "";
 			};
 			name = Release;
 		};
@@ -615,12 +625,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
+				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "\"\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,7 +640,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Quit Buddy!";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -646,12 +657,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
+				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "\"\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -660,7 +672,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Quit Buddy!";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -677,13 +689,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PL64AUG55;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -693,21 +709,25 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7PL64AUG55;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,4";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "MiniChallange05" */ = {
+		CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "Quit Buddy!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE278A892BF7DF2C0075E22E /* Debug */,
