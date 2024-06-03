@@ -10,8 +10,6 @@ import Foundation
 
 final class LocalNotifications: NSObject {
     
-    let smokeHours = DataManager.shared.userModel?.hourSmoke
-    
     private let smokedActionIdentifier: String = "SmokedID"
     private let notSmokedActionIdentifier: String = "NotSmokedID"
     private let categoryIdentifier: String = "categoryID"
@@ -49,6 +47,9 @@ final class LocalNotifications: NSObject {
     }
     
     func schedule() {
+        
+        let smokeHours = DataManager.shared.userModel?.hourSmoke
+        
         let current = UNUserNotificationCenter.current()
         
         //Remove all notifications
@@ -67,7 +68,7 @@ final class LocalNotifications: NSObject {
                 content.body = "Você fumou ? :((("
                 content.categoryIdentifier = self.categoryIdentifier
                 
-                let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour, .minute, .second], from: smokeHour)
+                let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: smokeHour)
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                 
                 let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -80,6 +81,8 @@ final class LocalNotifications: NSObject {
                 }
             }
         }
+        
+        print(smokeHours)
     }
     
 }

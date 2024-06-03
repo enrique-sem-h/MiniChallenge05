@@ -64,7 +64,7 @@ struct Onboard: View {
         case .vapeCost:
             VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior, userPreferences: userPreferences)
         case .smokingHours:
-            SmokingHoursView(viewAnterior: $viewAnterior, userPreferences: userPreferences,
+            SmokingHoursView(viewAnterior: $viewAnterior, notification: notification, userPreferences: userPreferences,
                             items: $items, selectedItems: $selectedItems
             )
         case .createSmokingHour:
