@@ -37,6 +37,8 @@ struct VapeFrequencyView: View {
                 .padding(.top)
             
         }
+        .padding(.horizontal)
+        
         .onDisappear{
             userPreferences.vapePerDay = defVar
         }

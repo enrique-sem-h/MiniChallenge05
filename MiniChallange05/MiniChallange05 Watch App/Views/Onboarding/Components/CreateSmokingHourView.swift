@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateSmokingHourView: View {
     @Environment(PageManager.self) var pageManager
-
+    
     @State var data: Date = .now
     
     @Binding var items: [Date]
@@ -20,8 +20,10 @@ struct CreateSmokingHourView: View {
             Button{
                 pageManager.page = .smokingHours
             } label: {
-                Text("Cancelar")
-                    .bold()
+                
+                Image(systemName: "xmark")
+                    .padding(.bottom)
+                
             }.buttonStyle(PlainButtonStyle())
             Spacer()
             
@@ -44,6 +46,9 @@ struct CreateSmokingHourView: View {
                 selectedItems.insert(data)
                 pageManager.page = .smokingHours
             }
+            .background(Color.gray)
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
             
         }
     }
@@ -53,5 +58,5 @@ struct CreateSmokingHourView: View {
     CreateSmokingHourView(
         items: .constant([.now]), selectedItems: .constant([.now])
     )
-        .environment(PageManager())
+    .environment(PageManager())
 }

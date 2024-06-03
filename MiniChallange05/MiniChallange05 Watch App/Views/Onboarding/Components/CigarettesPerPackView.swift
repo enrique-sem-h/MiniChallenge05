@@ -38,7 +38,11 @@ struct CigarettesPerPackView: View {
                 
             }
             
-        }.onDisappear{
+        }
+        
+        .padding(.horizontal)
+        
+        .onDisappear{
             userPreferences.cigarettesInPack = defVar
         }
     }

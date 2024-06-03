@@ -117,4 +117,6 @@ class DataManager {
         userEntity.cigarsPerDay = cigarsPerDay
     }
     
+    
+    
 }

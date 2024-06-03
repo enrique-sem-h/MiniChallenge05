@@ -89,7 +89,7 @@ extension LocalNotifications: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.actionIdentifier == smokedActionIdentifier {
-            //Colocar a ação do usuário quando ele fumar
+//            DataManager.shared.resetStreak()
         } else if response.actionIdentifier == notSmokedActionIdentifier {
             //Colocar as ações a serem feitas quando ele não fumar
         }
