@@ -12,28 +12,43 @@ struct CigarettesPerPackView: View {
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
     var userPreferences: UserPreferences
     
     var body: some View {
         ScrollView {
             VStack {
                 Text("Quantos cigarros tem no maço que você compra?")
-                    .padding(.bottom, 5)
-                    .minimumScaleFactor(0.5)
-                    .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
+                    .font(.title2)
+                    .minimumScaleFactor(0.7)
+                    .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
                 
                 OnboardingPicker(selectedNumber: $tempVar)
-                    .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
-                    .padding(.bottom, 10)
+                    .frame(height: 85)
+                
+                if tempVar > 1 {
+                    Text("\(tempVar) cigarros por maço")
+                        .italic()
+                } else {
+                    Text("\(tempVar) cigarro por maço")
+                        .italic()
+                }
                 
                 GenericBackAndNextButton(fowardView: .packCost, backwardsView: .cigaretteCount , tempVar: $tempVar, defVar: $defVar)
+                    .padding(.top)
                 
             }
-        }.onDisappear{
+            
+        }
+        
+        .padding(.horizontal)
+        
+        .onDisappear{
             userPreferences.cigarettesInPack = defVar
         }
     }
+}
+
+#Preview {
+    CigarettesPerPackView(tempVar: 1, defVar: .constant(200), userPreferences: UserPreferences())
+        .environment(PageManager())
 }

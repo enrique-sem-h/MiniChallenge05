@@ -20,21 +20,20 @@ struct PresentationView: View {
                 .padding(.bottom, 10)
                 .minimumScaleFactor(0.7)
             
-            
-            
-            
             Text("Para começar, precisamos que insira algumas inforamções a seguir.")
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                 .font(.footnote)
                 .padding(.bottom, 10)
                 .minimumScaleFactor(0.5)
             
-            
-            Button("Continuar") {
+            Button {
                 pageManager.page = .smokingType
+            } label: {
+                Text("Continuar")
+                    .bold()
             }
-            .background(Color.blue)
-            .foregroundColor(.white)
+            .background(Color.gray)
+            .foregroundStyle(.white)
             .clipShape(Capsule())
             .frame(maxWidth: .infinity, alignment: .center)
             

@@ -10,10 +10,21 @@ import SwiftUI
 @main
 struct MiniChallange05_Watch_AppApp: App {
             
+    private let localNotification = LocalNotifications()
+    var isOnboarding: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "isOnboarding")
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
-            Onboard()
-                .environment(PageManager())
+            if !isOnboarding{
+                Onboard(isOnboarding: isOnboarding)
+                    .environment(PageManager())
+            } else {
+                ContentView()
+            }
         }
     }
 }

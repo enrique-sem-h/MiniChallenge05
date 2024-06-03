@@ -94,7 +94,6 @@ class DataManager {
         }
     }
     
-    
     func updatePackCost(smokeCost : Double){
         self.userEntity?.smokeCost = smokeCost
         self.userModel?.smokeCost = smokeCost
@@ -104,6 +103,12 @@ class DataManager {
     func updateCigarreteCount(count : Int){
         self.userEntity?.cigarsPerDay = Int16(count)
         self.userModel?.cigarsPerDay = Int16(count)
+        saveData()
+    }
+    
+    func updateHourSmoke(hourSmoke: [Date]){
+        self.userEntity?.hourSmoke = hourSmoke
+        self.userModel?.hourSmoke = hourSmoke
         saveData()
     }
     

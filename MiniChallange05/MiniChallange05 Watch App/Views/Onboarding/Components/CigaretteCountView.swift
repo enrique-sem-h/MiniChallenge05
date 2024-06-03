@@ -14,29 +14,42 @@ struct CigaretteCountView: View {
     @Binding var defVar: Int
     var userPreferences: UserPreferences
     
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
-    
     var body: some View {
+        
         ScrollView {
-            VStack {
-                Text("Quantos cigarros por dia você costuma fumar?")
-                    .padding(.bottom, 5)
-                    .minimumScaleFactor(0.5)
-                    .frame(width: screenWidth * 0.9, height: screenHeight * 0.25)
-                
-                OnboardingPicker(selectedNumber: $tempVar)
-                    .frame(width: screenWidth * 0.4, height: screenHeight * 0.3)
-                    .padding(.bottom,10)
-                
-                
-                GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: Binding(projectedValue: .constant(tempVar)), defVar: Binding(projectedValue: .constant(defVar)))
-                
-                
+            
+            Text("Quantos cigarros por dia você costuma fumar?")
+                .font(.title2)
+                .minimumScaleFactor(0.7)
+                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+            
+            OnboardingPicker(selectedNumber: $tempVar)
+                .frame(height: 85)
+            
+            if tempVar > 1 {
+                Text("\(tempVar) cigarros por dia")
+                    .italic()
+            } else {
+                Text("\(tempVar) cigarro por dia")
+                    .italic()
             }
-        }.onDisappear{
+            
+            GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
+                .padding(.top)
+            
+        }
+        
+        .padding(.horizontal)
+        
+        .onDisappear{
             userPreferences.cigarsPerDay = defVar
         }
+        
     }
+}
+
+#Preview {
+    let pageManager = PageManager()
+    return CigaretteCountView(tempVar: 2, defVar: .constant(200), userPreferences: UserPreferences())
+        .environment(pageManager)
 }

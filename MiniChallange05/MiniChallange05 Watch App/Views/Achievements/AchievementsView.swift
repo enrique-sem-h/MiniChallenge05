@@ -9,24 +9,39 @@ import SwiftUI
 
 struct AchievementsView: View {
     var body: some View {
-        ScrollView {
-            Text("Conquistas")
-            
-            Text("Minhas Conquistas")
-            ForEach(0..<4) {_ in
-                HStack {
-                    AchievementsComponent(enabled: true)
+        NavigationStack {
+            ZStack {
+                Rectangle()
+                    .foregroundStyle( .background)
+                    .ignoresSafeArea()
+                
+                ScrollView {
+                    Text("Conquistas")
                     
-                    AchievementsComponent(enabled: true)
-                }
-            }
-            
-            Text("Próximas Conquistas")
-            ForEach(0..<4) {_ in
-                HStack {
-                    AchievementsComponent(enabled: false)
+                    Text("Minhas Conquistas")
+                    ForEach(0..<4) {_ in
+                        HStack {
+                            NavigationLink {
+                                AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))
+                            } label: {
+                                AchievementsComponent(enabled: true)
+                            }
+                            NavigationLink {
+                                AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))
+                            } label: {
+                                AchievementsComponent(enabled: true)
+                            }
+                        }
+                    }
                     
-                    AchievementsComponent(enabled: false)
+                    Text("Próximas Conquistas")
+                    ForEach(0..<4) {_ in
+                        HStack {
+                            AchievementsComponent(enabled: false)
+                            
+                            AchievementsComponent(enabled: false)
+                        }
+                    }
                 }
             }
         }

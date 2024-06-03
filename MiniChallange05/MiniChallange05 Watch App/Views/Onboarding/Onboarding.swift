@@ -32,6 +32,7 @@ struct Onboard: View {
     @State var defnumero: Int = 1
     @State var viewAnterior:Page = .packCost
     var userPreferences = UserPreferences()
+    var isOnboarding: Bool
     
     // Serve to pass the date to all dates.
     @State var items: [Date] = [
@@ -42,15 +43,13 @@ struct Onboard: View {
         Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 22, minute: 0, second: 0, of: Date())!
     ]
+    
     @State var selectedItems: Set<Date> = []
     
     var body: some View {
         switch pageManager.page {
         case .presentation:
             PresentationView()
-            
-            Text(DataManager.shared.userModel?.cigarsType ?? "a")
-            
         case .smokingType:
             SmokingTypeView(userPreferences: userPreferences)
         case .cigaretteCount:
@@ -73,13 +72,15 @@ struct Onboard: View {
             )
             
         case .homeView:
-            HomeView()
+            ContentView()
+                .onAppear{
+                    UserDefaults.standard.setValue(true, forKey: "isOnboarding")
+            }
         }
-   
     }
 }
 
 #Preview {
-    Onboard()
+    Onboard(isOnboarding: true)
         .environment(PageManager())
 }

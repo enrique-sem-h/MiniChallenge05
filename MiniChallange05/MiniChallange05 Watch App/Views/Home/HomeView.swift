@@ -11,16 +11,33 @@ struct HomeView: View {
     @State var user = DataManager.shared.userModel
     
     var body: some View {
-        ScrollView {
-            VStack {
+        ZStack {
+            
+            Image("homeBG")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            
+            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(1.0),Color.black.opacity(0.44),Color.black.opacity(0.3)]), startPoint: .top, endPoint: .center)
+                .ignoresSafeArea()
+            
+            ScrollView {
+                
                 StreakComponents()
                 
                 HealthHomeView()
                 
-                ConquestHomeView()
-            }.onAppear{
-                DataManager.shared.fetchUser()
+                //                ConquestHomeView()
+                
             }
+            .scenePadding(.horizontal)
+            
+            
+            
+            
+            
+            
+            
         }
     }
 }

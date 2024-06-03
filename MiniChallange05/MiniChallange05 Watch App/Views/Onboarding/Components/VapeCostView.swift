@@ -13,9 +13,6 @@ struct VapeCostView: View {
     @Binding var defVar: Int
     @Binding var viewAtual: Page
     
-    static let screenSize = WKInterfaceDevice.current().screenBounds.size
-    let screenWidth = screenSize.width
-    let screenHeight = screenSize.height
     var userPreferences: UserPreferences
     
     var body: some View {
