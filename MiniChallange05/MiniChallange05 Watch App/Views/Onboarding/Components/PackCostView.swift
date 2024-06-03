@@ -12,6 +12,8 @@ struct PackCostView: View {
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     @Binding var viewAtual: Page
+    let textConfig :TextConfig
+    
     
     var userPreferences: UserPreferences
     
@@ -20,8 +22,8 @@ struct PackCostView: View {
             VStack {
                 Text("Quanto custa o maço de cigarro?")
                     .font(.title2)
-                    .minimumScaleFactor(0.7)
-                    .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                    .minimumScaleFactor(textConfig.scaleFacroty)
+                    .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 
                 HStack {
                     Button {
@@ -36,7 +38,7 @@ struct PackCostView: View {
                     .clipShape(Circle())
                     
                     OnboardingPicker(selectedNumber: $tempVar, range: 0..<201)
-                        .frame(width: 90, height: 85)
+                        .frame(width: textConfig.frameHeight + 5, height: textConfig.frameHeight)
                         .padding(.bottom,10)
                     
                     Button {
@@ -88,6 +90,6 @@ struct PackCostView: View {
 }
 
 #Preview {
-    PackCostView(tempVar: 2, defVar: .constant(200), viewAtual: .constant(.cigarettesPerPack), userPreferences: UserPreferences())
+    PackCostView(tempVar: 2, defVar: .constant(200), viewAtual: .constant(.cigarettesPerPack), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }

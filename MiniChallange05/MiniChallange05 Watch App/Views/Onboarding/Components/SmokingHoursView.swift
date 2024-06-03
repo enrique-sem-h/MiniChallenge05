@@ -11,7 +11,7 @@ struct SmokingHoursView: View {
     @Environment(PageManager.self) var pageManager
     @Binding var viewAnterior: Page
     let notification : LocalNotifications
-    
+    let textConfig : TextConfig
     var userPreferences: UserPreferences
     
     @Binding var items: [Date]
@@ -22,8 +22,8 @@ struct SmokingHoursView: View {
             
             Text("Em que horários você fuma?")
                 .font(.title2)
-                .minimumScaleFactor(0.7)
-                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                .minimumScaleFactor(textConfig.scaleFacroty)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.frameHeight, alignment: .leading)
             
             ForEach(items, id: \.self) { item in
                 RowRectangle(date: item, isSelected: selectedItems.contains(item)) {
@@ -115,7 +115,7 @@ struct RowRectangle: View {
 }
 
 #Preview {
-    SmokingHoursView(viewAnterior: .constant(.vapeCost), notification: LocalNotifications(), userPreferences: UserPreferences(), items: .constant([
+    SmokingHoursView(viewAnterior: .constant(.vapeCost), notification: LocalNotifications(), textConfig: TextConfig(), userPreferences: UserPreferences(), items: .constant([
         Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: Date())!,

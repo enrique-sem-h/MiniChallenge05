@@ -11,15 +11,17 @@ import WatchKit
 struct SmokingTypeView: View {
     @Environment(PageManager.self) var pageManager
     var userPreferences: UserPreferences
+    let lineLimit = 2
+    let textConfig : TextConfig
     
     var body: some View {
         ScrollView {
             
             Text("O que você fuma atualmente?")
                 .font(.title2)
-                .frame(maxWidth: .infinity, maxHeight: 80, alignment: .leading)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 .padding(.bottom)
-                .minimumScaleFactor(0.7)
+                .minimumScaleFactor(textConfig.scaleFacroty)
             
             //Container with both buttons and texts
             HStack {
@@ -34,9 +36,9 @@ struct SmokingTypeView: View {
                     Text("Cigarro Convencional")
                         .font(.caption)
                         .multilineTextAlignment(.center)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.7)
-                        .frame(height: 30)
+                        .lineLimit(lineLimit)
+                        .minimumScaleFactor(textConfig.scaleFacroty)
+                        .frame(height: textConfig.frameHeight)
                 }
                 
                 VStack {
@@ -46,9 +48,9 @@ struct SmokingTypeView: View {
                     Text("Cigarro eletronico")
                         .multilineTextAlignment(.center)
                         .font(.caption)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.7)
-                        .frame(height: 30)
+                        .lineLimit(lineLimit)
+                        .minimumScaleFactor(textConfig.scaleFacroty)
+                        .frame(height: textConfig.frameHeight)
                 }
             }
     
@@ -58,6 +60,6 @@ struct SmokingTypeView: View {
 }
 
 #Preview {
-    SmokingTypeView(userPreferences: UserPreferences())
+    SmokingTypeView(userPreferences: UserPreferences(), textConfig: TextConfig())
         .environment(PageManager())
 }

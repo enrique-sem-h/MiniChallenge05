@@ -11,6 +11,8 @@ struct CigarettesPerPackView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
+    let textConfig : TextConfig
+    
     
     var userPreferences: UserPreferences
     
@@ -19,11 +21,11 @@ struct CigarettesPerPackView: View {
             VStack {
                 Text("Quantos cigarros tem no maço que você compra?")
                     .font(.title2)
-                    .minimumScaleFactor(0.7)
-                    .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                    .minimumScaleFactor(textConfig.scaleFacroty)
+                    .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 
                 OnboardingPicker(selectedNumber: $tempVar)
-                    .frame(height: 85)
+                    .frame(height: textConfig.frameHeight)
                 
                 if tempVar > 1 {
                     Text("\(tempVar) cigarros por maço")
@@ -49,6 +51,6 @@ struct CigarettesPerPackView: View {
 }
 
 #Preview {
-    CigarettesPerPackView(tempVar: 1, defVar: .constant(200), userPreferences: UserPreferences())
+    CigarettesPerPackView(tempVar: 1, defVar: .constant(200), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }

@@ -13,6 +13,7 @@ struct CigaretteCountView: View {
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     var userPreferences: UserPreferences
+    let textConfig : TextConfig
     
     var body: some View {
         
@@ -20,11 +21,11 @@ struct CigaretteCountView: View {
             
             Text("Quantos cigarros por dia você costuma fumar?")
                 .font(.title2)
-                .minimumScaleFactor(0.7)
-                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                .minimumScaleFactor(textConfig.scaleFacroty)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
             
             OnboardingPicker(selectedNumber: $tempVar)
-                .frame(height: 85)
+                .frame(height: textConfig.frameHeight)
             
             if tempVar > 1 {
                 Text("\(tempVar) cigarros por dia")
@@ -50,6 +51,6 @@ struct CigaretteCountView: View {
 
 #Preview {
     let pageManager = PageManager()
-    return CigaretteCountView(tempVar: 2, defVar: .constant(200), userPreferences: UserPreferences())
+    return CigaretteCountView(tempVar: 2, defVar: .constant(200), userPreferences: UserPreferences(), textConfig: TextConfig())
         .environment(pageManager)
 }

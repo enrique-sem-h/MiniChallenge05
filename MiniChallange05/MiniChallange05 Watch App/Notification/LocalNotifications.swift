@@ -81,8 +81,6 @@ final class LocalNotifications: NSObject {
                 }
             }
         }
-        
-        print(smokeHours)
     }
     
 }

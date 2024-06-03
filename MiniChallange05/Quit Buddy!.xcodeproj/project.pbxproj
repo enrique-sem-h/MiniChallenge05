@@ -48,6 +48,7 @@
 		CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */; };
 		CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */; };
+		CEA432042C0E58F20017F0C8 /* TextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA432032C0E58F20017F0C8 /* TextConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
 		CE7CE6C22C013263002E4001 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		CE7CE6C42C013263002E4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA432032C0E58F20017F0C8 /* TextConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 			children = (
 				CE278AAB2BF7E0360075E22E /* GeneralComponents.swift */,
 				B89C05182BFBC01400D49274 /* OnboardingPicker.swift */,
+				CEA432032C0E58F20017F0C8 /* TextConfig.swift */,
 			);
 			path = GeneralComponents;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				B89C05132BF7FB7200D49274 /* VapeCostView.swift in Sources */,
 				B89C050B2BF7FB5500D49274 /* CigaretteCountView.swift in Sources */,
 				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
+				CEA432042C0E58F20017F0C8 /* TextConfig.swift in Sources */,
 				CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */,
 				B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */,
 				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,

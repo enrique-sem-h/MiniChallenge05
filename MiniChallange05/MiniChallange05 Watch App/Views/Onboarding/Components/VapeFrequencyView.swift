@@ -11,6 +11,7 @@ struct VapeFrequencyView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
+    let textConfig : TextConfig
     
     var userPreferences: UserPreferences
     
@@ -19,11 +20,11 @@ struct VapeFrequencyView: View {
             
             Text("Quantas vezes por dia você costuma fumar?")
                 .font(.title2)
-                .minimumScaleFactor(0.7)
-                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                .minimumScaleFactor(textConfig.scaleFacroty)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
             
             OnboardingPicker(selectedNumber: $tempVar)
-                .frame(height: 85)
+                .frame(height: textConfig.frameHeight)
             
             if tempVar > 1 {
                 Text("\(tempVar) vezes por dia")
@@ -47,6 +48,6 @@ struct VapeFrequencyView: View {
 }
 
 #Preview {
-    VapeFrequencyView(tempVar: 2, defVar: .constant(200), userPreferences: UserPreferences())
+    VapeFrequencyView(tempVar: 2, defVar: .constant(200), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }
