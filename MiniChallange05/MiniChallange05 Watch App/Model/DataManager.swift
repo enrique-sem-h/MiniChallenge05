@@ -45,7 +45,7 @@ class DataManager {
         }
     }
     
-     func saveData(){
+    func saveData(){
         do {
             try container.viewContext.save()
             fetchUser()
@@ -71,7 +71,7 @@ class DataManager {
         user.vapePerDay = userModel.vapePerDay ?? 0
         
         saveData()
-    
+        
     }
     
     func parseData() {
@@ -117,6 +117,29 @@ class DataManager {
         userEntity.cigarsPerDay = cigarsPerDay
     }
     
+    func resetStreak(){
+        guard let userModel = self.userModel, let userEntity = self.userEntity, let userStartStreak = userEntity.startStreak else {return}
+        
+        resetRecord()
+        userEntity.streakPast? = DateInterval(start: userStartStreak, end: .now)
+        userModel.streakPast = DateInterval(start: userStartStreak, end: .now)
+        userEntity.startStreak = Date.now
+        userModel.startStreak = Date.now
+        saveData()
+    }
     
+    private func resetRecord(){
+        guard let startStreak = self.userModel?.startStreak else {return}
+        let interval = DateInterval(start: startStreak, end: .now)
+        
+        guard let recordDate = self.userModel?.recordDate else {return}
+        
+        if interval > recordDate{
+            self.userEntity?.recordDate = interval
+            self.userModel?.recordDate = interval
+        }
+        
+        saveData()
+    }
     
 }

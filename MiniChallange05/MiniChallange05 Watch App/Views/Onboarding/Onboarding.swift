@@ -33,6 +33,7 @@ struct Onboard: View {
     @State var viewAnterior:Page = .packCost
     var userPreferences = UserPreferences()
     var isOnboarding: Bool
+    let notification = LocalNotifications()
     
     // Serve to pass the date to all dates.
     @State var items: [Date] = [
@@ -68,7 +69,7 @@ struct Onboard: View {
             )
         case .createSmokingHour:
             CreateSmokingHourView(
-                items: $items, selectedItems: $selectedItems
+                notification: notification, items: $items, selectedItems: $selectedItems
             )
             
         case .homeView:

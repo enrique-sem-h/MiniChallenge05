@@ -9,8 +9,7 @@ import SwiftUI
 
 @main
 struct MiniChallange05_Watch_AppApp: App {
-            
-    private let localNotification = LocalNotifications()
+    
     var isOnboarding: Bool {
         get {
             UserDefaults.standard.bool(forKey: "isOnboarding")

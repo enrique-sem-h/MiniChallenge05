@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CreateSmokingHourView: View {
     @Environment(PageManager.self) var pageManager
+    var notification : LocalNotifications
     
     @State var data: Date = .now
     
@@ -45,6 +46,7 @@ struct CreateSmokingHourView: View {
                 items.append(data)
                 selectedItems.insert(data)
                 pageManager.page = .smokingHours
+                notification.schedule()
             }
             .background(Color.gray)
             .foregroundStyle(.white)
@@ -56,7 +58,7 @@ struct CreateSmokingHourView: View {
 
 #Preview {
     CreateSmokingHourView(
-        items: .constant([.now]), selectedItems: .constant([.now])
+        notification: LocalNotifications(), items: .constant([.now]), selectedItems: .constant([.now])
     )
     .environment(PageManager())
 }

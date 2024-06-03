@@ -22,6 +22,8 @@ final class LocalNotifications: NSObject {
         requestPermission { [weak self] granted in
             if granted {
                 self?.schedule()
+            }else {
+                //Lidar com o erro
             }
         }
     }
@@ -89,7 +91,7 @@ extension LocalNotifications: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.actionIdentifier == smokedActionIdentifier {
-//            DataManager.shared.resetStreak()
+            DataManager.shared.resetStreak()
         } else if response.actionIdentifier == notSmokedActionIdentifier {
             //Colocar as ações a serem feitas quando ele não fumar
         }
