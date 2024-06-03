@@ -141,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3178E1F72C0E4A8A006B6551 /* PrivacyManifests */ = {
+			isa = PBXGroup;
+			children = (
+				31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */,
+			);
+			path = PrivacyManifests;
+			sourceTree = "<group>";
+		};
 		9B711D222BFBE855003CF148 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */,
-				31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */,
+				3178E1F72C0E4A8A006B6551 /* PrivacyManifests */,
 				CE7CE6B92C01275E002E4001 /* Notification */,
 				CE278A952BF7DF470075E22E /* Settings */,
 				CE278A942BF7DF400075E22E /* Model */,
@@ -627,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
@@ -659,7 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = TLC9D54B8V;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
@@ -695,10 +703,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,4";
+				TARGETED_DEVICE_FAMILY = 1;
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
@@ -715,10 +723,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,4";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
