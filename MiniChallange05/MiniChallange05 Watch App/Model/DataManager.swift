@@ -142,4 +142,8 @@ class DataManager {
         saveData()
     }
     
+    func freeAchievement(uuid : UUID){
+        userEntity?.achievementsList?.append(uuid)
+    }
+    
 }

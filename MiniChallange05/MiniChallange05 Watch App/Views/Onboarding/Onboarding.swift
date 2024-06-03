@@ -69,9 +69,7 @@ struct Onboard: View {
                             items: $items, selectedItems: $selectedItems
             )
         case .createSmokingHour:
-            CreateSmokingHourView(
-                notification: notification, items: $items, selectedItems: $selectedItems
-            )
+            CreateSmokingHourView( notification: notification, items: $items, selectedItems: $selectedItems)
             
         case .homeView:
             ContentView()
