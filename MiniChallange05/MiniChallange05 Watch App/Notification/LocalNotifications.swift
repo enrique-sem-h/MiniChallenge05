@@ -36,8 +36,8 @@ final class LocalNotifications: NSObject {
             }
         }
         
-        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: "Fumei")
-        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: "Não Fumei")
+        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: "Yes")
+        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: "No, I smoked today")
         let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [smokedButton, notSmokedButton], intentIdentifiers: [])
         
         current.setNotificationCategories([category])
@@ -64,9 +64,9 @@ final class LocalNotifications: NSObject {
             for smokeHour in smokedHours {
                 
                 let content = UNMutableNotificationContent()
-                content.title = "Notificação da pitada"
-                content.subtitle = "Responda: "
-                content.body = "Você fumou ? :((("
+                content.title = "Hey there, just checking in!"
+                content.subtitle = ""
+                content.body = "\nAre you keeping up your streak of not smoking?"
                 content.categoryIdentifier = self.categoryIdentifier
                 
                 let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: smokeHour)
@@ -80,7 +80,7 @@ final class LocalNotifications: NSObject {
                         print("Error adding notification: \(error.localizedDescription)")
                     }
                 }
-            }            
+            }
             
         }
     }
