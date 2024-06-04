@@ -22,7 +22,7 @@ struct VapeCostView: View {
             VStack {
                 Text(Texts.vapeCostQuestion)
                     .font(.title2)
-                    .minimumScaleFactor(textConfig.scaleFacroty)
+                    .minimumScaleFactor(textConfig.scaleFactor)
                     .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 
                 HStack {
@@ -38,7 +38,7 @@ struct VapeCostView: View {
                     .clipShape(Circle())
                     
                     OnboardingPicker(selectedNumber: $tempVar, range: 0..<201)
-                        .frame(width: 90, height: textConfig.frameHeight)
+                        .frame(width: textConfig.frameHeight + 5, height: textConfig.frameHeight)
                         .padding(.bottom,10)
                     
                     Button {
@@ -55,7 +55,9 @@ struct VapeCostView: View {
                     
                 }
                 
-                Text(Texts.returnVapeCost(number: tempVar))
+                Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
+                    .foregroundColor(Color(red: 222 / 255, green: 255 / 255, blue: 19 / 255))
+                + Text(" em média por maço")
                 
                 Button {
                     if tempVar >= 190 {
@@ -66,6 +68,9 @@ struct VapeCostView: View {
                 } label: {
                     Text(Texts.add10)
                 }
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+                .foregroundStyle(.white)
+                .clipShape(Capsule())
                 
                 Button {
                     if tempVar >= 100 {
@@ -76,6 +81,9 @@ struct VapeCostView: View {
                 } label: {
                     Text(Texts.add100)
                 }
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+                .foregroundStyle(.white)
+                .clipShape(Capsule())
                 .padding(.bottom, 14)
                 
                 GenericBackAndNextButton(fowardView: .smokingHours, backwardsView: .vapeFrequency , tempVar: $tempVar, defVar: $defVar)

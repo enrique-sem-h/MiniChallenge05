@@ -12,6 +12,10 @@ struct PresentationView: View {
     
     var body: some View {
         VStack {
+            Image("Welcome")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             
             Text(Texts.presentation)
                 .font(.title3)
@@ -31,12 +35,28 @@ struct PresentationView: View {
             } label: {
                 Text(Texts.continueText)
                     .bold()
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                    .padding(.bottom, 10)
+                    .minimumScaleFactor(0.7)
+                
+                Text("Para começar, precisamos que insira algumas inforamções a seguir.")
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                    .font(.footnote)
+                    .padding(.bottom, 10)
+                    .minimumScaleFactor(0.5)
+                
+                Button {
+                    pageManager.page = .smokingType
+                } label: {
+                    Text("Continuar")
+                        .bold()
+                }
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255))
+                .foregroundStyle(.white)
+                .clipShape(Capsule())
+                .frame(maxWidth: .infinity, alignment: .center)
+                
             }
-            .background(Color.gray)
-            .foregroundStyle(.white)
-            .clipShape(Capsule())
-            .frame(maxWidth: .infinity, alignment: .center)
-            
         }
     }
 }

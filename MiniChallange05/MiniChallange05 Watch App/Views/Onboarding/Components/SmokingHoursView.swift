@@ -22,7 +22,7 @@ struct SmokingHoursView: View {
             
             Text(Texts.smokingHoursQuestion)
                 .font(.title2)
-                .minimumScaleFactor(textConfig.scaleFacroty)
+                .minimumScaleFactor(textConfig.scaleFactor)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.frameHeight, alignment: .leading)
             
             ForEach(items, id: \.self) { item in
@@ -97,8 +97,10 @@ struct RowRectangle: View {
             Text(formatDate(date))
                 .foregroundStyle(.white)
             Spacer()
-            isSelected ? Image(systemName: "checkmark.circle") : Image(systemName: "circle")
+            Image(systemName: isSelected ? "checkmark" : "circle")
+                                .foregroundColor(isSelected ? .green : .primary)
         })
+        .background(Color.Resolved(red: 68 / 255, green: 17 / 255, blue: 190 / 255, opacity: 0.2 / 1))
         .buttonBorderShape(.roundedRectangle(radius: 6))
         
     }

@@ -11,14 +11,14 @@ let screenWidth = WKInterfaceDevice.current().screenBounds.width
 let screenHeight = WKInterfaceDevice.current().screenBounds.height
 
 //Button with in the onboarding2 View with the same interface and just a different navigation behavior
-struct CigaretteTypeButton : View{
+struct CigaretteTypeButton : View {
     
     @Environment(PageManager.self) var pageManager : PageManager
     let cigarretTypeView : Page
     var userPreferences: UserPreferences
     var type: UserModel.SmokeType
     
-    var body: some View{
+    var body: some View {
         
         Button(action: {
             pageManager.page = cigarretTypeView
@@ -26,17 +26,17 @@ struct CigaretteTypeButton : View{
         }, label: {
             switch type {
             case .cigarette:
-                Image("CigaretteImage")
+                Image("Cigarette")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: screenWidth * 0.4)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
+//                    .frame(width: screenWidth * 0.4)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
             case .eCigarette:
-                Image("VapeImage")
+                Image("E-Cig")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: screenWidth * 0.4)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
+//                    .frame(width: screenWidth * 0.4)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
             }
         })
         .buttonStyle(PlainButtonStyle())
@@ -58,7 +58,7 @@ struct GenericBackAndNextButton : View{
                 defVar = tempVar
                 pageManager.page = fowardView
             }
-            .background(Color.gray)
+            .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255))
             .foregroundStyle(.white)
             .clipShape(Capsule())
             
@@ -66,6 +66,9 @@ struct GenericBackAndNextButton : View{
                 defVar = tempVar
                 pageManager.page = backwardsView
             }
+            .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
             
         }
     }
