@@ -530,6 +530,12 @@
             "state" : "new",
             "value" : "Yes"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sim"
+          }
         }
       }
     },
