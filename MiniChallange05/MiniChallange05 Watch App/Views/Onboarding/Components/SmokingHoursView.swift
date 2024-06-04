@@ -10,9 +10,9 @@ import SwiftUI
 struct SmokingHoursView: View {
     @Environment(PageManager.self) var pageManager
     @Binding var viewAnterior: Page
-    let notification : LocalNotifications
     let textConfig : TextConfig
     var userPreferences: UserPreferences
+    let notificationHandler = LocalNotifications()
     
     @Binding var items: [Date]
     @Binding var selectedItems: Set<Date>
@@ -65,9 +65,8 @@ struct SmokingHoursView: View {
                         DataManager.shared.createUser()
                     }
                     
+                    notificationHandler.schedule()
                     pageManager.page = .homeView
-                    
-                    notification.schedule()
                     
                 }
                 .background(Color.gray)
@@ -117,7 +116,7 @@ struct RowRectangle: View {
 }
 
 #Preview {
-    SmokingHoursView(viewAnterior: .constant(.vapeCost), notification: LocalNotifications(), textConfig: TextConfig(), userPreferences: UserPreferences(), items: .constant([
+    SmokingHoursView(viewAnterior: .constant(.vapeCost), textConfig: TextConfig(), userPreferences: UserPreferences(), items: .constant([
         Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: Date())!,

@@ -10,18 +10,16 @@ import Foundation
 
 final class LocalNotifications: NSObject {
     
+    static let localNotification = LocalNotifications()
     private let smokedActionIdentifier: String = "SmokedID"
     private let notSmokedActionIdentifier: String = "NotSmokedID"
     private let categoryIdentifier: String = "categoryID"
     
     override init() {
         super.init()
-        
         requestPermission { [weak self] granted in
-            if granted {
-                self?.schedule()
-            }else {
-                //Lidar com o erro
+            if !granted {
+                //Deal with the error
             }
         }
     }
@@ -38,8 +36,8 @@ final class LocalNotifications: NSObject {
             }
         }
         
-        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: "Fumei")
-        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: "Não Fumei")
+        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: "Yes")
+        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: "No, I smoked today")
         let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [smokedButton, notSmokedButton], intentIdentifiers: [])
         
         current.setNotificationCategories([category])
@@ -61,18 +59,21 @@ final class LocalNotifications: NSObject {
             
             guard let smokedHours = smokeHours else {return}
             
+            let dispatchedGroup = DispatchGroup()
+            
             for smokeHour in smokedHours {
+                
                 let content = UNMutableNotificationContent()
-                content.title = "Notificação da pitada"
-                content.subtitle = "Responda: "
-                content.body = "Você fumou ? :((("
+                content.title = "Hey there, just checking in!"
+                content.subtitle = ""
+                content.body = "\nAre you keeping up your streak of not smoking?"
                 content.categoryIdentifier = self.categoryIdentifier
                 
                 let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: smokeHour)
-                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
                 
                 let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                
                 
                 current.add(request) { error in
                     if let error = error {
@@ -80,6 +81,7 @@ final class LocalNotifications: NSObject {
                     }
                 }
             }
+            
         }
     }
     

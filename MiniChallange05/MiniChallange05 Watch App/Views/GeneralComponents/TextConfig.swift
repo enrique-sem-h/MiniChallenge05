@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Assign values to text
 struct TextConfig{
     let scaleFactor = 0.7
     let maxHeight = 100.0
