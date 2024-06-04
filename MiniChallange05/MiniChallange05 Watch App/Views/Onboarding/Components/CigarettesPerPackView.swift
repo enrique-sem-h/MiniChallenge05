@@ -21,7 +21,7 @@ struct CigarettesPerPackView: View {
             VStack {
                 Text("Quantos cigarros tem no maço que você compra?")
                     .font(.title2)
-                    .minimumScaleFactor(textConfig.scaleFacroty)
+                    .minimumScaleFactor(textConfig.scaleFactor)
                     .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 
                 OnboardingPicker(selectedNumber: $tempVar)

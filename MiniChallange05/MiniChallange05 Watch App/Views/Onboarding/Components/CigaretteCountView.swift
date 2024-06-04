@@ -21,7 +21,7 @@ struct CigaretteCountView: View {
             
             Text("Quantos cigarros por dia você costuma fumar?")
                 .font(.title2)
-                .minimumScaleFactor(textConfig.scaleFacroty)
+                .minimumScaleFactor(textConfig.scaleFactor)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
             
             OnboardingPicker(selectedNumber: $tempVar)
@@ -37,12 +37,11 @@ struct CigaretteCountView: View {
             
             GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
                 .padding(.top)
-            
         }
         
         .padding(.horizontal)
         
-        .onDisappear{
+        .onDisappear {
             userPreferences.cigarsPerDay = defVar
         }
         

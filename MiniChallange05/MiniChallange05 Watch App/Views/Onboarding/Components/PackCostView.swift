@@ -22,7 +22,7 @@ struct PackCostView: View {
             VStack {
                 Text("Quanto custa o maço de cigarro?")
                     .font(.title2)
-                    .minimumScaleFactor(textConfig.scaleFacroty)
+                    .minimumScaleFactor(textConfig.scaleFactor)
                     .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 
                 HStack {
@@ -55,7 +55,9 @@ struct PackCostView: View {
                     
                 }
                 
-                Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar) em média por maço")
+                Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
+                    .foregroundColor(Color(red: 222 / 255, green: 255 / 255, blue: 19 / 255))
+                + Text(" em média por maço")
                 
                 Button {
                     if tempVar >= 190 {
@@ -66,6 +68,9 @@ struct PackCostView: View {
                 } label: {
                     Text("Add $10")
                 }
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+                .foregroundStyle(.white)
+                .clipShape(Capsule())
                 
                 Button {
                     if tempVar >= 100 {
@@ -76,6 +81,9 @@ struct PackCostView: View {
                 } label: {
                     Text("Add $100")
                 }
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+                .foregroundStyle(.white)
+                .clipShape(Capsule())
                 .padding(.bottom, 14)
                 
                 GenericBackAndNextButton(fowardView: .smokingHours, backwardsView: .cigarettesPerPack, tempVar: $tempVar, defVar: $defVar)

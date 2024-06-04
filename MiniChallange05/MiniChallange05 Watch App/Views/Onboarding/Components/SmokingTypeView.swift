@@ -12,6 +12,7 @@ struct SmokingTypeView: View {
     @Environment(PageManager.self) var pageManager
     var userPreferences: UserPreferences
     let lineLimit = 2
+    let spacing: CGFloat = 10
     let textConfig : TextConfig
     
     var body: some View {
@@ -21,39 +22,33 @@ struct SmokingTypeView: View {
                 .font(.title2)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 .padding(.bottom)
-                .minimumScaleFactor(textConfig.scaleFacroty)
+                .minimumScaleFactor(textConfig.scaleFactor)
             
-            //Container with both buttons and texts
-            HStack {
-                
-                //Container with one button and one text
+            HStack(spacing: spacing) {
                 VStack {
-                    
-                    //Component with the button style in this screen
                     CigaretteTypeButton(cigarretTypeView: .cigaretteCount, userPreferences: userPreferences, type: .cigarette)
                         .environment(pageManager)
                     
-                    Text("Cigarro Convencional")
+                    Text("Cigarro Comum")
+                        .frame(width: textConfig.frameWidth, height: textConfig.frameHeight)
                         .font(.caption)
                         .multilineTextAlignment(.center)
                         .lineLimit(lineLimit)
-                        .minimumScaleFactor(textConfig.scaleFacroty)
-                        .frame(height: textConfig.frameHeight)
+                        .minimumScaleFactor(textConfig.scaleFactor)
                 }
                 
                 VStack {
                     CigaretteTypeButton(cigarretTypeView: .vapeFrequency, userPreferences: userPreferences, type: .eCigarette)
                         .environment(pageManager)
                     
-                    Text("Cigarro eletronico")
+                    Text("Cigarro eletrônico")
+                        .frame(width: textConfig.frameWidth, height: textConfig.frameHeight)
                         .multilineTextAlignment(.center)
                         .font(.caption)
                         .lineLimit(lineLimit)
-                        .minimumScaleFactor(textConfig.scaleFacroty)
-                        .frame(height: textConfig.frameHeight)
+                        .minimumScaleFactor(textConfig.scaleFactor)
                 }
             }
-    
         }.scenePadding(.horizontal)
         
     }
