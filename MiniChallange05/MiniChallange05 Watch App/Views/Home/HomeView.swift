@@ -30,13 +30,7 @@ struct HomeView: View {
                 
             }
             .scenePadding(.horizontal)
-            
-            
-            
-            
-            
-            
-            
+        
         }
     }
 }
