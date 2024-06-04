@@ -59,7 +59,7 @@ struct Texts {
     // MARK: VapeFrequencyView
     static let vapeFrequencyQuestion = String(localized: "vapeFrequencyQuestion", defaultValue: "How many times do you smoke per day?")
     static func returnVapeFrequency(number: Int) -> String {
-        return number == 1 ? String(localized: "returnVapeFrequency", defaultValue: "once per day") : String(localized: "returnVapeFrequencies", defaultValue: "times per day")
+        return number == 1 ? String(localized: "returnVapeFrequency", defaultValue: "once per day") : String(localized: "returnVapeFrequencies", defaultValue: "\(number) times per day")
     }
     
     // MARK: CigarettesPerPackView
@@ -70,6 +70,7 @@ struct Texts {
     
     // MARK: PackCostView
     static let packCostQuestion = String(localized: "packCostQuestion", defaultValue: "How much is a pack of cigarettes?")
+    static let averagePack = String(localized: "averagePack", defaultValue: " average per pack")
     static func returnPackCost(number: Int) -> String {
         return String(localized: "returnPackCost", defaultValue: "\(Locale.current.currencySymbol ?? "R$")\(number) pack cost average")
     }
@@ -77,7 +78,8 @@ struct Texts {
     // MARK: VapeCostView
     static let add10 = String(localized: "add10", defaultValue: "Add $10")
     static let add100 = String(localized: "add100", defaultValue: "Add $100")
-    static let vapeCostQuestion = String(localized: "vapeCostQuestion", defaultValue: "How much do you spend with smoking monthly?")
+    static let vapeCostQuestion = String(localized: "vapeCostQuestion", defaultValue: "How much do you spend on e-cigs per month?")
+    static let averageVape = String(localized: "averageVape", defaultValue: " on average per month")
     static func returnVapeCost(number: Int) -> String {
         return String(localized: "returnVapeCost", defaultValue: "\(Locale.current.currencySymbol ?? "R$")\(number) vaping cost average")
     }

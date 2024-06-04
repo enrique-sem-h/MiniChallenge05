@@ -4,6 +4,9 @@
     "" : {
 
     },
+    " em média por maço" : {
+
+    },
     "%@ %@" : {
       "localizations" : {
         "en" : {
@@ -30,6 +33,16 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ %2$@,  %3$@ e %4$@"
+          }
+        }
+      }
+    },
+    "%@%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$lld"
           }
         }
       }
@@ -103,6 +116,12 @@
         }
       }
     },
+    "Add $10" : {
+
+    },
+    "Add $100" : {
+
+    },
     "add10" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -133,6 +152,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "+ R$100"
+          }
+        }
+      }
+    },
+    "averagePack" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : " average per pack"
           }
         }
       }
@@ -618,6 +648,9 @@
         }
       }
     },
+    "Quanto custa o maço de cigarro?" : {
+
+    },
     "returnCigarette" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -743,13 +776,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "times per day"
+            "value" : "%lld times per day"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "vezes ao dia"
+            "value" : "%lld vezes ao dia"
           }
         }
       }

@@ -137,7 +137,6 @@
 		CE7CE6C22C013263002E4001 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		CE7CE6C42C013263002E4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA432032C0E58F20017F0C8 /* TextConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConfig.swift; sourceTree = "<group>"; };
-		CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,14 +164,6 @@
 				3178E1FE2C0F96C9006B6551 /* Localizable.xcstrings */,
 			);
 			path = Localization;
-			sourceTree = "<group>";
-		};
-		9B711D222BFBE855003CF148 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B89C05052BF7FB3100D49274 /* Components */ = {
@@ -227,7 +218,6 @@
 				CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */,
 				CE7CE6C12C013263002E4001 /* NotificationService */,
 				CE278A762BF7DF2B0075E22E /* Products */,
-				9B711D222BFBE855003CF148 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};

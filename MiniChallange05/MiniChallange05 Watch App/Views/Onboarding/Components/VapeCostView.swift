@@ -23,6 +23,7 @@ struct VapeCostView: View {
                 Text(Texts.vapeCostQuestion)
                     .font(.title2)
                     .minimumScaleFactor(textConfig.scaleFactor)
+                    .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 
                 HStack {
@@ -57,7 +58,7 @@ struct VapeCostView: View {
                 
                 Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
                     .foregroundColor(Color(red: 222 / 255, green: 255 / 255, blue: 19 / 255))
-                + Text(" em média por maço")
+                + Text(Texts.averageVape)
                 
                 Button {
                     if tempVar >= 190 {

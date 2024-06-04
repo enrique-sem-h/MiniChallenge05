@@ -20,7 +20,7 @@ struct PackCostView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("Quanto custa o maço de cigarro?")
+                Text(Texts.packCostQuestion)
                     .font(.title2)
                     .minimumScaleFactor(textConfig.scaleFactor)
                     .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
@@ -57,7 +57,7 @@ struct PackCostView: View {
                 
                 Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
                     .foregroundColor(Color(red: 222 / 255, green: 255 / 255, blue: 19 / 255))
-                + Text(" em média por maço")
+                + Text(Texts.averagePack)
                 
                 Button {
                     if tempVar >= 190 {
