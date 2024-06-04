@@ -19,7 +19,7 @@ struct CigarettesPerPackView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("Quantos cigarros tem no maço que você compra?")
+                Text(Texts.cigarettesPerPack)
                     .font(.title2)
                     .minimumScaleFactor(textConfig.scaleFacroty)
                     .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
@@ -27,13 +27,9 @@ struct CigarettesPerPackView: View {
                 OnboardingPicker(selectedNumber: $tempVar)
                     .frame(height: textConfig.frameHeight)
                 
-                if tempVar > 1 {
-                    Text("\(tempVar) cigarros por maço")
-                        .italic()
-                } else {
-                    Text("\(tempVar) cigarro por maço")
-                        .italic()
-                }
+                Text(Texts.returnCigarettesPerPack(number: tempVar))
+                    .italic()
+                
                 
                 GenericBackAndNextButton(fowardView: .packCost, backwardsView: .cigaretteCount , tempVar: $tempVar, defVar: $defVar)
                     .padding(.top)

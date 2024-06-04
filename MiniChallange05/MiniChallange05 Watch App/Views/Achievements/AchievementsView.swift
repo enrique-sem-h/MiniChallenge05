@@ -16,9 +16,9 @@ struct AchievementsView: View {
                     .ignoresSafeArea()
                 
                 ScrollView {
-                    Text("Conquistas")
+                    Text(Texts.achievements)
                     
-                    Text("Minhas Conquistas")
+                    Text(Texts.myAchievements)
                     ForEach(0..<4) {_ in
                         HStack {
                             NavigationLink {
@@ -35,7 +35,7 @@ struct AchievementsView: View {
                         }
                     }
                     
-                    Text("Próximas Conquistas")
+                    Text(Texts.nextAchievements)
                     ForEach(0..<4) {_ in
                         HStack {
                             AchievementsComponent(enabled: false)

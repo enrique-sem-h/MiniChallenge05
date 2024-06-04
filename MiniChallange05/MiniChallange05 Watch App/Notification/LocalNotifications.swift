@@ -11,9 +11,9 @@ import Foundation
 final class LocalNotifications: NSObject {
     
     static let localNotification = LocalNotifications()
-    private let smokedActionIdentifier: String = "SmokedID"
-    private let notSmokedActionIdentifier: String = "NotSmokedID"
-    private let categoryIdentifier: String = "categoryID"
+    private let smokedActionIdentifier: String = Texts.Keys.smokedID.rawValue
+    private let notSmokedActionIdentifier: String = Texts.Keys.notSmokedID.rawValue
+    private let categoryIdentifier: String = Texts.Keys.categoryID.rawValue
     
     override init() {
         super.init()
@@ -28,16 +28,14 @@ final class LocalNotifications: NSObject {
         let current = UNUserNotificationCenter.current()
         current.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
-                print("Success in notification authorization")
                 completion(true)
             } else {
-                print("Failure in notification authorization")
                 completion(false)
             }
         }
         
-        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: "Yes")
-        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: "No, I smoked today")
+        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: Texts.notificationYes)
+        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: Texts.notificationNo)
         let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [smokedButton, notSmokedButton], intentIdentifiers: [])
         
         current.setNotificationCategories([category])
@@ -64,9 +62,9 @@ final class LocalNotifications: NSObject {
             for smokeHour in smokedHours {
                 
                 let content = UNMutableNotificationContent()
-                content.title = "Hey there, just checking in!"
+                content.title = Texts.contentTitle
                 content.subtitle = ""
-                content.body = "\nAre you keeping up your streak of not smoking?"
+                content.body = Texts.contentBody
                 content.categoryIdentifier = self.categoryIdentifier
                 
                 let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: smokeHour)

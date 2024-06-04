@@ -17,7 +17,7 @@ struct SmokingTypeView: View {
     var body: some View {
         ScrollView {
             
-            Text("O que você fuma atualmente?")
+            Text(Texts.smokingType)
                 .font(.title2)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 .padding(.bottom)
@@ -33,7 +33,7 @@ struct SmokingTypeView: View {
                     CigaretteTypeButton(cigarretTypeView: .cigaretteCount, userPreferences: userPreferences, type: .cigarette)
                         .environment(pageManager)
                     
-                    Text("Cigarro Convencional")
+                    Text(Texts.cigarette)
                         .font(.caption)
                         .multilineTextAlignment(.center)
                         .lineLimit(lineLimit)
@@ -45,7 +45,7 @@ struct SmokingTypeView: View {
                     CigaretteTypeButton(cigarretTypeView: .vapeFrequency, userPreferences: userPreferences, type: .eCigarette)
                         .environment(pageManager)
                     
-                    Text("Cigarro eletronico")
+                    Text(Texts.eCigarette)
                         .multilineTextAlignment(.center)
                         .font(.caption)
                         .lineLimit(lineLimit)

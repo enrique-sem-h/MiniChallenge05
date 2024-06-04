@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315CDEEF2C012B950067061F /* AchievementDetail.swift */; };
+		3178E1F92C0E55AF006B6551 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3178E1F82C0E55AF006B6551 /* Texts.swift */; };
+		3178E2002C0F96C9006B6551 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3178E1FE2C0F96C9006B6551 /* Localizable.xcstrings */; };
 		3193190D2BFE627C001A1C40 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3193190C2BFE627C001A1C40 /* UserPreferences.swift */; };
-		31E71D112C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */; };
+		31ADEAFB2C0FAB8F00F0B7EC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */; };
+		31ADEAFC2C0FAB9500F0B7EC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3178E1FE2C0F96C9006B6551 /* Localizable.xcstrings */; };
+		31ADEAFE2C0FAC2F00F0B7EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADEAFD2C0FAC2F00F0B7EC /* UserModel.swift */; };
+		31ADEB002C0FAC6600F0B7EC /* AchievementCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADEAFF2C0FAC6600F0B7EC /* AchievementCases.swift */; };
 		31E71D122C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */; };
 		9B5C8A6E2C05283D00416DE0 /* SavingsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C8A6D2C05283D00416DE0 /* SavingsComponent.swift */; };
-		9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B711D2A2BFBE9CF003CF148 /* UserModel.swift */; };
 		9BD619872BFD2EF3004EF522 /* UUIDArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */; };
 		9BD619892BFD3018004EF522 /* DateArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */; };
 		9BD6198B2BFD30E0004EF522 /* DateIntervalTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD6198A2BFD30E0004EF522 /* DateIntervalTransformer.swift */; };
@@ -49,7 +53,6 @@
 		CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */; };
 		CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */; };
 		CEA432042C0E58F20017F0C8 /* TextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA432032C0E58F20017F0C8 /* TextConfig.swift */; };
-		CEA432062C0E62EE0017F0C8 /* AchievementCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,11 +91,14 @@
 
 /* Begin PBXFileReference section */
 		315CDEEF2C012B950067061F /* AchievementDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetail.swift; sourceTree = "<group>"; };
+		3178E1F82C0E55AF006B6551 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
+		3178E1FE2C0F96C9006B6551 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3193190C2BFE627C001A1C40 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		31ADEAFD2C0FAC2F00F0B7EC /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		31ADEAFF2C0FAC6600F0B7EC /* AchievementCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCases.swift; sourceTree = "<group>"; };
 		31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniChallange05-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		9B5C8A6D2C05283D00416DE0 /* SavingsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsComponent.swift; sourceTree = "<group>"; };
-		9B711D2A2BFBE9CF003CF148 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDArrayTransformer.swift; sourceTree = "<group>"; };
 		9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateArrayTransformer.swift; sourceTree = "<group>"; };
 		9BD6198A2BFD30E0004EF522 /* DateIntervalTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIntervalTransformer.swift; sourceTree = "<group>"; };
@@ -153,9 +159,18 @@
 			path = PrivacyManifests;
 			sourceTree = "<group>";
 		};
+		3178E1FA2C0F9165006B6551 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				3178E1FE2C0F96C9006B6551 /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		9B711D222BFBE855003CF148 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -228,6 +243,7 @@
 		CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				3178E1FA2C0F9165006B6551 /* Localization */,
 				31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */,
 				3178E1F72C0E4A8A006B6551 /* PrivacyManifests */,
 				CE7CE6B92C01275E002E4001 /* Notification */,
@@ -276,10 +292,11 @@
 		CE278A942BF7DF400075E22E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9B711D2A2BFBE9CF003CF148 /* UserModel.swift */,
+				31ADEAFF2C0FAC6600F0B7EC /* AchievementCases.swift */,
+				31ADEAFD2C0FAC2F00F0B7EC /* UserModel.swift */,
 				CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */,
 				CE278AA52BF7DFF40075E22E /* DataManager.swift */,
-				CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */,
+				3178E1F82C0E55AF006B6551 /* Texts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -428,6 +445,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = CE278A6E2BF7DF2B0075E22E;
 			productRefGroup = CE278A762BF7DF2B0075E22E /* Products */;
@@ -445,7 +463,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31E71D112C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */,
+				31ADEAFC2C0FAB9500F0B7EC /* Localizable.xcstrings in Resources */,
+				31ADEAFB2C0FAB8F00F0B7EC /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +474,7 @@
 			files = (
 				31E71D122C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */,
 				CE278A882BF7DF2C0075E22E /* Preview Assets.xcassets in Resources */,
+				3178E2002C0F96C9006B6551 /* Localizable.xcstrings in Resources */,
 				CE278A852BF7DF2C0075E22E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,11 +486,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31ADEB002C0FAC6600F0B7EC /* AchievementCases.swift in Sources */,
 				CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */,
 				CE2BF2FB2BFD2F3900555FBC /* (null) in Sources */,
 				B89F2B632C0105A9004EED57 /* ProgressComponent.swift in Sources */,
 				B8F671BE2BFD0F8E005DE68E /* OnboardingPicker.swift in Sources */,
-				9B711D2B2BFBE9CF003CF148 /* UserModel.swift in Sources */,
 				B89C05172BF7FB8000D49274 /* CreateSmokingHourView.swift in Sources */,
 				B89C05112BF7FB6B00D49274 /* PackCostView.swift in Sources */,
 				9BD6198D2BFD3584004EF522 /* User.swift in Sources */,
@@ -487,6 +507,7 @@
 				9BD6198B2BFD30E0004EF522 /* DateIntervalTransformer.swift in Sources */,
 				315CDEF02C012B950067061F /* AchievementDetail.swift in Sources */,
 				CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */,
+				3178E1F92C0E55AF006B6551 /* Texts.swift in Sources */,
 				B89C05072BF7FB4500D49274 /* PresentationView.swift in Sources */,
 				9B5C8A6E2C05283D00416DE0 /* SavingsComponent.swift in Sources */,
 				B89C05152BF7FB7900D49274 /* SmokingHoursView.swift in Sources */,
@@ -495,8 +516,8 @@
 				B89C050B2BF7FB5500D49274 /* CigaretteCountView.swift in Sources */,
 				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
 				CEA432042C0E58F20017F0C8 /* TextConfig.swift in Sources */,
-				CEA432062C0E62EE0017F0C8 /* AchievementCases.swift in Sources */,
 				CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */,
+				31ADEAFE2C0FAC2F00F0B7EC /* UserModel.swift in Sources */,
 				B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */,
 				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,
 				B89F2B5C2BFF83B1004EED57 /* HealthHomeView.swift in Sources */,
@@ -641,20 +662,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "\"\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
 				PRODUCT_NAME = "Quit Buddy!";
 				SDKROOT = watchos;
@@ -673,20 +693,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
-				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "\"\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
 				PRODUCT_NAME = "Quit Buddy!";
 				SDKROOT = watchos;
@@ -707,7 +726,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -727,7 +746,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

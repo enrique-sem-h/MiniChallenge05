@@ -15,7 +15,7 @@ struct SavingsComponent: View {
         
         VStack {
             HStack {
-                Text("Savings")
+                Text(Texts.savings)
                     .bold()
                 Spacer()
             }.padding(.bottom)
@@ -28,7 +28,7 @@ struct SavingsComponent: View {
                     Text("\(Locale.current.currencySymbol ?? "$") \(String(format: "%.2f", valueSaved))")
                         .font(.title3)
                     
-                    Text("Saved so far!")
+                    Text(Texts.savedSoFar)
                 }
                 Spacer()
             }

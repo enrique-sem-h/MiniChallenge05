@@ -13,14 +13,14 @@ struct PresentationView: View {
     var body: some View {
         VStack {
             
-            Text("Apresentação do App")
+            Text(Texts.presentation)
                 .font(.title3)
                 .bold()
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                 .padding(.bottom, 10)
                 .minimumScaleFactor(0.7)
             
-            Text("Para começar, precisamos que insira algumas inforamções a seguir.")
+            Text(Texts.onboardingInformations)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                 .font(.footnote)
                 .padding(.bottom, 10)
@@ -29,7 +29,7 @@ struct PresentationView: View {
             Button {
                 pageManager.page = .smokingType
             } label: {
-                Text("Continuar")
+                Text(Texts.continueText)
                     .bold()
             }
             .background(Color.gray)

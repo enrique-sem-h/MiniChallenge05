@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgressComponent: View {
-    var title: String = "Title"
+    var title: String = Texts.title
     var porcentagem: Float = 0.5
     
     var body: some View {

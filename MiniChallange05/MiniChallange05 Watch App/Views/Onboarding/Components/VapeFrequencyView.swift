@@ -18,7 +18,7 @@ struct VapeFrequencyView: View {
     var body: some View {
         ScrollView {
             
-            Text("Quantas vezes por dia você costuma fumar?")
+            Text(Texts.vapeFrequencyQuestion)
                 .font(.title2)
                 .minimumScaleFactor(textConfig.scaleFacroty)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
@@ -26,13 +26,8 @@ struct VapeFrequencyView: View {
             OnboardingPicker(selectedNumber: $tempVar)
                 .frame(height: textConfig.frameHeight)
             
-            if tempVar > 1 {
-                Text("\(tempVar) vezes por dia")
-                    .italic()
-            } else {
-                Text("\(tempVar) vezes por dia")
-                    .italic()
-            }
+            Text(Texts.returnVapeFrequency(number: tempVar))
+                .italic()
             
             GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
                 .padding(.top)

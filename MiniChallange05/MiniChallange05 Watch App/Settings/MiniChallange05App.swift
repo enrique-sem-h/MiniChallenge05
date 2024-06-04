@@ -12,7 +12,7 @@ struct MiniChallange05_Watch_AppApp: App {
     
     var isOnboarding: Bool {
         get {
-            UserDefaults.standard.bool(forKey: "isOnboarding")
+            UserDefaults.standard.bool(forKey: Texts.Keys.isOnboarding.rawValue)
         }
     }
     

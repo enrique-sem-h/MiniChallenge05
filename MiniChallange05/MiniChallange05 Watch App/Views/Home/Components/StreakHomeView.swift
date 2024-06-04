@@ -15,7 +15,7 @@ struct StreakComponents: View {
         VStack {
             
             HStack {
-                Text("Streak")
+                Text(Texts.streak)
                     .font(.title2)
                 Spacer()
             }
@@ -49,7 +49,7 @@ struct StreakComponents: View {
                                 .bold()
                                 .italic()
                         } else {
-                            Text("Hoje")
+                            Text(Texts.today)
                                 .font(.title2)
                                 .bold()
                                 .italic()
@@ -64,25 +64,25 @@ struct StreakComponents: View {
                 let duration = calculateDuration(from: user?.startStreak ?? .distantPast, to: Date())
                 
                 if duration.years > 0 {
-                    Text("Seu recorde é \(formatYear(duration.years)),  \(formatMonth(duration.months)) e \(formatDay(duration.days))")
+                    Text("\(Texts.yourRecord) \(formatYear(duration.years)),  \(formatMonth(duration.months)) e \(formatDay(duration.days))")
                         .font(.caption)
                         .truncationMode(.tail)
                         .lineLimit(2)
                         .minimumScaleFactor(0.6)
                 } else if duration.months > 0 {
-                    Text("Seu recorde é \(formatMonth(duration.months)) e \(formatDay(duration.days))")
+                    Text("\(Texts.yourRecord) \(formatMonth(duration.months)) e \(formatDay(duration.days))")
                         .font(.caption)
                         .truncationMode(.tail)
                         .lineLimit(2)
                         .minimumScaleFactor(0.6)
                 } else if duration.days > 0 {
-                    Text("Seu recorde é \(formatDay(duration.days))")
+                    Text("\(Texts.yourRecord) \(formatDay(duration.days))")
                         .font(.caption)
                         .truncationMode(.tail)
                         .lineLimit(2)
                         .minimumScaleFactor(0.6)
                 } else {
-                    Text("Hoje")
+                    Text(Texts.today)
                         .font(.caption)
                 }
                 
@@ -108,15 +108,15 @@ struct StreakComponents: View {
     }
     
     func formatYear(_ years: Int) -> String {
-        return years > 0 ? "\(years) \(years == 1 ? "ano" : "anos")" : ""
+        return years > 0 ? "\(years) \(years == 1 ? Texts.year : Texts.years)" : ""
     }
     
     func formatMonth(_ months: Int) -> String {
-        return months > 0 ? "\(months) \(months == 1 ? "mês" : "meses")" : ""
+        return months > 0 ? "\(months) \(months == 1 ? Texts.month : Texts.months)" : ""
     }
     
     func formatDay(_ days: Int) -> String {
-        return days > 0 ? "\(days) \(days == 1 ? "dia" : "dias")" : ""
+        return days > 0 ? "\(days) \(days == 1 ? Texts.day : Texts.days)" : ""
     }
     
 }

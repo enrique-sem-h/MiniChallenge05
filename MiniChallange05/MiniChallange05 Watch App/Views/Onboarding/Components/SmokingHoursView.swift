@@ -20,7 +20,7 @@ struct SmokingHoursView: View {
     var body: some View {
         ScrollView {
             
-            Text("Em que horários você fuma?")
+            Text(Texts.smokingHoursQuestion)
                 .font(.title2)
                 .minimumScaleFactor(textConfig.scaleFacroty)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.frameHeight, alignment: .leading)
@@ -48,7 +48,7 @@ struct SmokingHoursView: View {
             .padding(.bottom)
             
             VStack {
-                Button("Finalizar") {
+                Button(Texts.end) {
                     
                     userPreferences.hourSmoke = Array(selectedItems)
                     
@@ -73,7 +73,7 @@ struct SmokingHoursView: View {
                 .foregroundStyle(.achievementsGray)
                 .clipShape(Capsule())
                 
-                Button("Voltar") {
+                Button(Texts.back) {
                     pageManager.page = viewAnterior
                 }
                 

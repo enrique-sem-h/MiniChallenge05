@@ -29,7 +29,7 @@ struct AchievementDetail: View {
                         .font(.title)
                         .fontWeight(.light)
                         .padding()
-                    Text("About")
+                    Text(Texts.about)
                         .font(.title3)
                         .bold()
                         .padding()

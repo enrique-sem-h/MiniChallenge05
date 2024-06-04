@@ -19,7 +19,7 @@ struct CigaretteCountView: View {
         
         ScrollView {
             
-            Text("Quantos cigarros por dia você costuma fumar?")
+            Text(Texts.cigaretteCountQuestion)
                 .font(.title2)
                 .minimumScaleFactor(textConfig.scaleFacroty)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
@@ -27,13 +27,8 @@ struct CigaretteCountView: View {
             OnboardingPicker(selectedNumber: $tempVar)
                 .frame(height: textConfig.frameHeight)
             
-            if tempVar > 1 {
-                Text("\(tempVar) cigarros por dia")
-                    .italic()
-            } else {
-                Text("\(tempVar) cigarro por dia")
-                    .italic()
-            }
+            Text(Texts.returnCigarettes(number: tempVar))
+                .italic()
             
             GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
                 .padding(.top)
@@ -51,6 +46,6 @@ struct CigaretteCountView: View {
 
 #Preview {
     let pageManager = PageManager()
-    return CigaretteCountView(tempVar: 2, defVar: .constant(200), userPreferences: UserPreferences(), textConfig: TextConfig())
+    return CigaretteCountView(tempVar: 1, defVar: .constant(200), userPreferences: UserPreferences(), textConfig: TextConfig())
         .environment(pageManager)
 }

@@ -42,7 +42,7 @@ struct CreateSmokingHourView: View {
                     }
             }
             
-            Button("Confirmar") {
+            Button(Texts.confirm) {
                 items.append(data)
                 selectedItems.insert(data)
                 pageManager.page = .smokingHours

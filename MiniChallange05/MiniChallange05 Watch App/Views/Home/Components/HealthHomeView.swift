@@ -13,13 +13,8 @@ struct Updater: Codable { // a simple struct to validate if the health message h
 }
 
 struct HealthHomeView: View {
-    @State var messages = [
-    "Take a moment to reflect on how far you've come. Celebrate your progress!",
-    "Take a moment to remember your reasons to quit and reflect on what they mean to you.",
-//        "You have attained 10 achievements so far. Good job!",
-    "Share your progress with a supportive friend today for an extra dose of motivation!",
-    ]
-    @State var text = ""
+    @State var messages = Texts.healthHomeMessages
+    @State var text = Texts.healthHomeText
     
     var body: some View {
         VStack {
@@ -34,11 +29,11 @@ struct HealthHomeView: View {
                         .padding()
                 }
         }.onAppear{
-            if let userDefaultsText = UserDefaults.standard.string(forKey: "motivationText") {
+            if let userDefaultsText = UserDefaults.standard.string(forKey: Texts.Keys.motivationText.rawValue) {
                 text = userDefaultsText
             }
             if retrieveSavings() > 50 {
-                messages.append("You have saved around $\(Int(retrieveSavings())) so far. Keep it up!")
+                messages.append(Texts.returnHealthMessage(number: retrieveSavings()))
             }
             checkUpdate()
         }
@@ -64,7 +59,7 @@ struct HealthHomeView: View {
          guard var updater = getUpdater() else { return }
          if updater.canUpdate {
             text = messages[Int.random(in: 0..<messages.count)]
-            UserDefaults.standard.setValue(text, forKey: "motivationText")
+             UserDefaults.standard.setValue(text, forKey: Texts.Keys.motivationText.rawValue)
             updater.date = .now
             updater.canUpdate = false
             setUpdater(newValue: updater)
@@ -73,8 +68,8 @@ struct HealthHomeView: View {
     
     // retrieving updater from UserDefaults
     private func getUpdater() -> Updater? {
-        if UserDefaults.standard.value(forKey: "dailyMotivation") != nil {
-            if let data = UserDefaults.standard.object(forKey: "dailyMotivation") as? Data {
+        if UserDefaults.standard.value(forKey: Texts.Keys.dailyMotivation.rawValue) != nil {
+            if let data = UserDefaults.standard.object(forKey: Texts.Keys.dailyMotivation.rawValue) as? Data {
                 return try? JSONDecoder().decode(Updater.self, from: data)
             }
             return nil
@@ -88,7 +83,7 @@ struct HealthHomeView: View {
     // storing updater in UserDefaults
     private func setUpdater(newValue: Updater) {
         if let encodedData = try? JSONEncoder().encode(newValue) {
-            UserDefaults.standard.setValue(encodedData, forKey: "dailyMotivation")
+            UserDefaults.standard.setValue(encodedData, forKey: Texts.Keys.dailyMotivation.rawValue)
         }
     }
     

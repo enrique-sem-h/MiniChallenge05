@@ -73,7 +73,7 @@ struct Onboard: View {
         case .homeView:
             ContentView()
                 .onAppear{
-                    UserDefaults.standard.setValue(true, forKey: "isOnboarding")
+                    UserDefaults.standard.setValue(true, forKey: Texts.Keys.isOnboarding.rawValue)
             }
         }
     }

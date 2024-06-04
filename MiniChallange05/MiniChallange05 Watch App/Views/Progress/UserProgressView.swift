@@ -29,7 +29,7 @@ struct UserProgressView: View {
                 }
                 
             }
-            .navigationTitle("Progresso")
+            .navigationTitle(Texts.progress)
         }
     }
 }
