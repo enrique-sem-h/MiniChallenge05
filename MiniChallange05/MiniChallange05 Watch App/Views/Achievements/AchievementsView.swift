@@ -26,6 +26,7 @@ struct AchievementsView: View {
                             } label: {
                                 AchievementsComponent(enabled: true)
                             }
+                            
                             NavigationLink {
                                 AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))
                             } label: {

@@ -23,3 +23,9 @@ class AchievementModel{
         self.id = UUID()
     }
 }
+
+extension AchievementModel{
+    func releaseArchievment(){
+        
+    }
+}

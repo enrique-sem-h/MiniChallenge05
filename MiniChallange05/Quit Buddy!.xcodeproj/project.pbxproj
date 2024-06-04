@@ -49,6 +49,7 @@
 		CE69264E2BFE60A300ABE06B /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */; };
 		CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CE6BA2C01276A002E4001 /* LocalNotifications.swift */; };
 		CEA432042C0E58F20017F0C8 /* TextConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA432032C0E58F20017F0C8 /* TextConfig.swift */; };
+		CEA432062C0E62EE0017F0C8 /* AchievementCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		CE7CE6C22C013263002E4001 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		CE7CE6C42C013263002E4001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA432032C0E58F20017F0C8 /* TextConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConfig.swift; sourceTree = "<group>"; };
+		CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 				9B711D2A2BFBE9CF003CF148 /* UserModel.swift */,
 				CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */,
 				CE278AA52BF7DFF40075E22E /* DataManager.swift */,
+				CEA432052C0E62EE0017F0C8 /* AchievementCases.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				B89C050B2BF7FB5500D49274 /* CigaretteCountView.swift in Sources */,
 				CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */,
 				CEA432042C0E58F20017F0C8 /* TextConfig.swift in Sources */,
+				CEA432062C0E62EE0017F0C8 /* AchievementCases.swift in Sources */,
 				CE7CE6BB2C01276A002E4001 /* LocalNotifications.swift in Sources */,
 				B89C05092BF7FB4D00D49274 /* SmokingTypeView.swift in Sources */,
 				CE278AAC2BF7E0360075E22E /* GeneralComponents.swift in Sources */,
