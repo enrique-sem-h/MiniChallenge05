@@ -4,9 +4,6 @@
     "" : {
 
     },
-    " em média por maço" : {
-
-    },
     "%@ %@" : {
       "localizations" : {
         "en" : {
@@ -163,6 +160,17 @@
           "stringUnit" : {
             "state" : "new",
             "value" : " average per pack"
+          }
+        }
+      }
+    },
+    "averageVape" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : " on average per month"
           }
         }
       }
@@ -648,9 +656,6 @@
         }
       }
     },
-    "Quanto custa o maço de cigarro?" : {
-
-    },
     "returnCigarette" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -940,13 +945,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Today"
+            "value" : "A new beginning!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hoje"
+            "value" : "Um novo começo!"
           }
         }
       }
@@ -957,12 +962,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "How much do you spend with smoking monthly?"
+            "value" : "How much do you spend on e-cigs per month?"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Quanto você gasta com fumo por mês?"
           }
         }

@@ -28,7 +28,7 @@ struct Texts {
     static let sourceText = String(localized: "sourceText", defaultValue: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
     static let streak = String(localized: "streak", defaultValue: "Streak")
     static let title = String(localized: "title", defaultValue: "Title")
-    static let today = String(localized: "today", defaultValue: "Today")
+    static let today = String(localized: "today", defaultValue: "A new beginning!")
     
     // MARK: LocalNotifications
     static let notificationYes = String(localized: "notificationYes", defaultValue: "Yes")
