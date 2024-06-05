@@ -12,15 +12,19 @@ class AchievementModel{
     var progress : Float
     let title : String
     let description : String
-    var wasConquered : Bool
+    var wasConquered : Bool = false
+    let daysToAchieve : Int
     var id : UUID
     
-    init(progress: Float, title: String, description: String) {
+    init(progress: Float, title: String, description: String, daysToAchieve : AchievementCases) {
         self.progress = progress
         self.title = title
         self.description = description
-        self.wasConquered = false
         self.id = UUID()
+        self.daysToAchieve = daysToAchieve.rawValue
+        
+        //Atribui o valor real que se estiver no coreData
+        self.wasConquered = self.checkWhetherWasReached(uuid: self.id)
     }
 }
 
@@ -69,4 +73,20 @@ extension AchievementModel{
         return daysElapsed
     }
     
+    func checkWhetherWasReached(uuid : UUID) -> Bool{
+        guard let coreDataAchievements = DataManager.shared.userModel?.achievementsList else {return false}
+        
+        for id in coreDataAchievements{
+            if uuid == id{
+                return true
+            }
+        }
+        return false
+    }
+    
+    func evaluateProgress() -> Float{
+        guard let streakDays = getStreakDays() else {return 0.0}
+        self.progress = Float(streakDays / daysToAchieve)
+        return self.progress
+    }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AchievementsComponent: View {
+    
     var enabled:Bool
     
     var body: some View {
