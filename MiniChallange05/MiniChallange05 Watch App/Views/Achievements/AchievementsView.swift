@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AchievementsView: View {
     
-    @State var releasedAchievements : [AchievementModel]
-    @State var unreleasedAchievements : [AchievementModel]
+    @State var releasedAchievements : [AchievementModel] = []
+    @State var unreleasedAchievements : [AchievementModel] = []
     @State var achievementObjects = AchievementObjects()
     
     var body: some View {
@@ -67,5 +67,5 @@ struct AchievementsView: View {
 }
 
 #Preview {
-    AchievementsView(releasedAchievements: [], unreleasedAchievements: [])
+    AchievementsView()
 }
