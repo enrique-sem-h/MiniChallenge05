@@ -9,27 +9,21 @@ import SwiftUI
 
 struct AchievementsComponent: View {
     
-    var enabled:Bool
+    let tax = 0.5
     
     var body: some View {
-        if enabled {
-            VStack {
-                Ellipse()
-                RoundedRectangle(cornerRadius: 7)
-            }
-            .padding()
-            .background(.blue.opacity(0.6))
-        } else {
-            VStack {
-                Ellipse()
-                RoundedRectangle(cornerRadius: 7)
-            }
-            .padding()
-            .background(.gray.opacity(0.6))
+        
+        VStack {
+            Image(uiImage: UIImage(named: "TimeBased")!)
+            
+            ProgressView(value: tax)
+                .scaleEffect(CGSize(width: 0.5, height: 0.5))
         }
+        .padding()
+        
     }
 }
-
-#Preview {
-    AchievementsComponent(enabled: false)
-}
+    
+    #Preview {
+        AchievementsComponent()
+    }

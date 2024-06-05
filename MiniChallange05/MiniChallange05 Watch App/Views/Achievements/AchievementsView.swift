@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AchievementsView: View {
     
-    @State var achievementss : [AchievementModel]
+    @State var releasedAchievements : [AchievementModel]
+    @State var unreleasedAchievements : [AchievementModel]
+    @State var achievementObjects = AchievementObjects()
     
     var body: some View {
         NavigationStack {
@@ -21,37 +23,49 @@ struct AchievementsView: View {
                 ScrollView {
                     Text(Texts.achievements)
                     
-                    Text(Texts.myAchievements)
-                    ForEach(0..<4) {_ in
-                        HStack {
-                            NavigationLink {
-                                AchievementDetail(achievement: .init(title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", daysToAchieve: .firstDay, imageName: ""))
-                            } label: {
-                                AchievementsComponent(enabled: true)
+                    //Achievements reached
+                    if (!releasedAchievements.isEmpty){
+                        
+                        Text(Texts.myAchievements)
+                        
+                        LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
+                            ForEach(releasedAchievements, id: \.id) { achiement in
+                                
+                                NavigationLink {
+                                    AchievementDetail(achievement: achiement)
+                                } label: {
+                                    AchievementsComponent()
+                                }
+                                
                             }
-                            
-                            NavigationLink {
-                                AchievementDetail(achievement: .init(title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", daysToAchieve: .firstWeek, imageName: ""))
-                            } label: {
-                                AchievementsComponent(enabled: true)
-                            }
-                        }
+                            .buttonStyle(PlainButtonStyle())
+                        })
                     }
                     
+                    
+                    
+                    //Achievements not released
                     Text(Texts.nextAchievements)
-                    ForEach(0..<4) {_ in
-                        HStack {
-                            AchievementsComponent(enabled: false)
+                    
+                    LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
+                        ForEach(unreleasedAchievements, id: \.id) {_ in
                             
-                            AchievementsComponent(enabled: false)
+                            AchievementsComponent()
+                                .opacity(0.5)
+                            
                         }
-                    }
+                        .buttonStyle(PlainButtonStyle())
+                    })
+                    
                 }
             }
         }
+        .onAppear(perform: {
+            achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
+        })
     }
 }
 
 #Preview {
-    AchievementsView(achievementss: [])
+    AchievementsView(releasedAchievements: [], unreleasedAchievements: [])
 }
