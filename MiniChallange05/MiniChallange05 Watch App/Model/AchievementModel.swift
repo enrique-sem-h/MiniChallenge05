@@ -30,6 +30,8 @@ class AchievementModel{
         self.wasConquered = self.checkWhetherWasReached(uuid: self.id)
         
         self.progress = evaluateProgress()
+        
+        self.releaseArchievment()
     }
 }
 
@@ -40,29 +42,34 @@ extension AchievementModel{
         let daysElapsed = getStreakDays()
         
         switch daysElapsed{
-        case AchievementCases.startJourney.rawValue:
-            //Inicio da jornada
-            break
+    
         case AchievementCases.firstDay.rawValue:
             //Adicionar o UUID da streak de um dia no array do coreData
+            self.wasConquered = true
             break
         case AchievementCases.firstWeek.rawValue:
             //Adicionar o UUID da streak de uma semana no array do coreData
+            self.wasConquered = true
             break
         case AchievementCases.halfMonth.rawValue:
             //Adicionar o UUID da streak de 15 dias no array do coreData
+            self.wasConquered = true
             break
         case AchievementCases.month.rawValue: 
             //Adicionar o UUID da streak de um mês no array do coreData
+            self.wasConquered = true
             break
         case AchievementCases.threeMonths.rawValue:
             //Adicionar o UUID da streak de três meses no array do coreData
+            self.wasConquered = true
             break
         case AchievementCases.halfYear.rawValue:
             //Adicionar o UUID da streak de 6 meses no array do coreData
+            self.wasConquered = true
             break
         case AchievementCases.year.rawValue:
             //Adicionar o UUID da streak de um ano no array do coreData
+            self.wasConquered = true
             break
         default:
             print("Non case was executed")

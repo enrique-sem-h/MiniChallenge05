@@ -16,7 +16,7 @@ struct AchievementsComponent: View {
         VStack {
             Image(uiImage: UIImage(named: "TimeBased")!)
             
-            ProgressView(value: achievementInfo?.progress)
+            ProgressView(value: achievementInfo?.evaluateProgress())
                 .scaleEffect(CGSize(width: 0.5, height: 0.5))
         }
         .padding()
