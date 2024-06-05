@@ -14,7 +14,7 @@ struct ContentView: View {
         TabView {
             HomeView()
             UserProgressView()
-//            AchievementsView()
+            AchievementsView()
         }
     }
     
