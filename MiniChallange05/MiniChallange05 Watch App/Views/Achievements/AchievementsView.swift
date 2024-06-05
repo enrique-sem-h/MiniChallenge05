@@ -34,7 +34,7 @@ struct AchievementsView: View {
                                 NavigationLink {
                                     AchievementDetail(achievement: achiement)
                                 } label: {
-                                    AchievementsComponent()
+                                    AchievementsComponent(achievementInfo: achiement)
                                 }
                                 
                             }
@@ -50,7 +50,7 @@ struct AchievementsView: View {
                     LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
                         ForEach(unreleasedAchievements, id: \.id) {_ in
                             
-                            AchievementsComponent()
+                            AchievementsComponent(achievementInfo: nil)
                                 .opacity(0.5)
                             
                         }

@@ -9,21 +9,17 @@ import SwiftUI
 
 struct AchievementsComponent: View {
     
-    let tax = 0.5
+    var achievementInfo : AchievementModel?
     
     var body: some View {
         
         VStack {
             Image(uiImage: UIImage(named: "TimeBased")!)
             
-            ProgressView(value: tax)
+            ProgressView(value: achievementInfo?.progress)
                 .scaleEffect(CGSize(width: 0.5, height: 0.5))
         }
         .padding()
         
     }
 }
-    
-    #Preview {
-        AchievementsComponent()
-    }
