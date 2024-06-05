@@ -284,7 +284,6 @@
 		CE278A942BF7DF400075E22E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEA8667A2C10DCEF00BF2BF5 /* AchievementObjects */,
 				31ADEAFF2C0FAC6600F0B7EC /* AchievementCases.swift */,
 				31ADEAFD2C0FAC2F00F0B7EC /* UserModel.swift */,
 				CE278AA32BF7DFDE0075E22E /* AchievementModel.swift */,
@@ -374,13 +373,6 @@
 				CE7CE6C42C013263002E4001 /* Info.plist */,
 			);
 			path = NotificationService;
-			sourceTree = "<group>";
-		};
-		CEA8667A2C10DCEF00BF2BF5 /* AchievementObjects */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AchievementObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

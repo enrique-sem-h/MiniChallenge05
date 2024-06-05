@@ -13,39 +13,38 @@ struct AchievementDetail: View {
     
     var body: some View {
         
-        VStack {
-            ScrollView {
+        ScrollView {
+            ZStack {
+                LinearGradient(colors: [.achievementPurple, .black], startPoint: .top, endPoint: .bottom)
                 VStack {
-                    Image(systemName: "square.and.arrow.up")
-                        .resizable()
-                        .frame(width: 162, height: 130, alignment: .center)
-                        .padding()
-                    HStack {
-                        ProgressView(value: achievement.progress, total: 100)
-                            .scaleEffect(CGSize(width: 1, height: 0.5))
-                        Text("\(Int(achievement.progress))%")
-                            .padding(.horizontal)
-                    }.padding(.horizontal)
+                    VStack {
+                        Image(.timeBasedBig)
+                            .resizable()
+                            .frame(width: 162, height: 130, alignment: .center)
+                            .padding()
+                        HStack {
+                            ProgressView(value: achievement.progress, total: 100)
+                                .scaleEffect(CGSize(width: 1, height: 0.5))
+                            Text("\(Int(achievement.progress))%")
+                                .padding(.horizontal)
+                        }.padding(.horizontal)
+                    }.padding(.top, 49)
+                    VStack(alignment: .leading) {
+                        Text(achievement.title)
+                            .font(.title)
+                            .fontWeight(.light)
+                            .padding()
+                        Text(Texts.about)
+                            .font(.title3)
+                            .bold()
+                            .padding()
+                        Text(achievement.description)
+                            .fontWeight(.light)
+                            .padding()
+                    }.frame(width: screenWidth, alignment: .leading)
                 }
-                VStack(alignment: .leading) {
-                    Text(achievement.title)
-                        .font(.title)
-                        .fontWeight(.light)
-                        .padding()
-                    Text(Texts.about)
-                        .font(.title3)
-                        .bold()
-                        .padding()
-                    Text(achievement.description)
-                        .fontWeight(.light)
-                        .padding()
-                }.frame(width: screenWidth, alignment: .leading)
             }
-        }
-        .background{
-            LinearGradient(colors: [.black, .achievementsGray], startPoint: .top, endPoint: .bottom)
-                .frame(width: screenWidth, height: screenHeight)
-        }
+        }.ignoresSafeArea()
     }
 }
 
