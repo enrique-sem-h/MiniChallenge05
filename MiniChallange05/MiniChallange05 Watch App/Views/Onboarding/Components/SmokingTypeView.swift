@@ -13,6 +13,7 @@ struct SmokingTypeView: View {
     var userPreferences: UserPreferences
     let lineLimit = 2
     let spacing: CGFloat = 10
+    let height = 40
     let textConfig : TextConfig
     
     var body: some View {
@@ -30,7 +31,7 @@ struct SmokingTypeView: View {
                         .environment(pageManager)
                     
                     Text(Texts.cigarette)
-                    .frame(width: textConfig.frameWidth, height: textConfig.frameHeight)
+                        .frame(width: textConfig.frameWidth)
                         .font(.caption)
                         .multilineTextAlignment(.center)
                         .lineLimit(lineLimit)
@@ -42,7 +43,7 @@ struct SmokingTypeView: View {
                         .environment(pageManager)
                     
                     Text(Texts.eCigarette)
-                    .frame(width: textConfig.frameWidth, height: textConfig.frameHeight)
+                        .frame(width: textConfig.frameWidth)
                         .multilineTextAlignment(.center)
                         .font(.caption)
                         .lineLimit(lineLimit)

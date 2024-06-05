@@ -41,7 +41,7 @@ struct SmokingHoursView: View {
             }, label: {
                 Image(systemName: "plus")
                     .padding(15)
-                    .background(.achievementsGray)
+                    .background(Color(red: 68 / 255, green: 17 / 255, blue: 190 / 255, opacity: 0.4 / 1))
                     .clipShape(Circle())
             })
             .buttonStyle(PlainButtonStyle())
@@ -69,14 +69,16 @@ struct SmokingHoursView: View {
                     pageManager.page = .homeView
                     
                 }
-                .background(Color.gray)
-                .foregroundStyle(.achievementsGray)
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255))
+                .foregroundStyle(.white)
                 .clipShape(Capsule())
                 
                 Button(Texts.back) {
                     pageManager.page = viewAnterior
                 }
-                
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+                .foregroundStyle(.white)
+                .clipShape(Capsule())
             }
             .padding(.horizontal)
         }

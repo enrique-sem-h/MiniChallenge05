@@ -47,7 +47,7 @@ struct CreateSmokingHourView: View {
                 selectedItems.insert(data)
                 pageManager.page = .smokingHours
             }
-            .background(Color.gray)
+            .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255))
             .foregroundStyle(.white)
             .clipShape(Capsule())
             
