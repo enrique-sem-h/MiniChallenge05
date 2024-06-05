@@ -38,7 +38,7 @@
 		B89F2B622C0105A9004EED57 /* ProgressDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B5F2C0105A9004EED57 /* ProgressDetailComponent.swift */; };
 		B89F2B632C0105A9004EED57 /* ProgressComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F2B602C0105A9004EED57 /* ProgressComponent.swift */; };
 		B8F671BE2BFD0F8E005DE68E /* OnboardingPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89C05182BFBC01400D49274 /* OnboardingPicker.swift */; };
-		CE278A7C2BF7DF2B0075E22E /* Quit Buddy!.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE278A7C2BF7DF2B0075E22E /* NicQuit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE278A7B2BF7DF2B0075E22E /* NicQuit.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE278A812BF7DF2B0075E22E /* MiniChallange05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */; };
 		CE278A832BF7DF2B0075E22E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278A822BF7DF2B0075E22E /* ContentView.swift */; };
 		CE278A852BF7DF2C0075E22E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE278A842BF7DF2C0075E22E /* Assets.xcassets */; };
@@ -73,7 +73,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				CE278A7C2BF7DF2B0075E22E /* Quit Buddy!.app in Embed Watch Content */,
+				CE278A7C2BF7DF2B0075E22E /* NicQuit.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +122,7 @@
 		B89F2B5F2C0105A9004EED57 /* ProgressDetailComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDetailComponent.swift; sourceTree = "<group>"; };
 		B89F2B602C0105A9004EED57 /* ProgressComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressComponent.swift; sourceTree = "<group>"; };
 		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quit Buddy!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE278A7B2BF7DF2B0075E22E /* NicQuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicQuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallange05App.swift; sourceTree = "<group>"; };
 		CE278A822BF7DF2B0075E22E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE278A842BF7DF2C0075E22E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				CE278A752BF7DF2B0075E22E /* MiniChallange05.app */,
-				CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */,
+				CE278A7B2BF7DF2B0075E22E /* NicQuit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -410,7 +410,7 @@
 			);
 			name = "MiniChallange05 Watch App";
 			productName = "MiniChallange05 Watch App";
-			productReference = CE278A7B2BF7DF2B0075E22E /* Quit Buddy!.app */;
+			productReference = CE278A7B2BF7DF2B0075E22E /* NicQuit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -431,7 +431,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "Quit Buddy!" */;
+			buildConfigurationList = CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "NicQuit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -670,7 +670,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
-				PRODUCT_NAME = "Quit Buddy!";
+				PRODUCT_NAME = NicQuit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -701,7 +701,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10.watchkit;
-				PRODUCT_NAME = "Quit Buddy!";
+				PRODUCT_NAME = NicQuit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -756,7 +756,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "Quit Buddy!" */ = {
+		CE278A722BF7DF2B0075E22E /* Build configuration list for PBXProject "NicQuit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE278A892BF7DF2C0075E22E /* Debug */,

@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE278A7A2BF7DF2B0075E22E"
-               BuildableName = "Quit Buddy!.app"
+               BuildableName = "NicQuit.app"
                BlueprintName = "MiniChallange05 Watch App"
-               ReferencedContainer = "container:Quit Buddy!.xcodeproj">
+               ReferencedContainer = "container:NicQuit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -32,7 +32,7 @@
                BlueprintIdentifier = "CE278A742BF7DF2B0075E22E"
                BuildableName = "MiniChallange05.app"
                BlueprintName = "MiniChallange05"
-               ReferencedContainer = "container:Quit Buddy!.xcodeproj">
+               ReferencedContainer = "container:NicQuit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE278A7A2BF7DF2B0075E22E"
-            BuildableName = "Quit Buddy!.app"
+            BuildableName = "NicQuit.app"
             BlueprintName = "MiniChallange05 Watch App"
-            ReferencedContainer = "container:Quit Buddy!.xcodeproj">
+            ReferencedContainer = "container:NicQuit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE278A7A2BF7DF2B0075E22E"
-            BuildableName = "Quit Buddy!.app"
+            BuildableName = "NicQuit.app"
             BlueprintName = "MiniChallange05 Watch App"
-            ReferencedContainer = "container:Quit Buddy!.xcodeproj">
+            ReferencedContainer = "container:NicQuit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
