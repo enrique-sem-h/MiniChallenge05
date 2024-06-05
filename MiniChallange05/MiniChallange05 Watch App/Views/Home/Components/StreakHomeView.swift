@@ -61,35 +61,38 @@ struct StreakComponents: View {
             .padding(.bottom)
             
             HStack {
-                let duration = calculateDuration(from: user?.startStreak ?? .distantPast, to: Date())
-                
-                if duration.years > 0 {
-                    Text("\(Texts.yourRecord) \(formatYear(duration.years)),  \(formatMonth(duration.months)) e \(formatDay(duration.days))")
-                        .font(.caption)
-                        .truncationMode(.tail)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.6)
-                } else if duration.months > 0 {
-                    Text("\(Texts.yourRecord) \(formatMonth(duration.months)) e \(formatDay(duration.days))")
-                        .font(.caption)
-                        .truncationMode(.tail)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.6)
-                } else if duration.days > 0 {
-                    Text("\(Texts.yourRecord) \(formatDay(duration.days))")
-                        .font(.caption)
-                        .truncationMode(.tail)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.6)
-                } else {
-                    Text(Texts.today)
-                        .font(.caption)
-                }
+                let duration = calculateDuration(from: user?.recordDate.start ?? .now, to: user?.recordDate.end ?? .now)
+                VStack(alignment: .leading) {
+                    if duration.years > 0 {
+                        Text("\(Texts.yourRecord)")
+                        Text("\(formatYear(duration.years)),  \(formatMonth(duration.months)) e \(formatDay(duration.days))")
+                            .foregroundStyle(.brandYellow)
+                            .font(.body)
+                    } else if duration.months > 0 {
+                        Text("\(Texts.yourRecord)")
+                        Text("\(formatMonth(duration.months)) e \(formatDay(duration.days))")
+                            .foregroundStyle(.brandYellow)
+                            .font(.body)
+                    } else if duration.days > 0 {
+                        Text("\(Texts.yourRecord)")
+                        Text("\(formatDay(duration.days))")
+                            .foregroundStyle(.brandYellow)
+                            .font(.body)
+                    } else {
+                        Text(Texts.today)
+                            .minimumScaleFactor(1.0)
+                    }
+                }.font(.caption)
+                    .truncationMode(.tail)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.6)
                 
                 Spacer()
             }
             .padding(.vertical)
-            
+            .onAppear {
+                DataManager.shared.resetRecord()
+            }
         }
         
     }

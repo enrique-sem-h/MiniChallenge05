@@ -128,13 +128,13 @@ class DataManager {
         saveData()
     }
     
-    private func resetRecord(){
+    func resetRecord(){
         guard let startStreak = self.userModel?.startStreak else {return}
-        let interval = DateInterval(start: startStreak, end: .now)
-        
         guard let recordDate = self.userModel?.recordDate else {return}
         
-        if interval > recordDate{
+        let interval = DateInterval(start: startStreak, end: .now)
+        
+        if interval.duration > recordDate.duration{
             self.userEntity?.recordDate = interval
             self.userModel?.recordDate = interval
         }
