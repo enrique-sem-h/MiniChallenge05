@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AchievementDetail: View {
+    
     @State var achievement: AchievementModel
+    
     var body: some View {
+        
         VStack {
             ScrollView {
                 VStack {
@@ -47,5 +50,5 @@ struct AchievementDetail: View {
 }
 
 #Preview {
-    AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "b"))
+    AchievementDetail(achievement: .init(title: "aa", description: "b", daysToAchieve: .firstWeek, imageName: ""))
 }

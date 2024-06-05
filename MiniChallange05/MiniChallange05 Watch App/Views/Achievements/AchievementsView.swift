@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AchievementsView: View {
+    
+    @State var achievementss : [AchievementModel]
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -22,13 +25,13 @@ struct AchievementsView: View {
                     ForEach(0..<4) {_ in
                         HStack {
                             NavigationLink {
-                                AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))
+                                AchievementDetail(achievement: .init(title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", daysToAchieve: .firstDay, imageName: ""))
                             } label: {
                                 AchievementsComponent(enabled: true)
                             }
                             
                             NavigationLink {
-                                AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))
+                                AchievementDetail(achievement: .init(title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", daysToAchieve: .firstWeek, imageName: ""))
                             } label: {
                                 AchievementsComponent(enabled: true)
                             }
@@ -50,5 +53,5 @@ struct AchievementsView: View {
 }
 
 #Preview {
-    AchievementsView()
+    AchievementsView(achievementss: [])
 }

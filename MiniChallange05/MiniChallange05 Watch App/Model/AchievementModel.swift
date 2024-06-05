@@ -6,29 +6,35 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 class AchievementModel{
-    var progress : Float
+    var progress : Float = 0.0
     let title : String
     let description : String
     var wasConquered : Bool = false
     let daysToAchieve : Int
     var id : UUID
+    let image : UIImage?
     
-    init(progress: Float, title: String, description: String, daysToAchieve : AchievementCases) {
-        self.progress = progress
+    init(title: String, description: String, daysToAchieve : AchievementCases, imageName : String) {
         self.title = title
         self.description = description
         self.id = UUID()
         self.daysToAchieve = daysToAchieve.rawValue
         
+        self.image = UIImage(named: imageName) ?? nil
+        
         //Atribui o valor real que se estiver no coreData
         self.wasConquered = self.checkWhetherWasReached(uuid: self.id)
+        
+        self.progress = evaluateProgress()
     }
 }
 
 extension AchievementModel{
+    
     func releaseArchievment(){
         
         let daysElapsed = getStreakDays()
