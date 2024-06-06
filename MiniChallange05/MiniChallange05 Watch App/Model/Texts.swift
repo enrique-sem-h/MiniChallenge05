@@ -43,7 +43,7 @@ struct Texts {
     
     // MARK: PresentationView
     static let onboardingInformations = String(localized: "onboardingInformations", defaultValue: "Keep yourself motivated during your journey to quit smoking.")
-    static let onboardingInformations2 = String(localized: "onboardingInformations2", defaultValue: "With Quit Buddy, be sure that you will feel well accompanied and supported throughout this journey!")
+    static let onboardingInformations2 = String(localized: "onboardingInformations2", defaultValue: "With NicQuit, be sure that you will feel well accompanied and supported throughout this journey!")
     static let presentation = String(localized: "presentation", defaultValue: "Welcome!")
     
     // MARK: SmokingTypeView

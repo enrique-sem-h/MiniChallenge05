@@ -424,6 +424,116 @@
         }
       }
     },
+    "firstDayInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You've just completed your first day of a brand new streak without smoking. Hang in there!"
+          }
+        }
+      }
+    },
+    "firstDayInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Fresh Start"
+          }
+        }
+      }
+    },
+    "firstMonthInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You completed a whole month without working. Good job! Celebrate this achievement by taking a moment to reflect on how far you've come, and on the changes you've gone through. You're doing great! Keep going."
+          }
+        }
+      }
+    },
+    "firstMonthInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "1 Month Streak"
+          }
+        }
+      }
+    },
+    "firstWeekInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Congratulations! You   completed your first week without smoking. Celebrate this achievement with your loved ones, and keep up the good work!"
+          }
+        }
+      }
+    },
+    "firstWeekInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Brand New Streak"
+          }
+        }
+      }
+    },
+    "halfMontInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You have reached 15 days in your streak! You're halfway through your first month, keep it up!"
+          }
+        }
+      }
+    },
+    "halfMontInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "15 Days Streak"
+          }
+        }
+      }
+    },
+    "halfYearInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You reached a 6 months streak. Congraulations, keep up the great work!"
+          }
+        }
+      }
+    },
+    "halfYearInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "6 Months Streak"
+          }
+        }
+      }
+    },
     "healthHomeMessage1" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -625,13 +735,35 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "With Quit Buddy, be sure that you will feel well accompanied and supported throughout this journey!"
+            "value" : "With NicQuit, be sure that you will feel well accompanied and supported throughout this journey!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Com Quit Buddy, tenha certeza de que se sentirá muito bem acompanhado e assistido durante essa jornada!"
+            "state" : "needs_review",
+            "value" : "Com NicQuit, tenha certeza de que se sentirá muito bem acompanhado e assistido durante essa jornada!"
+          }
+        }
+      }
+    },
+    "oneYearInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You reached a 1 year streak. Congraulations, keep up the great work!"
+          }
+        }
+      }
+    },
+    "oneYearInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "1 Year Streak"
           }
         }
       }
@@ -966,6 +1098,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sequência"
+          }
+        }
+      }
+    },
+    "threeMonthsInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You reached a 3 months streak. Congraulations, keep up the great work!"
+          }
+        }
+      }
+    },
+    "threeMonthsInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "3 Months Streak"
           }
         }
       }
