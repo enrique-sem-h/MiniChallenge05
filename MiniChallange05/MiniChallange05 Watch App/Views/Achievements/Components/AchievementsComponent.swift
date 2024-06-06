@@ -17,7 +17,7 @@ struct AchievementsComponent: View {
             Image(uiImage: UIImage(named: "TimeBased")!)
             
             ProgressView(value: achievementInfo?.evaluateProgress())
-                .accentColor(Color(uiColor: UIColor(named: "BrandYellow") ?? .purple))
+                .tint(.brandYellow)
                 .scaleEffect(CGSize(width: 0.5, height: 0.5))
                 
         }

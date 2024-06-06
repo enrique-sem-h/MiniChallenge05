@@ -1,5 +1,5 @@
 //
-//  AchievementView.swift
+//  AchievementView.swift  
 //  MiniChallange05 Watch App
 //
 //  Created by Kaua Miguel on 17/05/24.
@@ -37,6 +37,7 @@ struct AchievementsView: View {
                                     AchievementDetail(achievement: achiement)
                                 } label: {
                                     AchievementsComponent(achievementInfo: achiement)
+
                                 }
                                 
                             }
@@ -53,6 +54,7 @@ struct AchievementsView: View {
                         ForEach(unreleasedAchievements, id: \.id) {unreleasedAchievements in
                             
                             AchievementsComponent(achievementInfo: unreleasedAchievements)
+                                .foregroundColor(.brandYellow)
                                 .opacity(0.5)
                             
                         }
@@ -64,7 +66,6 @@ struct AchievementsView: View {
         }
         .onAppear(perform: {
             achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
-            
         })
     }
 }
