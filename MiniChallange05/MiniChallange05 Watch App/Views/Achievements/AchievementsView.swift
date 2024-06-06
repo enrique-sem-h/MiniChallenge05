@@ -16,16 +16,18 @@ struct AchievementsView: View {
     var body: some View {
             
             ZStack {
-                
                 ScrollView {
                     Text(Texts.achievements)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.title2)
                         .padding()
                         .bold()
-                    
+                        
                     //Achievements reached
                     if (!releasedAchievements.isEmpty){
                         
                         Text(Texts.myAchievements)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
                         LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
                             ForEach(releasedAchievements, id: \.id) { achiement in
@@ -34,7 +36,6 @@ struct AchievementsView: View {
                                     AchievementDetail(achievement: achiement)
                                 } label: {
                                     AchievementsComponent(achievementInfo: achiement)
-
                                 }
                                 
                             }

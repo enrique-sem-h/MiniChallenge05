@@ -56,8 +56,6 @@ extension AchievementModel {
         }
         
         self.progress = Float(streakDays)/Float(daysToAchieve)
-        
-        print(self.progress)
        
         return self.progress
     }

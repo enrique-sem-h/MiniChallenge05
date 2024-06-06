@@ -18,17 +18,17 @@ struct AchievementDetail: View {
                     VStack {
                         Image(.timeBasedBig)
                             .resizable()
-                            .frame(width: 162, height: 130, alignment: .center)
-                            .padding()
+                            .frame(width: screenWidth - 20, height: screenHeight / 1.8, alignment: .center)
+                            .padding(.bottom, 3)
                         HStack {
                             ProgressView(value: achievement.evaluateProgress())
                                 .scaleEffect(CGSize(width: 1, height: 0.5))
                                 .tint(.brandYellow)
                             Text("\(Int(achievement.evaluateProgress() * 100))%")
                                 .foregroundColor(.brandYellow)
-                                .padding(.horizontal)
+                                
                         }.padding(.horizontal)
-                            .frame(width: 172)
+                            .frame(width: screenWidth - 10)
                     }.padding(.top, 49)
                     VStack(alignment: .leading) {
                         Text(achievement.title)

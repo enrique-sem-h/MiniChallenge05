@@ -14,10 +14,11 @@ struct AchievementsComponent: View {
     var body: some View {
         VStack {
             Image(uiImage: UIImage(named: "TimeBased")!)
+                .frame(width: screenWidth / 4, height: screenHeight / 4)
             
             ProgressView(value: achievementInfo?.evaluateProgress())
                 .tint(.brandYellow)
-                .scaleEffect(CGSize(width: 0.5, height: 0.5))
+                .scaleEffect(CGSize(width: 0.7, height: 0.5))
                 
         }
         .padding()
