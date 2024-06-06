@@ -22,23 +22,17 @@ struct AchievementDetail: View {
                             .resizable()
                             .frame(width: 162, height: 130, alignment: .center)
                             .padding()
-                        
                         HStack {
                             ProgressView(value: achievement.progress, total: 100)
                                 .scaleEffect(CGSize(width: 1, height: 0.5))
                             Text("\(Int(achievement.progress))%")
                                 .padding(.horizontal)
-                                .font(.system(.caption, weight: .semibold))
-                                .foregroundStyle(.brandYellow)
                         }.padding(.horizontal)
-                        
                     }.padding(.top, 49)
-                    
                     VStack(alignment: .leading) {
                         Text(achievement.title)
                             .font(.title)
                             .fontWeight(.light)
-                            .foregroundStyle(.brandYellow)
                             .padding()
                         Text(Texts.about)
                             .font(.title3)
@@ -51,9 +45,6 @@ struct AchievementDetail: View {
                 }
             }
         }.ignoresSafeArea()
-            .onAppear {
-                achievement.evaluateProgress()
-            }
     }
 }
 

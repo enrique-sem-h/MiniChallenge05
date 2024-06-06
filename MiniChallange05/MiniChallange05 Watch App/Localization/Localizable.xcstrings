@@ -768,6 +768,28 @@
         }
       }
     },
+    "oneYearInfoDescription" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You reached a 1 year streak. Congraulations, keep up the great work!"
+          }
+        }
+      }
+    },
+    "oneYearInfoTitle" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "1 Year Streak"
+          }
+        }
+      }
+    },
     "packCostQuestion" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
