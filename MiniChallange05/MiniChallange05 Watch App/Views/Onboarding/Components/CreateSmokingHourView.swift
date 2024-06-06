@@ -21,13 +21,14 @@ struct CreateSmokingHourView: View {
             Button{
                 pageManager.page = .smokingHours
             } label: {
-                
                 Image(systemName: "xmark")
+                    .resizable()
+                    .bold()
+                    .frame(width: 17, height: 17)
                     .padding(.bottom)
-                
-            }.buttonStyle(PlainButtonStyle())
-            Spacer()
-            
+            }
+            .buttonStyle(PlainButtonStyle())
+        
             if Locale.current.language.region == "US" && Locale.current.language.languageCode == "en" {
                 DatePicker("", selection: $data, displayedComponents: [.hourAndMinute])
             } else {
@@ -52,12 +53,13 @@ struct CreateSmokingHourView: View {
             .clipShape(Capsule())
             
         }
+        .padding(.horizontal)
     }
 }
 
 #Preview {
     CreateSmokingHourView(
-         items: .constant([.now]), selectedItems: .constant([.now])
+        items: .constant([.now]), selectedItems: .constant([.now])
     )
     .environment(PageManager())
 }

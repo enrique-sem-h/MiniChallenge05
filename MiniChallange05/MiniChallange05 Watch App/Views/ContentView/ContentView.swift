@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-        
+    
     var body: some View {
         
-        TabView {
-            HomeView()
-            UserProgressView()
-            AchievementsView()
+        NavigationStack {
+            TabView {
+                HomeView()
+                UserProgressView()
+                AchievementsView()
+            }
         }
+        
     }
-    
 }
 
 #Preview {

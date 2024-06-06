@@ -18,31 +18,35 @@ struct CigarettesPerPackView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                Text(Texts.cigarettesPerPack)
-                    .font(.title2)
-                    .minimumScaleFactor(textConfig.scaleFactor)
-                    .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
-                
-                OnboardingPicker(selectedNumber: $tempVar)
-                    .frame(height: textConfig.frameHeight)
-                
-                Text(Texts.returnCigarettesPerPack(number: tempVar))
-                    .italic()
-                
-                
-                GenericBackAndNextButton(fowardView: .packCost, backwardsView: .cigaretteCount , tempVar: $tempVar, defVar: $defVar)
-                    .padding(.top)
-                
-            }
+            
+            Text(Texts.cigarettesPerPack)
+                .font(.title2)
+                .minimumScaleFactor(textConfig.scaleFactor)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
+            
+            OnboardingPicker(selectedNumber: $tempVar)
+                .frame(height: textConfig.frameHeight)
+            
+            Text(Texts.returnCigarettesPerPack(number: tempVar))
+                .italic()
+            
+            
+            GenericBackAndNextButton(fowardView: .packCost, backwardsView: .cigaretteCount , tempVar: $tempVar, defVar: $defVar)
+                .padding(.top)
+            
+            
             
         }
-        
         .padding(.horizontal)
-        
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                                    .black.opacity(0.2),
+                                    .black], startPoint: .top, endPoint: .bottom)
+        )
         .onDisappear{
             userPreferences.cigarettesInPack = defVar
         }
+        
     }
 }
 

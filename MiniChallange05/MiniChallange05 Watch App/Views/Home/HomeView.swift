@@ -10,28 +10,36 @@ import SwiftUI
 struct HomeView: View {
     @State var user = DataManager.shared.userModel
     
-    @State var background: Image = Image("homeBg2")
+    @State var background: Image = Image("homeBg1")
     
     var body: some View {
         
         ScrollView {
             
-            VStack {
+            ZStack {
+                
+                background
+                    .resizable()
+                    .frame(maxWidth: .infinity)
+                
+                LinearGradient(colors: [.black.opacity(0.5), .black.opacity(0.1) , .black], startPoint: .top, endPoint: .bottom)
+                
                 StreakComponents()
-                    .scenePadding(.horizontal)
+                    .padding(.horizontal)
+                
             }
-            .background(self.background
-                .resizable()
-            )
             
             HealthHomeView()
+                .padding(.bottom, 30)
                 .padding(.horizontal)
             
         }
-        .ignoresSafeArea()
         .onAppear(perform: {
             changeBackground()
         })
+        
+        .ignoresSafeArea()
+        .background(LinearGradient(colors: [.black, .black.opacity(0.2) , .achievementPurple.opacity(0.8)], startPoint: .top, endPoint: .bottom))
         
     }
     
