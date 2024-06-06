@@ -34,8 +34,12 @@ extension AchievementModel{
     
     //Get the current period in the streak to check wich achievement should be released
     func getStreakDays() -> Int?{
-        guard let startStreak = DataManager.shared.userEntity?.startStreak else {return 0}
+//        guard let startStreak = DataManager.shared.userEntity?.startStreak else {return 0}
+        var startStreak = Date()
         let calendar = Calendar.current
+        if let twoDaysAgo = calendar.date(byAdding: .day, value: -2, to: Date()){
+            startStreak = twoDaysAgo
+        }
         let daysElapsed =  calendar.dateComponents([.day], from: startStreak, to: .now).day
         return daysElapsed
     }
@@ -46,6 +50,11 @@ extension AchievementModel{
         }
         
         guard let streakDays = getStreakDays() else {return 0.0}
+        
+        if (streakDays >= daysToAchieve){
+            return 1.0
+        }
+        
         self.progress = Float(streakDays / daysToAchieve)
         return self.progress
     }

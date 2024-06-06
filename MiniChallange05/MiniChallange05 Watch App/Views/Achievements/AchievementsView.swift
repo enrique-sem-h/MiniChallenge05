@@ -64,8 +64,7 @@ struct AchievementsView: View {
         }
         .onAppear(perform: {
             achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
-            print(releasedAchievements)
-            print(unreleasedAchievements)
+            
         })
     }
 }

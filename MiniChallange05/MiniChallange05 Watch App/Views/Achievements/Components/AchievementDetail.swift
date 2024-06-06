@@ -45,6 +45,9 @@ struct AchievementDetail: View {
                 }
             }
         }.ignoresSafeArea()
+            .onAppear(perform: {
+                print(achievement.evaluateProgress())
+            })
     }
 }
 

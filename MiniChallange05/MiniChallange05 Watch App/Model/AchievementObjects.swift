@@ -28,8 +28,6 @@ struct AchievementObjects{
     
     init() {
         self.achievementObjects = [firstDayInfo, firstWeekInfo, halfMontInfo, firstMonthInfo, threeMonthsInfo, halfYearInfo, oneYearInfo]
-        self.achievementObjects[1].wasConquered = true
-        self.achievementObjects[5].wasConquered = true
         releaseArchievment()
     }
     
@@ -45,35 +43,38 @@ struct AchievementObjects{
     
     func releaseArchievment(){
         
-        let daysElapsed = self.achievementObjects[0].getStreakDays()
+        guard let daysElapsed = self.achievementObjects[0].getStreakDays() else {return}
+        
+        print("Dias passados : \(daysElapsed)")
         
         switch daysElapsed{
             
-        case AchievementCases.firstDay.rawValue:
+        case 1...6:
             //Adicionar o UUID da streak de um dia no array do coreData
             self.achievementObjects[0].wasConquered = true
+            print("Entrou no primeiro dia")
             break
-        case AchievementCases.firstWeek.rawValue:
+        case 7...14:
             //Adicionar o UUID da streak de uma semana no array do coreData
             self.achievementObjects[1].wasConquered = true
             break
-        case AchievementCases.halfMonth.rawValue:
+        case 15...29:
             //Adicionar o UUID da streak de 15 dias no array do coreData
             self.achievementObjects[2].wasConquered = true
             break
-        case AchievementCases.month.rawValue:
+        case 30...59:
             //Adicionar o UUID da streak de um mês no array do coreData
             self.achievementObjects[3].wasConquered = true
             break
-        case AchievementCases.threeMonths.rawValue:
+        case 60...182:
             //Adicionar o UUID da streak de três meses no array do coreData
             self.achievementObjects[4].wasConquered = true
             break
-        case AchievementCases.halfYear.rawValue:
+        case 183...364:
             //Adicionar o UUID da streak de 6 meses no array do coreData
             self.achievementObjects[5].wasConquered = true
             break
-        case AchievementCases.year.rawValue:
+        case 364...400:
             //Adicionar o UUID da streak de um ano no array do coreData
             self.achievementObjects[6].wasConquered = true
             break
