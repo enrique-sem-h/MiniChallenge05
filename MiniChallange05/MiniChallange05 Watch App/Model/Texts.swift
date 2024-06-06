@@ -54,19 +54,19 @@ struct Texts {
     // MARK: CigaretteCountView
     static let cigaretteCountQuestion = String(localized: "cigaretteCountQuestion", defaultValue: "How many cigarettes do you smoke per day?")
     static func returnCigarettes(number: Int) -> String {
-        return number == 1 ? String(localized: "returnCigarette", defaultValue: "\(number) cigarette per day") : String(localized: "returnCigarettes", defaultValue: "\(number) cigarettes per day")
+        return number == 1 ? String(localized: "returnCigarette", defaultValue: "cigarette per day") : String(localized: "returnCigarettes", defaultValue: "cigarettes per day")
     }
     
     // MARK: VapeFrequencyView
     static let vapeFrequencyQuestion = String(localized: "vapeFrequencyQuestion", defaultValue: "How many times do you smoke per day?")
     static func returnVapeFrequency(number: Int) -> String {
-        return number == 1 ? String(localized: "returnVapeFrequency", defaultValue: "once per day") : String(localized: "returnVapeFrequencies", defaultValue: "\(number) times per day")
+        return number == 1 ? String(localized: "returnVapeFrequency", defaultValue: "once per day") : String(localized: "returnVapeFrequencies", defaultValue: "times per day")
     }
     
     // MARK: CigarettesPerPackView
     static let cigarettesPerPack = String(localized: "cigarettesPerPack", defaultValue: "How many cigarettes are there in the pack you buy?")
     static func returnCigarettesPerPack(number: Int) -> String {
-        return number == 1 ? String(localized: "returnCigarettePerPack", defaultValue: "\(number) cigarette per pack") : String(localized: "returnCigarettesPerPack", defaultValue: "\(number) cigarettes per pack")
+        return number == 1 ? String(localized: "returnCigarettePerPack", defaultValue: "cigarette per pack") : String(localized: "returnCigarettesPerPack", defaultValue: "cigarettes per pack")
     }
     
     // MARK: PackCostView

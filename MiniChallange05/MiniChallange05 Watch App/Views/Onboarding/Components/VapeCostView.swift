@@ -56,9 +56,11 @@ struct VapeCostView: View {
                     
                 }
                 
-                Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
-                    .foregroundColor(Color(red: 222 / 255, green: 255 / 255, blue: 19 / 255))
-                + Text(Texts.averageVape)
+                HStack {
+                    Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
+                        .foregroundStyle(.brandYellow)
+                Text(Texts.averageVape)
+                }.italic()
                 
                 Button {
                     if tempVar >= 190 {

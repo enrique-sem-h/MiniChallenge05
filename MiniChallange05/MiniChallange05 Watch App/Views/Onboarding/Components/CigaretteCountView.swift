@@ -27,8 +27,11 @@ struct CigaretteCountView: View {
             OnboardingPicker(selectedNumber: $tempVar)
                 .frame(height: textConfig.frameHeight)
             
-            Text(Texts.returnCigarettes(number: tempVar))
-                .italic()
+            HStack {
+                Text("\(tempVar)")
+                    .foregroundStyle(.brandYellow)
+                Text(Texts.returnCigarettes(number: tempVar))
+            }.italic()
             
             GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
                 .padding(.top)

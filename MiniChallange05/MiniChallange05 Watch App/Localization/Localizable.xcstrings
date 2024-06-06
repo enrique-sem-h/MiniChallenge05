@@ -240,7 +240,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Anterior"
           }
         }
@@ -274,7 +274,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cigarro comum"
           }
         }
@@ -308,7 +308,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Quantos cigarros tem por maço que você compra?"
           }
         }
@@ -846,7 +846,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Com NicQuit, tenha certeza de que se sentirá muito bem acompanhado e assistido durante essa jornada!"
           }
         }
@@ -897,7 +897,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Quanto custa um maço de cigarro em média?"
           }
         }
@@ -914,7 +914,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Bem Vindo!"
           }
         }
@@ -960,13 +960,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%lld cigarette per day"
+            "value" : "cigarette per day"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld cigarro por dia"
+            "value" : "cigarro por dia"
           }
         }
       }
@@ -977,13 +977,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%lld cigarette per pack"
+            "value" : "cigarette per pack"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld cigarro por maço"
+            "value" : "cigarro por maço"
           }
         }
       }
@@ -994,13 +994,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%lld cigarettes per day"
+            "value" : "cigarettes per day"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld cigarros por dia"
+            "value" : "cigarros por dia"
           }
         }
       }
@@ -1011,13 +1011,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%lld cigarettes per pack"
+            "value" : "cigarettes per pack"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld cigarros por maço"
+            "value" : "cigarros por maço"
           }
         }
       }
@@ -1079,13 +1079,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%lld times per day"
+            "value" : "times per day"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld vezes ao dia"
+            "value" : "vezes ao dia"
           }
         }
       }
@@ -1169,7 +1169,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "O que você costuma fumar?"
           }
         }
@@ -1299,7 +1299,7 @@
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Quanto você gasta com fumo por mês?"
           }
         }

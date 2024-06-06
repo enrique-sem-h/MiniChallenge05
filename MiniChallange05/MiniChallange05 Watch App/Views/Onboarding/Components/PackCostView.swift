@@ -55,9 +55,11 @@ struct PackCostView: View {
                     
                 }
                 
-                Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
-                    .foregroundColor(Color(red: 222 / 255, green: 255 / 255, blue: 19 / 255))
-                + Text(Texts.averagePack)
+                HStack {
+                    Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
+                        .foregroundStyle(.brandYellow)
+                Text(Texts.averagePack)
+                }.italic()
                 
                 Button {
                     if tempVar >= 190 {

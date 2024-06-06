@@ -26,8 +26,11 @@ struct VapeFrequencyView: View {
             OnboardingPicker(selectedNumber: $tempVar)
                 .frame(height: textConfig.frameHeight)
             
-            Text(Texts.returnVapeFrequency(number: tempVar))
-                .italic()
+            HStack {
+                Text("\(tempVar)")
+                    .foregroundStyle(.brandYellow)
+                Text(Texts.returnVapeFrequency(number: tempVar))
+            }.italic()
             
             GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
                 .padding(.top)
