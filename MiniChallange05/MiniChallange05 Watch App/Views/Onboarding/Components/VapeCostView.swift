@@ -60,40 +60,10 @@ struct VapeCostView: View {
                     Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
                         .foregroundStyle(.brandYellow)
                 Text(Texts.averageVape)
-                }.italic()
-                
-                Button {
-                    if tempVar > 0 {
-                        tempVar -= 1
-                    }
-                } label: {
-                    Image(systemName: "minus")
-                        .resizable()
-                        .scaledToFit()
                 }
-                .clipShape(Circle())
-                
-                OnboardingPicker(selectedNumber: $tempVar, range: 0..<201)
-                    .frame(width: textConfig.frameHeight + 5, height: textConfig.frameHeight)
-                    .padding(.bottom,10)
-                
-                Button {
-                    if tempVar < 200 {
-                        tempVar += 1
-                    }
-                    
-                } label: {
-                    Image(systemName: "plus")
-                        .resizable()
-                        .scaledToFit()
-                }
-                .clipShape(Circle())
-                
+                .italic()
+    
             }
-            
-            Text("\(Locale.current.currencySymbol ?? "R$")\(tempVar)")
-                .foregroundColor(Color(red: 222 / 255, green: 255 / 255, blue: 19 / 255))
-            + Text(Texts.averageVape)
             
             Button {
                 if tempVar >= 190 {

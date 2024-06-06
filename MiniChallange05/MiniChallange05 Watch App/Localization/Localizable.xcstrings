@@ -161,6 +161,12 @@
         }
       }
     },
+    "Add $10" : {
+
+    },
+    "Add $100" : {
+
+    },
     "add10" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
