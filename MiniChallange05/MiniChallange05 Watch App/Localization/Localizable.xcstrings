@@ -184,13 +184,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Back"
+            "value" : "Previous"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voltar"
+            "state" : "needs_review",
+            "value" : "Anterior"
           }
         }
       }
@@ -218,12 +218,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Standard cigarette"
+            "value" : "Common cigarette"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Cigarro comum"
           }
         }
@@ -252,13 +252,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "How many smokes are there in one of your packs?"
+            "value" : "How many cigarettes are there in the pack you buy?"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quantos cigarros por maço?"
+            "state" : "needs_review",
+            "value" : "Quantos cigarros tem por maço que você compra?"
           }
         }
       }
@@ -342,6 +342,23 @@
         }
       }
     },
+    "dailyMotivation" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Daily Motivation"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motivação diária"
+          }
+        }
+      }
+    },
     "day" : {
       "localizations" : {
         "pt-BR" : {
@@ -358,6 +375,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "dias"
+          }
+        }
+      }
+    },
+    "done" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Done"
           }
         }
       }
@@ -380,7 +408,7 @@
       }
     },
     "end" : {
-      "extractionState" : "extracted_with_value",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -580,13 +608,30 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "To begin, we need a few informations coming up next."
+            "value" : "Keep yourself motivated during your journey to quit smoking."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Para começar, precisamos de algumas informações a seguir."
+            "value" : "Mantenha-se motivado durante sua jornada em busca de parar de fumar."
+          }
+        }
+      }
+    },
+    "onboardingInformations2" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "With Quit Buddy, be sure that you will feel well accompanied and supported throughout this journey!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Com Quit Buddy, tenha certeza de que se sentirá muito bem acompanhado e assistido durante essa jornada!"
           }
         }
       }
@@ -597,13 +642,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "How much is a pack of cigarettes?"
+            "value" : "How much does a pack cost on average?"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Qual o valor de um maço de cigarros?"
+            "state" : "needs_review",
+            "value" : "Quanto custa um maço de cigarro em média?"
           }
         }
       }
@@ -614,13 +659,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "App's Presentation"
+            "value" : "Welcome!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apresentação do App"
+            "state" : "needs_review",
+            "value" : "Bem Vindo!"
           }
         }
       }
@@ -869,13 +914,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "What is your kind of smoke?"
+            "value" : "What do you currently smoke?"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "O que você fuma?"
+            "state" : "needs_review",
+            "value" : "O que você costuma fumar?"
           }
         }
       }

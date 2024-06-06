@@ -18,16 +18,26 @@ struct HealthHomeView: View {
     
     var body: some View {
         VStack {
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundStyle(.gray.opacity(0.6))
-                .frame(width: 162, height: 120)
-                .overlay(alignment: .bottomLeading) {
-                    Text(text)
-                        .font(.body)
-                        .font(.system(size: 14, weight: .none))
-                        .minimumScaleFactor(0.5)
-                        .padding()
-                }
+            
+            HStack {
+                Text(Texts.dailyMotivation)
+                    .font(.title3)
+                    .bold()
+                    .foregroundStyle(.brandYellow)
+                    .padding(.vertical)
+                Spacer()
+            }
+            
+            Text(text)
+                .font(.body)
+                .minimumScaleFactor(0.5)
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Image("motivation")
+                    .resizable()
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+        
         }.onAppear{
             if let userDefaultsText = UserDefaults.standard.string(forKey: Texts.Keys.motivationText.rawValue) {
                 text = userDefaultsText
@@ -55,11 +65,11 @@ struct HealthHomeView: View {
     }
     
     // updates the message for the day
-     func updateMessage() {
-         guard var updater = getUpdater() else { return }
-         if updater.canUpdate {
+    func updateMessage() {
+        guard var updater = getUpdater() else { return }
+        if updater.canUpdate {
             text = messages[Int.random(in: 0..<messages.count)]
-             UserDefaults.standard.setValue(text, forKey: Texts.Keys.motivationText.rawValue)
+            UserDefaults.standard.setValue(text, forKey: Texts.Keys.motivationText.rawValue)
             updater.date = .now
             updater.canUpdate = false
             setUpdater(newValue: updater)
@@ -98,4 +108,9 @@ struct HealthHomeView: View {
         
         return savings
     }
+}
+
+
+#Preview {
+    HealthHomeView(messages: Texts.healthHomeMessages, text: Texts.healthHomeText)
 }

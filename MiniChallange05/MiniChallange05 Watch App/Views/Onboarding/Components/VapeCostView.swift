@@ -89,7 +89,7 @@ struct VapeCostView: View {
                 
                 GenericBackAndNextButton(fowardView: .smokingHours, backwardsView: .vapeFrequency , tempVar: $tempVar, defVar: $defVar)
                 
-            }
+            }.padding(.horizontal)
         }.onDisappear{
             userPreferences.smokeCost = Double(defVar)
         }
