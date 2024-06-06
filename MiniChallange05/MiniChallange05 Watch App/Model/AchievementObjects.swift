@@ -16,13 +16,13 @@ struct AchievementObjects{
     
     private let halfMontInfo = AchievementModel(title: String(localized: "halfMontInfoTitle", defaultValue:  "15 Days Streak"), description: String(localized: "halfMontInfoDescription", defaultValue: "You have reached 15 days in your streak! You're halfway through your first month, keep it up!") , daysToAchieve: .halfMonth, imageName: "TimeBased")
     
-    private let firstMonthInfo = AchievementModel(title: String(localized: "firstMonthInfoTitle", defaultValue: "1 Month Streak"), description: String(localized: "firstMonthInfoDescription", defaultValue: "You completed a whole month without working. Good job! Celebrate this achievement by taking a moment to reflect on how far you've come, and on the changes you've gone through. You're doing great! Keep going.") , daysToAchieve: .month, imageName: "TimeBased")
+    private let firstMonthInfo = AchievementModel(title: String(localized: "firstMonthInfoTitle", defaultValue: "1 Month Streak"), description: String(localized: "firstMonthInfoDescription", defaultValue: "You completed a whole month without smoking. Good job! Celebrate this achievement by taking a moment to reflect on how far you've come, and on the changes you've gone through. You're doing great! Keep going.") , daysToAchieve: .halfMonth, imageName: "TimeBased")
     
-    private let threeMonthsInfo = AchievementModel(title: String(localized: "threeMonthsInfoTitle", defaultValue:  "3 Months Streak"), description: String(localized: "threeMonthsInfoDescription", defaultValue: "You reached a 3 months streak. Congraulations, keep up the great work!") , daysToAchieve: .threeMonths, imageName: "TimeBased")
+    private let threeMonthsInfo = AchievementModel(title: String(localized: "threeMonthsInfoTitle", defaultValue:  "3 Months Streak"), description: String(localized: "threeMonthsInfoDescription", defaultValue: "You reached a 3 months streak. Congraulations, keep up the great work!") , daysToAchieve: .halfMonth, imageName: "TimeBased")
     
-    private let halfYearInfo = AchievementModel(title: String(localized: "halfYearInfoTitle", defaultValue:  "6 Months Streak"), description: String(localized: "halfYearInfoDescription", defaultValue: "You reached a 6 months streak. Congraulations, keep up the great work!") , daysToAchieve: .halfYear, imageName: "TimeBased")
+    private let halfYearInfo = AchievementModel(title: String(localized: "halfYearInfoTitle", defaultValue:  "6 Months Streak"), description: String(localized: "halfYearInfoDescription", defaultValue: "You reached a 6 months streak. Congraulations, keep up the great work!") , daysToAchieve: .halfMonth, imageName: "TimeBased")
     
-    private let oneYearInfo = AchievementModel(title: String(localized: "oneYearInfoTitle", defaultValue:  "1 Year Streak"), description: String(localized: "oneYearInfoDescription", defaultValue: "You reached a 1 year streak. Congraulations, keep up the great work!") , daysToAchieve: .year, imageName: "TimeBased")
+    private let oneYearInfo = AchievementModel(title: String(localized: "oneYearInfoTitle", defaultValue:  "1 Year Streak"), description: String(localized: "oneYearInfoDescription", defaultValue: "You reached a 1 year streak. Congraulations, keep up the great work!") , daysToAchieve: .halfMonth, imageName: "TimeBased")
     
     var achievementObjects : [AchievementModel]
     
