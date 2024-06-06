@@ -31,6 +31,12 @@ struct PresentationView: View {
                     .padding(.bottom, 10)
                     .minimumScaleFactor(0.5)
                 
+                Text(Texts.onboardingInformations2)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                    .font(.footnote)
+                    .padding(.bottom, 10)
+                    .minimumScaleFactor(0.5)
+                
                 Button {
                     pageManager.page = .smokingType
                 } label: {

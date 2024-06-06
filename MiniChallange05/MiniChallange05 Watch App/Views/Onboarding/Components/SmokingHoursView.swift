@@ -24,6 +24,7 @@ struct SmokingHoursView: View {
                 .font(.title2)
                 .minimumScaleFactor(textConfig.scaleFactor)
                 .frame(maxWidth: .infinity, maxHeight: textConfig.frameHeight, alignment: .leading)
+                .padding(.bottom)
             
             ForEach(items, id: \.self) { item in
                 RowRectangle(date: item, isSelected: selectedItems.contains(item)) {
@@ -40,6 +41,9 @@ struct SmokingHoursView: View {
                 pageManager.page = .createSmokingHour
             }, label: {
                 Image(systemName: "plus")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .bold()
                     .padding(15)
                     .background(Color(red: 68 / 255, green: 17 / 255, blue: 190 / 255, opacity: 0.4 / 1))
                     .clipShape(Circle())
@@ -48,7 +52,7 @@ struct SmokingHoursView: View {
             .padding(.bottom)
             
             VStack {
-                Button(Texts.end) {
+                Button(Texts.done) {
                     
                     userPreferences.hourSmoke = Array(selectedItems)
                     

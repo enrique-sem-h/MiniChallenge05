@@ -20,6 +20,7 @@ struct StreakComponents: View {
                 Spacer()
             }
             .padding(.bottom, 10)
+            .padding(.top)
             
             HStack {
                 VStack(alignment: .leading) {
@@ -55,7 +56,8 @@ struct StreakComponents: View {
                                 .italic()
                         }
     
-                }
+                }.foregroundStyle(.brandYellow)
+                
                 Spacer()
             }
             .padding(.bottom)

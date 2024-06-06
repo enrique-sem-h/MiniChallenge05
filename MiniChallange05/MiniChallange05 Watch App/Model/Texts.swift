@@ -13,11 +13,11 @@ struct Texts {
     static let aboutText = String(localized: "aboutText", defaultValue: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.")
     static let achievementText = String(localized: "achievementText", defaultValue: "Complete your first year without smoking")
     static let achievements = String(localized: "achievements", defaultValue: "Achievements")
-    static let back = String(localized: "back", defaultValue: "Back")
+    static let back = String(localized: "back", defaultValue: "Previous")
     static let bloodOxygen = String(localized: "bloodOxygen", defaultValue: "Blood Oxygen")
     static let confirm = String(localized: "confirm", defaultValue: "Confirm")
     static let continueText = String(localized: "continueText", defaultValue: "Continue")
-    static let end = String(localized: "end", defaultValue: "End")
+    static let done = String(localized: "done", defaultValue: "Done")
     static let myAchievements = String(localized: "myAchievements", defaultValue: "My Achievements")
     static let next = String(localized: "next", defaultValue: "Next")
     static let nextAchievement = String(localized: "nextAchievement", defaultValue: "Next Achievement")
@@ -42,13 +42,14 @@ struct Texts {
     static let savedSoFar = String(localized: "savedSoFar", defaultValue: "Saved so far!")
     
     // MARK: PresentationView
-    static let onboardingInformations = String(localized: "onboardingInformations", defaultValue: "To begin, we need a few informations coming up next.")
-    static let presentation = String(localized: "presentation", defaultValue: "App's Presentation")
+    static let onboardingInformations = String(localized: "onboardingInformations", defaultValue: "Keep yourself motivated during your journey to quit smoking.")
+    static let onboardingInformations2 = String(localized: "onboardingInformations2", defaultValue: "With Quit Buddy, be sure that you will feel well accompanied and supported throughout this journey!")
+    static let presentation = String(localized: "presentation", defaultValue: "Welcome!")
     
     // MARK: SmokingTypeView
-    static let cigarette = String(localized: "cigarette", defaultValue: "Standard cigarette")
+    static let cigarette = String(localized: "cigarette", defaultValue: "Common cigarette")
     static let eCigarette = String(localized: "eCigarette", defaultValue: "Electronic cigarette")
-    static let smokingType = String(localized: "smokingType", defaultValue: "What is your kind of smoke?")
+    static let smokingType = String(localized: "smokingType", defaultValue: "What do you currently smoke?")
     
     // MARK: CigaretteCountView
     static let cigaretteCountQuestion = String(localized: "cigaretteCountQuestion", defaultValue: "How many cigarettes do you smoke per day?")
@@ -63,13 +64,13 @@ struct Texts {
     }
     
     // MARK: CigarettesPerPackView
-    static let cigarettesPerPack = String(localized: "cigarettesPerPack", defaultValue: "How many smokes are there in one of your packs?")
+    static let cigarettesPerPack = String(localized: "cigarettesPerPack", defaultValue: "How many cigarettes are there in the pack you buy?")
     static func returnCigarettesPerPack(number: Int) -> String {
         return number == 1 ? String(localized: "returnCigarettePerPack", defaultValue: "\(number) cigarette per pack") : String(localized: "returnCigarettesPerPack", defaultValue: "\(number) cigarettes per pack")
     }
     
     // MARK: PackCostView
-    static let packCostQuestion = String(localized: "packCostQuestion", defaultValue: "How much is a pack of cigarettes?")
+    static let packCostQuestion = String(localized: "packCostQuestion", defaultValue: "How much does a pack cost on average?")
     static let averagePack = String(localized: "averagePack", defaultValue: " average per pack")
     static func returnPackCost(number: Int) -> String {
         return String(localized: "returnPackCost", defaultValue: "\(Locale.current.currencySymbol ?? "R$")\(number) pack cost average")
@@ -93,6 +94,7 @@ struct Texts {
         String(localized: "healthHomeMessage2", defaultValue: "Take a moment to remember your reasons to quit and reflect on what they mean to you."),
         String(localized: "healthHomeMessage3", defaultValue: "Share your progress with a supportive friend today for an extra dose of motivation!")
     ]
+    static let dailyMotivation = String(localized: "dailyMotivation", defaultValue: "Daily Motivation")
     static let healthHomeText = String(localized: "healthHomeText", defaultValue: "")
     static func returnHealthMessage(number: Double) -> String{
         return String(localized: "returnHealthMessage", defaultValue: "You have saved around $\(Int(number)) so far. Keep it up!")
