@@ -5,13 +5,26 @@
 
     },
     "%@" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "%1$@ %2$@"
           }
         }
@@ -24,6 +37,12 @@
             "state" : "new",
             "value" : "%1$@ e %2$@"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ e %2$@"
+          }
         }
       }
     },
@@ -32,6 +51,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "%1$@,  %2$@ e %3$@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "%1$@,  %2$@ e %3$@"
           }
         }
@@ -44,14 +69,34 @@
             "state" : "new",
             "value" : "%1$@%2$lld"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@%2$lld"
+          }
         }
       }
     },
     "%lld" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
     },
     "%lld%%" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
     },
     "about" : {
       "comment" : "About",
@@ -116,12 +161,6 @@
         }
       }
     },
-    "Add $10" : {
-
-    },
-    "Add $100" : {
-
-    },
     "add10" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -164,6 +203,12 @@
             "state" : "new",
             "value" : " average per pack"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Média por maço"
+          }
         }
       }
     },
@@ -174,6 +219,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : " on average per month"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "em média por mês"
           }
         }
       }
@@ -387,6 +438,12 @@
             "state" : "new",
             "value" : "Done"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pronto"
+          }
         }
       }
     },
@@ -407,23 +464,6 @@
         }
       }
     },
-    "end" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "End"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Finalizar"
-          }
-        }
-      }
-    },
     "firstDayInfoDescription" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -431,6 +471,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "You've just completed your first day of a brand new streak without smoking. Hang in there!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você completou seu primeiro dia em uma nova sequência sem fumar. Aguenta firme!"
           }
         }
       }
@@ -443,6 +489,12 @@
             "state" : "new",
             "value" : "Fresh Start"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um novo começo"
+          }
         }
       }
     },
@@ -452,7 +504,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "You completed a whole month without working. Good job! Celebrate this achievement by taking a moment to reflect on how far you've come, and on the changes you've gone through. You're doing great! Keep going."
+            "value" : "You completed a whole month without smoking. Good job! Celebrate this achievement by taking a moment to reflect on how far you've come, and on the changes you've gone through. You're doing great! Keep going."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você completou um mês inteiro sem fumar. Bom trabalho! Celebre essa conquista tirando um momento para refletir no quão longe você chegou e nas mudanças que você passou. Você está indo bem! Aguenta firme."
           }
         }
       }
@@ -465,6 +523,12 @@
             "state" : "new",
             "value" : "1 Month Streak"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sequência de 1 mês"
+          }
         }
       }
     },
@@ -475,6 +539,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Congratulations! You   completed your first week without smoking. Celebrate this achievement with your loved ones, and keep up the good work!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parabéns! Você completou sua primeira semana sem fumar. Celebre essa conquista compartilhando com pessoas queridas, e continue com o bom trabalho!"
           }
         }
       }
@@ -487,6 +557,12 @@
             "state" : "new",
             "value" : "1 Week Streak"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nova sequência"
+          }
         }
       }
     },
@@ -497,6 +573,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "You have reached 15 days in your streak! You're halfway through your first month, keep it up!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você atingiu 15 dias em sua sequência! Você está na metade do seu primeiro mês, continue assim!"
           }
         }
       }
@@ -509,6 +591,12 @@
             "state" : "new",
             "value" : "15 Days Streak"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sequência de 15 dias"
+          }
         }
       }
     },
@@ -520,6 +608,12 @@
             "state" : "new",
             "value" : "You reached a 6 months streak. Congraulations, keep up the great work!"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você atingiu uma sequência de 6 meses. Parabéns, continue com o bom trabalho!"
+          }
         }
       }
     },
@@ -530,6 +624,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "6 Months Streak"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sequência de 6 meses"
           }
         }
       }
@@ -709,6 +809,12 @@
             "state" : "new",
             "value" : "Yes"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sim"
+          }
         }
       }
     },
@@ -754,6 +860,12 @@
             "state" : "new",
             "value" : "You reached a 1 year streak. Congraulations, keep up the great work!"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você atingiu uma sequência de 1 ano. Parabéns, continue com o bom trabalho!"
+          }
         }
       }
     },
@@ -764,6 +876,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "1 Year Streak"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sequência de 1 ano"
           }
         }
       }
@@ -1110,6 +1228,12 @@
             "state" : "new",
             "value" : "You reached a 3 months streak. Congraulations, keep up the great work!"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Você atingiu uma sequência de 3 meses. Parabéns, continue com o bom trabalho!"
+          }
         }
       }
     },
@@ -1120,6 +1244,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "3 Months Streak"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sequência de 3 meses"
           }
         }
       }

@@ -66,7 +66,7 @@ struct PackCostView: View {
                         tempVar += 10
                     }
                 } label: {
-                    Text("Add $10")
+                    Text(Texts.add10)
                 }
                 .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
                 .foregroundStyle(.white)
@@ -79,7 +79,7 @@ struct PackCostView: View {
                         tempVar += 100
                     }
                 } label: {
-                    Text("Add $100")
+                    Text(Texts.add100)
                 }
                 .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
                 .foregroundStyle(.white)
