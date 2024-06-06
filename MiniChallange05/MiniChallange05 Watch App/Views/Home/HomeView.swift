@@ -10,64 +10,28 @@ import SwiftUI
 struct HomeView: View {
     @State var user = DataManager.shared.userModel
     
+    @State var background: Image = Image("homeBg2")
+    
     var body: some View {
-        
-        let duration = calculateDuration(from: user?.startStreak ?? .distantPast, to: Date())
         
         ScrollView {
             
-            if duration >= 0 {
-                VStack {
-                    StreakComponents()
-                        .scenePadding(.horizontal)
-                }
-                .padding()
-                .background(Image("homeBg1")
-                    .resizable()
-                )
-            } else if duration > 6 {
-                VStack {
-                    StreakComponents()
-                        .scenePadding(.horizontal)
-                }
-                .padding()
-                .background(Image("homeBg2")
-                    .resizable()
-                )
-            } else if duration > 15 {
-                VStack {
-                    StreakComponents()
-                        .scenePadding(.horizontal)
-                }
-                .padding()
-                .background(Image("homeBg3")
-                    .resizable()
-                )
-            } else if duration > 23 {
-                VStack {
-                    StreakComponents()
-                        .scenePadding(.horizontal)
-                }
-                .padding()
-                .background(Image("homeBg4")
-                    .resizable()
-                )
-            } else if duration > 30 {
-                VStack {
-                    StreakComponents()
-                        .scenePadding(.horizontal)
-                }
-                .padding()
-                .background(Image("homeBg5")
-                    .resizable()
-                )
+            VStack {
+                StreakComponents()
+                    .scenePadding(.horizontal)
             }
+            .background(self.background
+                .resizable()
+            )
             
             HealthHomeView()
-                .scenePadding(.horizontal)
+                .padding(.horizontal)
             
         }
         .ignoresSafeArea()
+        .onAppear(perform: {
+            changeBackground()
+        })
         
     }
     
@@ -80,7 +44,25 @@ struct HomeView: View {
         let days = components.day ?? 0
         
         return (days)
+    }
+    
+    func changeBackground() {
+        let duration = calculateDuration(from: user?.startStreak ?? .distantPast, to: Date())
         
+        switch duration {
+        case 0...6:
+            background = Image("homeBg1")
+        case 7...15:
+            background = Image("homeBg2")
+        case 16...23:
+            background = Image("homeBg3")
+        case 24...30:
+            background = Image("homeBg4")
+        case 30...:
+            background = Image("homeBg5")
+        default:
+            background = Image("")
+        }
     }
     
 }
