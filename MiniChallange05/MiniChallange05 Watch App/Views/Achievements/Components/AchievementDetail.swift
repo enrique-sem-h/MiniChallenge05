@@ -23,9 +23,9 @@ struct AchievementDetail: View {
                             .frame(width: 162, height: 130, alignment: .center)
                             .padding()
                         HStack {
-                            ProgressView(value: achievement.progress, total: 100)
+                            ProgressView(value: achievement.evaluateProgress())
                                 .scaleEffect(CGSize(width: 1, height: 0.5))
-                            Text("\(Int(achievement.progress))%")
+                            Text("\(Int(achievement.evaluateProgress() * 100))%")
                                 .padding(.horizontal)
                         }.padding(.horizontal)
                     }.padding(.top, 49)

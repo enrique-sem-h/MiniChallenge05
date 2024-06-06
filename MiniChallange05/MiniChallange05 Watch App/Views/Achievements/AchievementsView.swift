@@ -22,6 +22,8 @@ struct AchievementsView: View {
                 
                 ScrollView {
                     Text(Texts.achievements)
+                        .padding()
+                        .bold()
                     
                     //Achievements reached
                     if (!releasedAchievements.isEmpty){
@@ -48,9 +50,9 @@ struct AchievementsView: View {
                     Text(Texts.nextAchievements)
                     
                     LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
-                        ForEach(unreleasedAchievements, id: \.id) {_ in
+                        ForEach(unreleasedAchievements, id: \.id) {unreleasedAchievements in
                             
-                            AchievementsComponent(achievementInfo: nil)
+                            AchievementsComponent(achievementInfo: unreleasedAchievements)
                                 .opacity(0.5)
                             
                         }
@@ -62,6 +64,8 @@ struct AchievementsView: View {
         }
         .onAppear(perform: {
             achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
+            print(releasedAchievements)
+            print(unreleasedAchievements)
         })
     }
 }

@@ -12,7 +12,7 @@ struct AchievementObjects{
     
     private let firstDayInfo = AchievementModel(title: String(localized: "firstDayInfoTitle", defaultValue: "Fresh Start"), description: String(localized: "firstDayInfoDescription", defaultValue: "You've just completed your first day of a brand new streak without smoking. Hang in there!"), daysToAchieve: .firstDay, imageName: "TimeBased")
     
-    private let firstWeekInfo = AchievementModel(title: String(localized: "firstWeekInfoTitle", defaultValue: "Brand New Streak"), description: String(localized: "firstWeekInfoDescription", defaultValue: "Congratulations! You   completed your first week without smoking. Celebrate this achievement with your loved ones, and keep up the good work!"), daysToAchieve: .firstWeek, imageName: "TimeBased")
+    private let firstWeekInfo = AchievementModel(title: String(localized: "firstWeekInfoTitle", defaultValue: "1 Week Streak"), description: String(localized: "firstWeekInfoDescription", defaultValue: "Congratulations! You   completed your first week without smoking. Celebrate this achievement with your loved ones, and keep up the good work!"), daysToAchieve: .firstWeek, imageName: "TimeBased")
     
     private let halfMontInfo = AchievementModel(title: String(localized: "halfMontInfoTitle", defaultValue:  "15 Days Streak"), description: String(localized: "halfMontInfoDescription", defaultValue: "You have reached 15 days in your streak! You're halfway through your first month, keep it up!") , daysToAchieve: .halfMonth, imageName: "TimeBased")
     
@@ -28,7 +28,9 @@ struct AchievementObjects{
     
     init() {
         self.achievementObjects = [firstDayInfo, firstWeekInfo, halfMontInfo, firstMonthInfo, threeMonthsInfo, halfYearInfo, oneYearInfo]
-        self.achievementObjects[0].wasConquered = true
+        self.achievementObjects[1].wasConquered = true
+        self.achievementObjects[5].wasConquered = true
+        releaseArchievment()
     }
     
     func separeAchievementObjects( released : inout [AchievementModel], unreleased : inout [AchievementModel]){
@@ -40,4 +42,46 @@ struct AchievementObjects{
             }
         }
     }
+    
+    func releaseArchievment(){
+        
+        let daysElapsed = self.achievementObjects[0].getStreakDays()
+        
+        switch daysElapsed{
+            
+        case AchievementCases.firstDay.rawValue:
+            //Adicionar o UUID da streak de um dia no array do coreData
+            self.achievementObjects[0].wasConquered = true
+            break
+        case AchievementCases.firstWeek.rawValue:
+            //Adicionar o UUID da streak de uma semana no array do coreData
+            self.achievementObjects[1].wasConquered = true
+            break
+        case AchievementCases.halfMonth.rawValue:
+            //Adicionar o UUID da streak de 15 dias no array do coreData
+            self.achievementObjects[2].wasConquered = true
+            break
+        case AchievementCases.month.rawValue:
+            //Adicionar o UUID da streak de um mês no array do coreData
+            self.achievementObjects[3].wasConquered = true
+            break
+        case AchievementCases.threeMonths.rawValue:
+            //Adicionar o UUID da streak de três meses no array do coreData
+            self.achievementObjects[4].wasConquered = true
+            break
+        case AchievementCases.halfYear.rawValue:
+            //Adicionar o UUID da streak de 6 meses no array do coreData
+            self.achievementObjects[5].wasConquered = true
+            break
+        case AchievementCases.year.rawValue:
+            //Adicionar o UUID da streak de um ano no array do coreData
+            self.achievementObjects[6].wasConquered = true
+            break
+        default:
+            print("Non case was executed")
+            break
+        }
+        
+    }
+    
 }

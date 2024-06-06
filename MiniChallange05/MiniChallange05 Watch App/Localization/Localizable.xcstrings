@@ -485,7 +485,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Brand New Streak"
+            "value" : "1 Week Streak"
           }
         }
       }
@@ -622,12 +622,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "My Achievements"
+            "value" : "Your Achievements"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Minhas Conquistas"
           }
         }
@@ -742,28 +742,6 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Com NicQuit, tenha certeza de que se sentirá muito bem acompanhado e assistido durante essa jornada!"
-          }
-        }
-      }
-    },
-    "oneYearInfoDescription" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "You reached a 1 year streak. Congraulations, keep up the great work!"
-          }
-        }
-      }
-    },
-    "oneYearInfoTitle" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "1 Year Streak"
           }
         }
       }

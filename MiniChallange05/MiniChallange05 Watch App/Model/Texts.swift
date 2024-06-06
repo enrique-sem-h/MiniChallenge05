@@ -18,7 +18,7 @@ struct Texts {
     static let confirm = String(localized: "confirm", defaultValue: "Confirm")
     static let continueText = String(localized: "continueText", defaultValue: "Continue")
     static let done = String(localized: "done", defaultValue: "Done")
-    static let myAchievements = String(localized: "myAchievements", defaultValue: "My Achievements")
+    static let myAchievements = String(localized: "myAchievements", defaultValue: "Your Achievements")
     static let next = String(localized: "next", defaultValue: "Next")
     static let nextAchievement = String(localized: "nextAchievement", defaultValue: "Next Achievement")
     static let nextAchievements = String(localized: "nextAchievements", defaultValue: "Next Achievements")

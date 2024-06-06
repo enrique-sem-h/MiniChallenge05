@@ -65,8 +65,7 @@ struct Onboard: View {
             VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior, textConfig: textConfig, userPreferences: userPreferences)
         case .smokingHours:
             SmokingHoursView(viewAnterior: $viewAnterior, textConfig: textConfig, userPreferences: userPreferences,
-                            items: $items, selectedItems: $selectedItems
-            )
+                             items: $items, selectedItems: $selectedItems)
         case .createSmokingHour:
             CreateSmokingHourView(items: $items, selectedItems: $selectedItems)
             
@@ -74,7 +73,7 @@ struct Onboard: View {
             ContentView()
                 .onAppear{
                     UserDefaults.standard.setValue(true, forKey: Texts.Keys.isOnboarding.rawValue)
-            }
+                }
         }
     }
 }
