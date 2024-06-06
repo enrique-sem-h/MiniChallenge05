@@ -10,26 +10,24 @@ import SwiftUI
 struct UserProgressView: View {
     
     var body: some View {
-        
-        ZStack {
-            Rectangle()
-                .foregroundStyle( .background)
-                .ignoresSafeArea()
-            
-            ScrollView {
-                VStack {
-                    HStack {
-                        Text(Texts.progress)
-                            .font(.title2)
-                            .bold()
-                        
-                        Spacer()
-                    }
-                    SavingsComponent()
-                }
-                .padding()
+    
+        ScrollView {
+            HStack {
+                Text(Texts.progress)
+                    .font(.title2)
+                    .bold()
+                Spacer()
             }
+            SavingsComponent()
+            
         }
+        .padding(.horizontal)
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                                    .black.opacity(0.2),
+                                    .black], startPoint: .top, endPoint: .bottom)
+        )
+        
     }
     
 }

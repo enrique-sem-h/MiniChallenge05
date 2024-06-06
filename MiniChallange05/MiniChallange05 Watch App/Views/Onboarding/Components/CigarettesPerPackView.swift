@@ -40,12 +40,16 @@ struct CigarettesPerPackView: View {
             }
             
         }
-        
         .padding(.horizontal)
-        
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                                    .black.opacity(0.2),
+                                    .black], startPoint: .top, endPoint: .bottom)
+        )
         .onDisappear{
             userPreferences.cigarettesInPack = defVar
         }
+        
     }
 }
 

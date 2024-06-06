@@ -14,11 +14,8 @@ struct AchievementsView: View {
     @State var achievementObjects = AchievementObjects()
     
     var body: some View {
-        NavigationStack {
+            
             ZStack {
-                Rectangle()
-                    .foregroundStyle( .background)
-                    .ignoresSafeArea()
                 
                 ScrollView {
                     Text(Texts.achievements)
@@ -63,10 +60,15 @@ struct AchievementsView: View {
                     
                 }
             }
-        }
-        .onAppear(perform: {
-            achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
-        })
+            .background(
+                LinearGradient(colors: [.achievementPurple,
+                    .black.opacity(0.2),
+                    .black], startPoint: .top, endPoint: .bottom)
+            )
+            .onAppear(perform: {
+                achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
+            })
+    
     }
 }
 

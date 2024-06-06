@@ -50,8 +50,14 @@ struct SmokingTypeView: View {
                         .minimumScaleFactor(textConfig.scaleFactor)
                 }
             }
-        }.scenePadding(.horizontal)
-        
+        }
+        .padding(.horizontal)
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                .black.opacity(0.2),
+                .black], startPoint: .top, endPoint: .bottom)
+        )
+    
     }
 }
 

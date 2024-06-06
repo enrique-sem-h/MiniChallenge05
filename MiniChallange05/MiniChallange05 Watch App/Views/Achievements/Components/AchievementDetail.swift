@@ -15,7 +15,7 @@ struct AchievementDetail: View {
         
         ScrollView {
             ZStack {
-                LinearGradient(colors: [.achievementPurple, .black], startPoint: .top, endPoint: .bottom)
+        
                 VStack {
                     VStack {
                         Image(.timeBasedBig)
@@ -47,7 +47,10 @@ struct AchievementDetail: View {
                             .padding()
                     }.frame(width: screenWidth, alignment: .leading)
                 }
-            }
+            }.background(
+                LinearGradient(colors: [.achievementPurple,
+                    .black], startPoint: .top, endPoint: .bottom)
+            )
         }.ignoresSafeArea()
             .onAppear(perform: {
                 print(achievement.evaluateProgress())

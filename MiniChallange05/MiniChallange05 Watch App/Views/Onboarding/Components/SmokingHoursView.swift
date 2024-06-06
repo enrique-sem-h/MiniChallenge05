@@ -86,6 +86,13 @@ struct SmokingHoursView: View {
             }
             .padding(.horizontal)
         }
+        .padding(.horizontal, 8)
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                .black.opacity(0.2),
+                .black], startPoint: .top, endPoint: .bottom)
+        )
+        
     }
 }
 

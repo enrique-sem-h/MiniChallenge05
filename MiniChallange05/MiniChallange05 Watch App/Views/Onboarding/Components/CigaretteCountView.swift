@@ -36,9 +36,12 @@ struct CigaretteCountView: View {
             GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
                 .padding(.top)
         }
-        
         .padding(.horizontal)
-        
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                .black.opacity(0.2),
+                .black], startPoint: .top, endPoint: .bottom)
+        )
         .onDisappear {
             userPreferences.cigarsPerDay = defVar
         }

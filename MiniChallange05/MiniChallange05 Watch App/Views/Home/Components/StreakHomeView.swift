@@ -29,31 +29,24 @@ struct StreakComponents: View {
                             Text(formatYear(duration.years))
                                 .font(.title2)
                                 .bold()
-                                .italic()
                             Text(formatMonth(duration.months))
                                 .font(.title3)
-                                .italic()
                             Text(formatDay(duration.days))
                                 .font(.title3)
-                                .italic()
                         } else if duration.months > 0 {
                             Text(formatMonth(duration.months))
                                 .font(.title2)
                                 .bold()
-                                .italic()
                             Text(formatDay(duration.days))
                                 .font(.title3)
-                                .italic()
                         } else if duration.days > 0 {
                             Text(formatDay(duration.days))
                                 .font(.title2)
                                 .bold()
-                                .italic()
                         } else {
                             Text(Texts.today)
                                 .font(.title2)
                                 .bold()
-                                .italic()
                         }
     
                 }.foregroundStyle(.brandYellow)

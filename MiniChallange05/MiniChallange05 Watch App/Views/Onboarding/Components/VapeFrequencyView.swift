@@ -37,7 +37,11 @@ struct VapeFrequencyView: View {
             
         }
         .padding(.horizontal)
-        
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                .black.opacity(0.2),
+                .black], startPoint: .top, endPoint: .bottom)
+        )
         .onDisappear{
             userPreferences.vapePerDay = defVar
         }
