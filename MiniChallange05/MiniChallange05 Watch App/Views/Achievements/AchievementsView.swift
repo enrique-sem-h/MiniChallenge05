@@ -21,13 +21,15 @@ struct AchievementsView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.title2)
                         .padding()
-                        .bold()
+                        .fontWeight(.bold)
                         
                     //Achievements reached
                     if (!releasedAchievements.isEmpty){
                         
                         Text(Texts.myAchievements)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .fontWeight(.bold)
+                            .padding()
                         
                         LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
                             ForEach(releasedAchievements, id: \.id) { achiement in
@@ -36,6 +38,7 @@ struct AchievementsView: View {
                                     AchievementDetail(achievement: achiement)
                                 } label: {
                                     AchievementsComponent(achievementInfo: achiement)
+                                        
                                 }
                                 
                             }
@@ -47,12 +50,14 @@ struct AchievementsView: View {
                     
                     //Achievements not released
                     Text(Texts.nextAchievements)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+                        .fontWeight(.bold)
                     
                     LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
                         ForEach(unreleasedAchievements, id: \.id) {unreleasedAchievements in
                             
                             AchievementsComponent(achievementInfo: unreleasedAchievements)
-                                .foregroundColor(.brandYellow)
                                 .opacity(0.5)
                             
                         }

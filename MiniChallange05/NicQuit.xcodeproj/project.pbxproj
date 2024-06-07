@@ -140,6 +140,7 @@
 		B89F2B592BFF83B1004EED57 /* StreakHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreakHomeView.swift; sourceTree = "<group>"; };
 		B89F2B5F2C0105A9004EED57 /* ProgressDetailComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressDetailComponent.swift; sourceTree = "<group>"; };
 		B89F2B602C0105A9004EED57 /* ProgressComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressComponent.swift; sourceTree = "<group>"; };
+		CE0120C92C138C2600B35375 /* MiniChallange05 Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallange05 Watch App.entitlements"; sourceTree = "<group>"; };
 		CE278A752BF7DF2B0075E22E /* MiniChallange05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallange05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A7B2BF7DF2B0075E22E /* NicQuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicQuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE278A802BF7DF2B0075E22E /* MiniChallange05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallange05App.swift; sourceTree = "<group>"; };
@@ -285,6 +286,7 @@
 		CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				CE0120C92C138C2600B35375 /* MiniChallange05 Watch App.entitlements */,
 				3178E1FA2C0F9165006B6551 /* Localization */,
 				31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */,
 				3178E1F72C0E4A8A006B6551 /* PrivacyManifests */,
@@ -809,10 +811,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MiniChallange05 Watch App/MiniChallange05 Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
@@ -840,10 +843,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MiniChallange05 Watch App/MiniChallange05 Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = 7PL64AUG55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";

@@ -32,6 +32,7 @@ struct AchievementDetail: View {
                     }.padding(.top, 49)
                     VStack(alignment: .leading) {
                         Text(achievement.title)
+                            .minimumScaleFactor(0.5)
                             .font(.title)
                             .fontWeight(.light)
                             .padding()
