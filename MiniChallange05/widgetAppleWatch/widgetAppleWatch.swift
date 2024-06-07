@@ -9,37 +9,48 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), icon: "widget")
-    }
-
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), icon: "widget")
-        completion(entry)
-    }
-
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, icon: "widget")
-            entries.append(entry)
+    private let user = DataManager.shared.userModel
+        
+        func placeholder(in context: Context) -> StreakEntry {
+            return StreakEntry(date: Date(), streak: 20)
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
-    }
+        
+        func getSnapshot(in context: Context, completion: @escaping (StreakEntry) -> ()) {
+            let entry = createEntry()
+            completion(entry)
+        }
+        
+        func getTimeline(in context: Context, completion: @escaping (Timeline<StreakEntry>) -> ()) {
+            let entry = createEntry()
+            let timeline = Timeline(entries: [entry], policy: .atEnd)
+            completion(timeline)
+        }
+        
+        private func createEntry() -> StreakEntry {
+            
+            guard let startStreak = user?.startStreak else {
+                return StreakEntry(date: Date(), streak: 100)
+            }
+            
+            let streak = calculateStreak(from: startStreak, to: Date())
+            return StreakEntry(date: Date(), streak: streak)
+        }
+        
+        private func calculateStreak(from startDate: Date, to endDate: Date) -> Int {
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.minute], from: startDate, to: endDate)
+            let minutes = components.minute ?? 0
+            return minutes
+        }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct StreakEntry: TimelineEntry {
     let date: Date
-    let icon: String
+    let streak: Int
 }
 
 struct WidgetAppleWatchEntryView : View {
+
     var entry: Provider.Entry
     
     @Environment(\.widgetFamily) var family
@@ -56,10 +67,15 @@ struct WidgetAppleWatchEntryView : View {
                     .scaledToFit()
            
             case .accessoryCircular:
-                Image("widget")
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
+                VStack {
+//                    let duration = calculateStreak(from: user?.startStreak ?? .distantPast, to: Date())
+//                    if duration > 0 {
+                        Text("\(entry.streak)min")
+//                    } else {
+//                        Text("Sem dado")
+//                    }
+                }
+                
             default:
                 Image("widget")
                     .resizable()
@@ -69,6 +85,9 @@ struct WidgetAppleWatchEntryView : View {
         }
         
     }
+    
+   
+    
 }
 
 @main
@@ -95,11 +114,11 @@ struct WidgetAppleWatch: Widget {
 #Preview(as: .accessoryCorner) {
     WidgetAppleWatch()
 } timeline: {
-    SimpleEntry(date: .now, icon: "widget")
+    StreakEntry(date: Date(), streak: 0)
 }
 
 #Preview(as: .accessoryCircular) {
     WidgetAppleWatch()
 } timeline: {
-    SimpleEntry(date: .now, icon: "widget")
+    StreakEntry(date: Date(), streak: 0)
 }

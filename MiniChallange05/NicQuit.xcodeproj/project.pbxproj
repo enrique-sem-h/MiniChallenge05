@@ -16,6 +16,14 @@
 		31ADEAFE2C0FAC2F00F0B7EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADEAFD2C0FAC2F00F0B7EC /* UserModel.swift */; };
 		31ADEB002C0FAC6600F0B7EC /* AchievementCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADEAFF2C0FAC6600F0B7EC /* AchievementCases.swift */; };
 		31E71D122C0B8455005758D7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */; };
+		9B22057E2C13740E00EF134E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ADEAFD2C0FAC2F00F0B7EC /* UserModel.swift */; };
+		9B22057F2C13741200EF134E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE278AA52BF7DFF40075E22E /* DataManager.swift */; };
+		9B2205802C13742600EF134E /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE69264C2BFE60A300ABE06B /* UserData.xcdatamodeld */; };
+		9B2205812C13742900EF134E /* UUIDArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619862BFD2EF3004EF522 /* UUIDArrayTransformer.swift */; };
+		9B2205822C13742B00EF134E /* DateArrayTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD619882BFD3018004EF522 /* DateArrayTransformer.swift */; };
+		9B2205832C13742D00EF134E /* DateIntervalTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD6198A2BFD30E0004EF522 /* DateIntervalTransformer.swift */; };
+		9B2205842C13743000EF134E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD6198C2BFD3584004EF522 /* User.swift */; };
+		9B2205872C13749B00EF134E /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3178E1F82C0E55AF006B6551 /* Texts.swift */; };
 		9B4A9C492C11584000457905 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4A9C482C11584000457905 /* WidgetKit.framework */; };
 		9B4A9C4B2C11584000457905 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4A9C4A2C11584000457905 /* SwiftUI.framework */; };
 		9B4A9C4E2C11584000457905 /* widgetAppleWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A9C4D2C11584000457905 /* widgetAppleWatch.swift */; };
@@ -112,6 +120,8 @@
 		31ADEAFF2C0FAC6600F0B7EC /* AchievementCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCases.swift; sourceTree = "<group>"; };
 		31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniChallange05-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		31E71D102C0B8455005758D7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9B2205852C13745B00EF134E /* MiniChallange05 Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MiniChallange05 Watch App.entitlements"; sourceTree = "<group>"; };
+		9B2205862C13746C00EF134E /* widgetAppleWatchExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetAppleWatchExtension.entitlements; sourceTree = "<group>"; };
 		9B4A9C462C11584000457905 /* widgetAppleWatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetAppleWatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4A9C482C11584000457905 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9B4A9C4A2C11584000457905 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -264,6 +274,7 @@
 		CE278A6E2BF7DF2B0075E22E = {
 			isa = PBXGroup;
 			children = (
+				9B2205862C13746C00EF134E /* widgetAppleWatchExtension.entitlements */,
 				CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */,
 				CE7CE6C12C013263002E4001 /* NotificationService */,
 				9B4A9C4C2C11584000457905 /* widgetAppleWatch */,
@@ -285,6 +296,7 @@
 		CE278A7F2BF7DF2B0075E22E /* MiniChallange05 Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9B2205852C13745B00EF134E /* MiniChallange05 Watch App.entitlements */,
 				3178E1FA2C0F9165006B6551 /* Localization */,
 				31E71D0F2C0B828E005758D7 /* MiniChallange05-Watch-App-Info.plist */,
 				3178E1F72C0E4A8A006B6551 /* PrivacyManifests */,
@@ -559,6 +571,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B22057E2C13740E00EF134E /* UserModel.swift in Sources */,
+				9B2205822C13742B00EF134E /* DateArrayTransformer.swift in Sources */,
+				9B2205812C13742900EF134E /* UUIDArrayTransformer.swift in Sources */,
+				9B2205872C13749B00EF134E /* Texts.swift in Sources */,
+				9B22057F2C13741200EF134E /* DataManager.swift in Sources */,
+				9B2205842C13743000EF134E /* User.swift in Sources */,
+				9B2205832C13742D00EF134E /* DateIntervalTransformer.swift in Sources */,
+				9B2205802C13742600EF134E /* UserData.xcdatamodeld in Sources */,
 				9B4A9C4E2C11584000457905 /* widgetAppleWatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,9 +651,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetAppleWatchExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = K559Z2V9Q2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widgetAppleWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = widgetAppleWatch;
@@ -661,9 +682,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widgetAppleWatchExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = K559Z2V9Q2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = widgetAppleWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = widgetAppleWatch;
@@ -809,10 +831,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MiniChallange05 Watch App/MiniChallange05 Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = K559Z2V9Q2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
@@ -840,10 +863,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MiniChallange05 Watch App/MiniChallange05 Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MiniChallange05 Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = K559Z2V9Q2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniChallange05-Watch-App-Info.plist";
@@ -872,7 +896,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = K559Z2V9Q2;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;
@@ -892,7 +916,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = K559Z2V9Q2;
 				INFOPLIST_KEY_CFBundleDisplayName = MiniChallange05;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MiniChallenge05.Group10;

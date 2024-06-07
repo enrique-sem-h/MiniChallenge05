@@ -17,15 +17,23 @@ class DataManager {
     var userEntity: User?
     var userModel : UserModel?
     
+    var containerURL: URL {
+        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.MiniChallenge05.Group10.watchkit")!
+    }
+    
     init() {
         
         ValueTransformer.setValueTransformer(UUIDArrayTransformer(), forName: NSValueTransformerName("UUIDArrayTransformer"))
         ValueTransformer.setValueTransformer(DateArrayTransformer(), forName: NSValueTransformerName("DateArrayTransformer"))
         ValueTransformer.setValueTransformer(DateIntervalTransformer(), forName: NSValueTransformerName("DateIntervalTransformer"))
         
+      
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")
+            } else {
+                let storeURL = self.containerURL.appendingPathComponent("MiniChallenge05.sqlite")
+                self.container.persistentStoreDescriptions.first!.url = storeURL
             }
         }
         self.fetchUser()
