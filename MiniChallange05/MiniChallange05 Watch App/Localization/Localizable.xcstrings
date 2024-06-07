@@ -544,12 +544,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Congratulations! You   completed your first week without smoking. Celebrate this achievement with your loved ones, and keep up the good work!"
+            "value" : "Congratulations! You completed your first week without smoking. Celebrate this achievement with your loved ones, and keep up the good work!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Parabéns! Você completou sua primeira semana sem fumar. Celebre essa conquista compartilhando com pessoas queridas, e continue com o bom trabalho!"
           }
         }
@@ -612,12 +612,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "You reached a 6 months streak. Congraulations, keep up the great work!"
+            "value" : "You reached a 6 months streak. Congratulations, keep up the great work!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Você atingiu uma sequência de 6 meses. Parabéns, continue com o bom trabalho!"
           }
         }
@@ -864,12 +864,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "You reached a 1 year streak. Congraulations, keep up the great work!"
+            "value" : "You reached a 1 year streak. Congratulations, keep up the great work!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Você atingiu uma sequência de 1 ano. Parabéns, continue com o bom trabalho!"
           }
         }
@@ -1232,12 +1232,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "You reached a 3 months streak. Congraulations, keep up the great work!"
+            "value" : "You reached a 3 months streak. Congratulations, keep up the great work!"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Você atingiu uma sequência de 3 meses. Parabéns, continue com o bom trabalho!"
           }
         }

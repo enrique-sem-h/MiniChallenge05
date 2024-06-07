@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-// Esta estrutura define uma visualização para configurar os horários de fumar usando SwiftUI.
-// A visualização permite ao usuário selecionar e adicionar horários de fumar, e salvar suas preferências de fumo.
+/// Displays the view for selecting smoking hours.
 struct SmokingHoursView: View {
     @Environment(PageManager.self) var pageManager
     @Binding var viewAnterior: Page
@@ -98,6 +97,7 @@ struct SmokingHoursView: View {
     }
 }
 
+/// Represents a row rectangle for displaying smoking hours.
 struct RowRectangle: View {
     var date: Date
     @State var isSelected: Bool
@@ -120,6 +120,9 @@ struct RowRectangle: View {
         
     }
     
+    /// Formats the given date into a string.
+    /// - Parameter date: The date to format.
+    /// - Returns: The formatted date string.
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.locale = .autoupdatingCurrent

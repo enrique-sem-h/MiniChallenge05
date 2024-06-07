@@ -8,22 +8,33 @@
 import UserNotifications
 import Foundation
 
-// Esta classe gerencia as notificações locais do aplicativo.
+/// Manages local notifications for the MiniChallange05 Watch App.
 final class LocalNotifications: NSObject {
+    
+    /// Shared instance of LocalNotifications.
     static let localNotification = LocalNotifications()
+    
+    /// Identifier for the action triggered when the user smoked.
     private let smokedActionIdentifier: String = Texts.Keys.smokedID.rawValue
+    
+    /// Identifier for the action triggered when the user did not smoke.
     private let notSmokedActionIdentifier: String = Texts.Keys.notSmokedID.rawValue
+    
+    /// Identifier for the notification category.
     private let categoryIdentifier: String = Texts.Keys.categoryID.rawValue
     
+    /// Initializes LocalNotifications and requests user permission for notifications.
     override init() {
         super.init()
         requestPermission { [weak self] granted in
             if !granted {
-                //Deal with the error
+                // Deal with the error
             }
         }
     }
     
+    /// Requests user permission for notifications.
+    /// - Parameter completion: A closure to be executed when the request is completed, providing a Boolean value indicating whether the permission was granted.
     func requestPermission(completion: @escaping (Bool) -> Void) {
         let current = UNUserNotificationCenter.current()
         current.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
@@ -42,13 +53,14 @@ final class LocalNotifications: NSObject {
         current.delegate = self
     }
     
+    /// Schedules notifications based on user-defined smoking hours.
     func schedule() {
         
         let smokeHours = DataManager.shared.userModel?.hourSmoke
         
         let current = UNUserNotificationCenter.current()
         
-        //Remove all notifications
+        // Remove all notifications
         current.removeAllPendingNotificationRequests()
         current.removeAllDeliveredNotifications()
         
@@ -85,7 +97,10 @@ final class LocalNotifications: NSObject {
     
 }
 
+// MARK: - UNUserNotificationCenterDelegate
+
 extension LocalNotifications: UNUserNotificationCenterDelegate {
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) -> UNNotificationPresentationOptions {
         return [.banner, .sound]
     }
@@ -94,9 +109,10 @@ extension LocalNotifications: UNUserNotificationCenterDelegate {
         if response.actionIdentifier == smokedActionIdentifier {
             DataManager.shared.resetStreak()
         } else if response.actionIdentifier == notSmokedActionIdentifier {
-            //Colocar as ações a serem feitas quando ele não fumar
+            // Place actions to be performed when the user did not smoke
         }
         
         completionHandler()
     }
 }
+

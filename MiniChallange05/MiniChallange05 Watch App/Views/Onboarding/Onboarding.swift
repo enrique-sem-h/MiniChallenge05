@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-//Aqui estará os states, Environments, e métodos de navegação
-//Navegação de possíveis telas
+/// Enum defining different pages of onboarding.
 enum Page {
     case presentation
     case smokingType
@@ -22,15 +21,16 @@ enum Page {
     case homeView
 }
 
+/// Manager for controlling the current page of the onboarding process.
 @Observable class PageManager {
     var page: Page = .presentation
 }
 
-//View que reúne tudo q é relacionado a onboarding, View, dados e afins
+/// A view that gathers all elements related to onboarding, including views and data.
 struct Onboard: View {
     @Environment(PageManager.self) var pageManager
     @State var defnumero: Int = 1
-    @State var viewAnterior:Page = .packCost
+    @State var viewAnterior: Page = .packCost
     var userPreferences = UserPreferences()
     var isOnboarding: Bool
     let textConfig = TextConfig()
@@ -82,3 +82,4 @@ struct Onboard: View {
     Onboard(isOnboarding: true)
         .environment(PageManager())
 }
+

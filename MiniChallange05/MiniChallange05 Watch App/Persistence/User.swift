@@ -8,28 +8,47 @@
 import Foundation
 import CoreData
 
-
-// Esta classe representa um usuário no contexto do Core Data.
-// Inclui propriedades que armazenam informações sobre o hábito de fumar e vape do usuário,
-// como o número de cigarros fumados por dia, o tipo de cigarro, o custo do hábito,
-// datas relacionadas a quando o usuário fuma, e conquistas associadas.
+/// Represents a user entity in Core Data.
 @objc(User)
 class User: NSManagedObject {
     
+    /// Returns a fetch request for the User entity.
     @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest<User>(entityName: "User")
     }
     
+    /// List of achievements associated with the user.
     @NSManaged public var achievementsList: [UUID]?
+    
+    /// Number of cigarettes in a pack for the user.
     @NSManaged public var cigarettesInPack: Int16
+    
+    /// Number of cigars per day for the user.
     @NSManaged public var cigarsPerDay: Int16
+    
+    /// Type of cigars for the user.
     @NSManaged public var cigarsType: String?
+    
+    /// List of smoking hours for the user.
     @NSManaged public var hourSmoke: [Date]?
+    
+    /// Date when the user quit smoking.
     @NSManaged public var quitDay: Date?
+    
+    /// Record date interval for the user.
     @NSManaged public var recordDate: DateInterval?
+    
+    /// Cost of smoking for the user.
     @NSManaged public var smokeCost: Double
+    
+    /// Start date of the smoking streak for the user.
     @NSManaged public var startStreak: Date?
+    
+    /// Past streak date interval for the user.
     @NSManaged public var streakPast: DateInterval?
+    
+    /// Number of vapes per day for the user.
     @NSManaged public var vapePerDay: Int16
     
 }
+

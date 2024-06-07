@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-// Esta estrutura define um componente de economia que exibe o valor economizado até agora.
+/// Displays the savings component, showing the amount of money saved by not smoking.
 struct SavingsComponent: View {
+    /// The amount of money saved.
     @State var valueSaved: Double = 12
     
     var body: some View {
@@ -46,6 +47,7 @@ struct SavingsComponent: View {
         
     }
     
+    /// Retrieves the total savings based on the user's smoking data.
     func retrieveSavings() -> Double {
         guard let userModel = DataManager.shared.userModel else { return 0 }
         var savings: Double = 0
@@ -61,3 +63,4 @@ struct SavingsComponent: View {
 #Preview {
     SavingsComponent()
 }
+

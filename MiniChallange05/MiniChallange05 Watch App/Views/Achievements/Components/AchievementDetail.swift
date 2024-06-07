@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Esta estrutura define a visualização detalhada de um achievement.
+/// Displays detailed information about an achievement.
 struct AchievementDetail: View {
     @State var achievement: AchievementModel
     

@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-//Esse arquivo reúne componentes usados no decorrer do aplicativo
+/// Width of the screen.
 let screenWidth = WKInterfaceDevice.current().screenBounds.width
+
+/// Height of the screen.
 let screenHeight = WKInterfaceDevice.current().screenBounds.height
 
-//Button with in the onboarding2 View with the same interface and just a different navigation behavior
+/// Button for selecting cigarette type.
 struct CigaretteTypeButton : View {
     
     @Environment(PageManager.self) var pageManager : PageManager
@@ -30,13 +32,11 @@ struct CigaretteTypeButton : View {
                 Image("Cigarette")
                     .resizable()
                     .scaledToFit()
-//                    .frame(width: screenWidth * 0.4)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             case .eCigarette:
                 Image("E-Cig")
                     .resizable()
                     .scaledToFit()
-//                    .frame(width: screenWidth * 0.4)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }
         })
@@ -44,7 +44,7 @@ struct CigaretteTypeButton : View {
     }
 }
 
-//Generic button that push forward and backwards the flow of the onboarding
+/// Button for navigating between pages.
 struct GenericBackAndNextButton : View{
     
     @Environment(PageManager.self) var pageManager
@@ -79,3 +79,4 @@ struct GenericBackAndNextButton : View{
     GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType, tempVar: .constant(2), defVar: .constant(200))
         .environment(PageManager())
 }
+

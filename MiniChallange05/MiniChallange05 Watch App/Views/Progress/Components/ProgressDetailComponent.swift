@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-// Esta estrutura define um componente de detalhes de progresso que exibe informações detalhadas sobre o progresso de saúde.
+/// Displays the detailed information about health progress.
 struct ProgressDetailComponent: View {
     @State var percentage: Float = 0.8
     @State var healthType: String = Texts.bloodOxygen
     @State var aboutText: String = Texts.aboutText
-    
     @State var sourceText: String = Texts.sourceText
     
     var body: some View {
@@ -58,3 +57,4 @@ struct ProgressDetailComponent: View {
 #Preview {
     ProgressDetailComponent()
 }
+

@@ -7,10 +7,11 @@
 
 import Foundation
 
-//Struct para reunir valores para as views
-struct TextConfig{
+/// Configuration parameters for text display.
+struct TextConfig {
     let scaleFactor = 0.7
     let maxHeight = 100.0
     let frameHeight = 85.0
     let frameWidth = 70.0
 }
+
