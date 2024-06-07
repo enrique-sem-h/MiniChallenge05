@@ -8,6 +8,11 @@
 import Foundation
 import CoreData
 
+
+// Esta classe representa um usuário no contexto do Core Data.
+// Inclui propriedades que armazenam informações sobre o hábito de fumar e vape do usuário,
+// como o número de cigarros fumados por dia, o tipo de cigarro, o custo do hábito,
+// datas relacionadas a quando o usuário fuma, e conquistas associadas.
 @objc(User)
 class User: NSManagedObject {
     

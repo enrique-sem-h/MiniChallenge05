@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//Colocar entre 1 e 20
+//Esse arquivo cria um componente para ser usado no decorrer do aplicativo
 struct OnboardingPicker: View {
     @Binding var selectedNumber: Int
     @State var label: String?

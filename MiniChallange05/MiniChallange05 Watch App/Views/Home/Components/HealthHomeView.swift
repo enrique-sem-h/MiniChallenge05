@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Esta estrutura define a visualização da tela de saúde, que exibe uma mensagem motivacional diária e informações de economia relacionadas ao abandono de hábitos prejudiciais à saúde.
 struct Updater: Codable { // a simple struct to validate if the health message has been updated today
     var date: Date = .now
     var canUpdate: Bool = true

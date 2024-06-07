@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Esta estrutura define uma visualização para configurar a frequência de uso de vaporizador usando SwiftUI.
+// A visualização permite ao usuário selecionar a frequência de uso diário do vaporizador.
 struct VapeFrequencyView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1

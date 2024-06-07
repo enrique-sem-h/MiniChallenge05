@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-
-class AchievementModel{
+// Esta classe representa um modelo de conquista que contém informações sobre uma conquista específica do usuário.
+class AchievementModel {
     var progress : Float = 0.0
     let title : String
     let description : String
@@ -30,10 +30,10 @@ class AchievementModel{
     }
 }
 
-extension AchievementModel{
+extension AchievementModel {
     
     //Get the current period in the streak to check wich achievement should be released
-    func getStreakDays() -> Int?{
+    func getStreakDays() -> Int? {
 //        guard let startStreak = DataManager.shared.userEntity?.startStreak else {return 0}
         var startStreak = Date()
         let calendar = Calendar.current
@@ -44,14 +44,14 @@ extension AchievementModel{
         return daysElapsed
     }
     
-    func evaluateProgress() -> Float{
-        if self.wasConquered{
+    func evaluateProgress() -> Float {
+        if self.wasConquered {
             return 1.0
         }
         
         guard let streakDays = getStreakDays() else {return 0.0}
         
-        if (streakDays >= daysToAchieve){
+        if (streakDays >= daysToAchieve) {
             return 1.0
         }
         

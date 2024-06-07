@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Esta classe define um transformador de valor personalizado para converter entre um array de Date e Data.
+// É utilizado para armazenar e recuperar arrays de Date em formatos que o Core Data pode gerenciar.
 @objc(DateArrayTransformer)
 class DateArrayTransformer: ValueTransformer {
     

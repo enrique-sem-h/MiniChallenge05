@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+// Esta estrutura define uma visualização que exibe os achievements alcançados e não alcançados.
 struct AchievementsView: View {
-    
     @State var releasedAchievements : [AchievementModel] = []
     @State var unreleasedAchievements : [AchievementModel] = []
     @State var achievementObjects = AchievementObjects()

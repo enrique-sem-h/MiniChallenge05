@@ -8,7 +8,6 @@
 import SwiftUI
 
 //Aqui estará os states, Environments, e métodos de navegação
-
 //Navegação de possíveis telas
 enum Page {
     case presentation
@@ -27,6 +26,7 @@ enum Page {
     var page: Page = .presentation
 }
 
+//View que reúne tudo q é relacionado a onboarding, View, dados e afins
 struct Onboard: View {
     @Environment(PageManager.self) var pageManager
     @State var defnumero: Int = 1

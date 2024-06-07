@@ -8,6 +8,9 @@
 import WidgetKit
 import SwiftUI
 
+// Este arquivo define um widget para o Apple Watch usando SwiftUI e WidgetKit.
+// O widget exibe uma imagem de ícone em diferentes formatos de widgets (acessórios circulares e de canto),
+// com uma linha do tempo de atualizações a cada hora.
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), icon: "widget")

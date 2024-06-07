@@ -7,9 +7,8 @@
 
 import Foundation
 
-
-struct AchievementObjects{
-    
+// Esta estrutura define os objetos de conquista disponíveis no aplicativo e lida com a liberação de conquistas com base no progresso do usuário.
+struct AchievementObjects {
     private let firstDayInfo = AchievementModel(title: String(localized: "firstDayInfoTitle", defaultValue: "Fresh Start"), description: String(localized: "firstDayInfoDescription", defaultValue: "You've just completed your first day of a brand new streak without smoking. Hang in there!"), daysToAchieve: .firstDay, imageName: "TimeBased")
     
     private let firstWeekInfo = AchievementModel(title: String(localized: "firstWeekInfoTitle", defaultValue: "1 Week Streak"), description: String(localized: "firstWeekInfoDescription", defaultValue: "Congratulations! You   completed your first week without smoking. Celebrate this achievement with your loved ones, and keep up the good work!"), daysToAchieve: .firstWeek, imageName: "TimeBased")
@@ -79,7 +78,5 @@ struct AchievementObjects{
             print("Non case was executed")
             break
         }
-        
     }
-    
 }

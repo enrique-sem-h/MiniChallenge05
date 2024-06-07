@@ -8,8 +8,8 @@
 import UserNotifications
 import Foundation
 
+// Esta classe gerencia as notificações locais do aplicativo.
 final class LocalNotifications: NSObject {
-    
     static let localNotification = LocalNotifications()
     private let smokedActionIdentifier: String = Texts.Keys.smokedID.rawValue
     private let notSmokedActionIdentifier: String = Texts.Keys.notSmokedID.rawValue
@@ -100,8 +100,3 @@ extension LocalNotifications: UNUserNotificationCenterDelegate {
         completionHandler()
     }
 }
-
-
-
-
-

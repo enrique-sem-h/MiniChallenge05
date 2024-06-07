@@ -7,10 +7,9 @@
 
 import SwiftUI
 
+// Esta estrutura define a visualização do progresso do usuário, que exibe uma lista de componentes de economia.
 struct UserProgressView: View {
-    
     var body: some View {
-    
         ScrollView {
             HStack {
                 Text(Texts.progress)
@@ -27,9 +26,7 @@ struct UserProgressView: View {
                                     .black.opacity(0.2),
                                     .black], startPoint: .top, endPoint: .bottom)
         )
-        
     }
-    
 }
 
 #Preview {

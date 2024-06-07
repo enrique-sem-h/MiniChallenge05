@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Esse arquivo reúne componentes usados no decorrer do aplicativo
 let screenWidth = WKInterfaceDevice.current().screenBounds.width
 let screenHeight = WKInterfaceDevice.current().screenBounds.height
 

@@ -7,15 +7,13 @@
 
 import SwiftUI
 
+// Esta estrutura define a visualização detalhada de um achievement.
 struct AchievementDetail: View {
-    
     @State var achievement: AchievementModel
     
     var body: some View {
-        
         ScrollView {
             ZStack {
-        
                 VStack {
                     VStack {
                         Image(.timeBasedBig)

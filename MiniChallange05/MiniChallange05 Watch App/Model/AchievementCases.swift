@@ -7,6 +7,7 @@
 
 import Foundation
 
+//enum para agrupar os diferentes tempos de conquistas
 enum AchievementCases : Int{
     case startJourney = 0
     case firstDay = 1

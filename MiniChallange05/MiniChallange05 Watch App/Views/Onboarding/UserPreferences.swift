@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Classe para reunir os dados do usuário
 class UserPreferences {
     var smokingType: UserModel.SmokeType
     var cigarsPerDay: Int?

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Esta classe representa o modelo de dados do usuário, que contém informações sobre os hábitos de fumar e conquistas do usuário.
 class UserModel {
     var startStreak: Date
     var streakPast: DateInterval
@@ -52,6 +53,4 @@ class UserModel {
         case eCigarette
         case cigarette
     }
-    
-    
 }

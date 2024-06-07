@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+//Arquivo para reunir todas as strings apresentadas para o usuario 
 struct Texts {
     static let about = String(localized: "about", defaultValue: "About")
     static let aboutText = String(localized: "aboutText", defaultValue: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.")

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Arquivo definir o App e a main, e validar se o Onboarding será mostrado ou n 
 @main
 struct MiniChallange05_Watch_AppApp: App {
     

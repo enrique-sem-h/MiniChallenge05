@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Esta estrutura define uma visualização de apresentação para o aplicativo, mostrando uma imagem de boas-vindas, texto de apresentação e um botão para continuar.
 struct PresentationView: View {
     @Environment(PageManager.self) var pageManager
     

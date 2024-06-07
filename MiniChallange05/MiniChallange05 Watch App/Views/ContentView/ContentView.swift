@@ -7,10 +7,9 @@
 
 import SwiftUI
 
+// TabView para os 3 componentes principais do app
 struct ContentView: View {
-    
     var body: some View {
-        
         NavigationStack {
             TabView {
                 HomeView()
@@ -18,7 +17,6 @@ struct ContentView: View {
                 AchievementsView()
             }
         }
-        
     }
 }
 

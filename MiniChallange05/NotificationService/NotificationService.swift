@@ -7,6 +7,8 @@
 
 import UserNotifications
 
+// Este arquivo define um serviço de notificação que permite modificar o conteúdo das notificações push recebidas.
+// A classe NotificationService herda de UNNotificationServiceExtension e fornece métodos para receber e modificar notificações.
 class NotificationService: UNNotificationServiceExtension {
 
     var contentHandler: ((UNNotificationContent) -> Void)?

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+// Esta estrutura define a visualização da tela de conquistas, que exibe o progresso em direção ao próximo objetivo de conquista.
 struct ConquestHomeView: View {
-    
     @State var porcentagem: Float = 0.8
     @State var achievementText: String = Texts.achievementText
     

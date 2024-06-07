@@ -7,13 +7,12 @@
 
 import SwiftUI
 
+// Esta estrutura define os componentes visuais relacionados ao streak na tela inicial do aplicativo.
 struct StreakComponents: View {
-    
     @State var user = DataManager.shared.userModel
        
     var body: some View {
         VStack {
-            
             HStack {
                 Text(Texts.streak)
                     .font(.title2)

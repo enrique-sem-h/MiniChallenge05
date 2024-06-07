@@ -7,7 +7,7 @@
 
 import Foundation
 
-//Assign values to text
+//Struct para reunir valores para as views
 struct TextConfig{
     let scaleFactor = 0.7
     let maxHeight = 100.0

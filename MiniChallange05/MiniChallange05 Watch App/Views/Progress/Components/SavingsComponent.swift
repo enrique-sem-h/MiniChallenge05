@@ -7,12 +7,11 @@
 
 import SwiftUI
 
+// Esta estrutura define um componente de economia que exibe o valor economizado até agora.
 struct SavingsComponent: View {
-    
     @State var valueSaved: Double = 12
     
     var body: some View {
-        
         VStack {
             HStack {
                 Text(Texts.savings)

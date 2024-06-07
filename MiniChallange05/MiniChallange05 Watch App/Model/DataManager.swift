@@ -8,8 +8,8 @@
 import Foundation
 import CoreData
 
+// Esta classe gerencia os dados do usuário, incluindo operações básicas de salvar e recuperar dados do Core Data.
 class DataManager {
-    
     static let shared = DataManager()
     
     let container = NSPersistentContainer(name: "UserData")
@@ -18,7 +18,6 @@ class DataManager {
     var userModel : UserModel?
     
     init() {
-        
         ValueTransformer.setValueTransformer(UUIDArrayTransformer(), forName: NSValueTransformerName("UUIDArrayTransformer"))
         ValueTransformer.setValueTransformer(DateArrayTransformer(), forName: NSValueTransformerName("DateArrayTransformer"))
         ValueTransformer.setValueTransformer(DateIntervalTransformer(), forName: NSValueTransformerName("DateIntervalTransformer"))

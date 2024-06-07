@@ -7,17 +7,15 @@
 
 import SwiftUI
 
+// Este arquivo define a visualização da tela inicial do aplicativo.
+// A tela inclui informações do usuário e pode alterar dinamicamente a imagem de fundo com base no streak atual.
 struct HomeView: View {
     @State var user = DataManager.shared.userModel
-    
     @State var background: Image = Image("homeBg1")
     
     var body: some View {
-        
         ScrollView {
-            
             ZStack {
-                
                 background
                     .resizable()
                     .frame(maxWidth: .infinity)

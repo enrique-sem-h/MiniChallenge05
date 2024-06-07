@@ -7,12 +7,11 @@
 
 import SwiftUI
 
+// Esta estrutura define um componente de conquistas, que exibe a imagem e o progresso de uma conquista.
 struct AchievementsComponent: View {
-    
     var achievementInfo : AchievementModel?
     
     var body: some View {
-        
         VStack {
             Image(uiImage: UIImage(named: "TimeBased")!)
             

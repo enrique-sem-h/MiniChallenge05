@@ -7,6 +7,8 @@
 
 import Foundation
 
+// Esta classe define um transformador de valor personalizado para converter entre DateInterval e Data.
+// É utilizado para armazenar e recuperar objetos DateInterval em formatos que o Core Data pode gerenciar.
 @objc(DateIntervalTransformer)
 class DateIntervalTransformer: ValueTransformer {
     
