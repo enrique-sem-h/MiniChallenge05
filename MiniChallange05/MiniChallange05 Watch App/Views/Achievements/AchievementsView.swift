@@ -14,52 +14,34 @@ struct AchievementsView: View {
     @State var achievementObjects = AchievementObjects()
     
     var body: some View {
-            ZStack {
-                ScrollView {
-                    Text(Texts.achievements)
+        ZStack {
+            ScrollView {
+                Text(Texts.achievements)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.title2)
+                    .padding()
+                    .fontWeight(.bold)
+                
+                //Achievements reached
+                if (!releasedAchievements.isEmpty){
+                    
+                    Text(Texts.myAchievements)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .font(.title2)
-                        .padding()
                         .fontWeight(.bold)
-                        
-                    //Achievements reached
-                    if (!releasedAchievements.isEmpty){
-                        
-                        Text(Texts.myAchievements)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .fontWeight(.bold)
-                            .padding()
-                        
-                        LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
-                            ForEach(releasedAchievements, id: \.id) { achiement in
-                                
-                                NavigationLink {
-                                    AchievementDetail(achievement: achiement)
-                                } label: {
-                                    AchievementsComponent(achievementInfo: achiement)
-                                        
-                                }
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                        })
-                    }
-                    
-                    
-                    
-                    //Achievements not released
-                    Text(Texts.nextAchievements)
-                        .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
-                        .fontWeight(.bold)
                     
                     LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
-                        ForEach(unreleasedAchievements, id: \.id) {unreleasedAchievements in
+                        ForEach(releasedAchievements, id: \.id) { achiement in
                             
-                            AchievementsComponent(achievementInfo: unreleasedAchievements)
-                                .opacity(0.5)
-                            
+                            NavigationLink {
+                                AchievementDetail(achievement: achiement)
+                            } label: {
+                                AchievementsComponent(achievementInfo: achiement)
+                                
+                            }
                         }
-                    }
+                        .buttonStyle(PlainButtonStyle())
+                    })
                 }
                 
                 Text(Texts.nextAchievements)
@@ -77,14 +59,15 @@ struct AchievementsView: View {
             }
             .background(
                 LinearGradient(colors: [.achievementPurple,
-                    .black.opacity(0.2),
-                    .black], startPoint: .top, endPoint: .bottom)
+                                        .black.opacity(0.2),
+                                        .black], startPoint: .top, endPoint: .bottom)
             )
             .onAppear(perform: {
                 achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
             })
             
-        
+            
+        }
     }
 }
 
