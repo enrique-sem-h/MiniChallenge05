@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-// Esta estrutura define uma visualização para criar um horário de fumar usando SwiftUI.
-// A visualização permite ao usuário selecionar um horário e adicioná-lo a uma lista de horários de fumar.
+/// A view for creating a smoking hour.
 struct CreateSmokingHourView: View {
     @Environment(PageManager.self) var pageManager
     
@@ -61,3 +60,4 @@ struct CreateSmokingHourView: View {
     )
     .environment(PageManager())
 }
+

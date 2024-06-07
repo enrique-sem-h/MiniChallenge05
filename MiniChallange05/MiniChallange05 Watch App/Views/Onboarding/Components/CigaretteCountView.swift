@@ -8,14 +8,13 @@
 import SwiftUI
 import WatchKit
 
-// Esta estrutura define uma visualização para configurar a contagem de cigarros usando SwiftUI.
-// A visualização permite ao usuário selecionar o número de cigarros que fuma por dia.
+/// Displays the view for selecting the number of cigarettes smoked per day.
 struct CigaretteCountView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     var userPreferences: UserPreferences
-    let textConfig : TextConfig
+    let textConfig: TextConfig
     
     var body: some View {
         
@@ -56,3 +55,4 @@ struct CigaretteCountView: View {
     return CigaretteCountView(tempVar: 1, defVar: .constant(200), userPreferences: UserPreferences(), textConfig: TextConfig())
         .environment(pageManager)
 }
+

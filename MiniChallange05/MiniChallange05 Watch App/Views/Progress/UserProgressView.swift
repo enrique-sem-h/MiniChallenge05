@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Esta estrutura define a visualização do progresso do usuário, que exibe uma lista de componentes de economia.
+/// Displays the user's health progress, including savings from not smoking.
 struct UserProgressView: View {
     var body: some View {
         ScrollView {
@@ -32,3 +32,4 @@ struct UserProgressView: View {
 #Preview {
     UserProgressView()
 }
+

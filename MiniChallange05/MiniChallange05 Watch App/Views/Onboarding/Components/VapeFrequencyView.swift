@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-// Esta estrutura define uma visualização para configurar a frequência de uso de vaporizador usando SwiftUI.
-// A visualização permite ao usuário selecionar a frequência de uso diário do vaporizador.
+/// Displays the view for selecting the frequency of vaping per day.
 struct VapeFrequencyView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     let textConfig : TextConfig
-    
     var userPreferences: UserPreferences
     
     var body: some View {
@@ -55,3 +53,4 @@ struct VapeFrequencyView: View {
     VapeFrequencyView(tempVar: 2, defVar: .constant(200), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }
+

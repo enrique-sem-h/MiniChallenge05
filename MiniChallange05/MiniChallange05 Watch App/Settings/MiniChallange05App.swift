@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-// Arquivo definir o App e a main, e validar se o Onboarding será mostrado ou n 
+/// The main entry point of the MiniChallange05 Watch App.
 @main
 struct MiniChallange05_Watch_AppApp: App {
     
+    /// Indicates whether the onboarding process has been completed.
     var isOnboarding: Bool {
         get {
             UserDefaults.standard.bool(forKey: Texts.Keys.isOnboarding.rawValue)
@@ -19,7 +20,7 @@ struct MiniChallange05_Watch_AppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if !isOnboarding{
+            if !isOnboarding {
                 Onboard(isOnboarding: isOnboarding)
                     .environment(PageManager())
             } else {
@@ -28,3 +29,4 @@ struct MiniChallange05_Watch_AppApp: App {
         }
     }
 }
+

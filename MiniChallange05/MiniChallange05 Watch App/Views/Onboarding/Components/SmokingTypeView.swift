@@ -8,15 +8,14 @@
 import SwiftUI
 import WatchKit
 
-// Esta estrutura define uma visualização para configurar o tipo de fumo, seja cigarro ou cigarro eletrônico, usando SwiftUI.
-// A visualização permite ao usuário selecionar entre cigarro tradicional e cigarro eletrônico.
+/// Displays the smoking type selection screen.
 struct SmokingTypeView: View {
     @Environment(PageManager.self) var pageManager
     var userPreferences: UserPreferences
     let lineLimit = 2
     let spacing: CGFloat = 10
     let height = 40
-    let textConfig : TextConfig
+    let textConfig: TextConfig
     
     var body: some View {
         ScrollView {

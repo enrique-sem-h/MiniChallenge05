@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//Esse arquivo cria um componente para ser usado no decorrer do aplicativo
+/// A picker used in onboarding for selecting numbers.
 struct OnboardingPicker: View {
     @Binding var selectedNumber: Int
     @State var label: String?

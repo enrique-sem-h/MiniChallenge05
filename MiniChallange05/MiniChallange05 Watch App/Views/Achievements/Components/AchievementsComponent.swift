@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Esta estrutura define um componente de conquistas, que exibe a imagem e o progresso de uma conquista.
+/// Displays achievement information including an image and a progress bar.
 struct AchievementsComponent: View {
     var achievementInfo : AchievementModel?
     
@@ -27,3 +27,4 @@ struct AchievementsComponent: View {
         
     }
 }
+

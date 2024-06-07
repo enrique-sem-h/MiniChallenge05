@@ -8,23 +8,23 @@
 import WidgetKit
 import SwiftUI
 
-// Este arquivo define um widget para o Apple Watch usando SwiftUI e WidgetKit.
-// O widget exibe uma imagem de ícone em diferentes formatos de widgets (acessórios circulares e de canto),
-// com uma linha do tempo de atualizações a cada hora.
+/// The timeline provider for the widget.
 struct Provider: TimelineProvider {
+    /// Provides a placeholder entry.
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), icon: "widget")
     }
 
+    /// Provides a snapshot entry.
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), icon: "widget")
         completion(entry)
     }
 
+    /// Provides the timeline for the widget.
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
@@ -37,11 +37,13 @@ struct Provider: TimelineProvider {
     }
 }
 
+/// Represents a simple entry in the widget's timeline.
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let icon: String
 }
 
+/// The view for the widget's entry.
 struct WidgetAppleWatchEntryView : View {
     var entry: Provider.Entry
     
@@ -74,6 +76,7 @@ struct WidgetAppleWatchEntryView : View {
     }
 }
 
+/// The main widget structure.
 @main
 struct WidgetAppleWatch: Widget {
     let kind: String = "WidgetAppleWatch"
@@ -106,3 +109,4 @@ struct WidgetAppleWatch: Widget {
 } timeline: {
     SimpleEntry(date: .now, icon: "widget")
 }
+

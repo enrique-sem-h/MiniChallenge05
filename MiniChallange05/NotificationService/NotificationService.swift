@@ -7,31 +7,32 @@
 
 import UserNotifications
 
-// Este arquivo define um serviço de notificação que permite modificar o conteúdo das notificações push recebidas.
-// A classe NotificationService herda de UNNotificationServiceExtension e fornece métodos para receber e modificar notificações.
+/// Service class responsible for handling notification extensions.
 class NotificationService: UNNotificationServiceExtension {
 
+    /// The content handler closure to modify the notification content.
     var contentHandler: ((UNNotificationContent) -> Void)?
+    
+    /// The mutable notification content for modification.
     var bestAttemptContent: UNMutableNotificationContent?
 
+    /// Called when the service receives a notification request.
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
         if let bestAttemptContent = bestAttemptContent {
-            // Modify the notification content here...
             bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
-            
             contentHandler(bestAttemptContent)
         }
     }
     
+    /// Called when the service's time is about to expire.
     override func serviceExtensionTimeWillExpire() {
-        // Called just before the extension will be terminated by the system.
-        // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
         if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
             contentHandler(bestAttemptContent)
         }
     }
 
 }
+

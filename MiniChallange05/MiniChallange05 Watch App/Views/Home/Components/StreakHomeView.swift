@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Esta estrutura define os componentes visuais relacionados ao streak na tela inicial do aplicativo.
+/// View displaying streak-related information.
 struct StreakComponents: View {
     @State var user = DataManager.shared.userModel
        
@@ -24,29 +24,29 @@ struct StreakComponents: View {
             HStack {
                 VStack(alignment: .leading) {
                     let duration = calculateDuration(from: user?.startStreak ?? .distantPast, to: Date())
-                        if duration.years > 0 {
-                            Text(formatYear(duration.years))
-                                .font(.title2)
-                                .bold()
-                            Text(formatMonth(duration.months))
-                                .font(.title3)
-                            Text(formatDay(duration.days))
-                                .font(.title3)
-                        } else if duration.months > 0 {
-                            Text(formatMonth(duration.months))
-                                .font(.title2)
-                                .bold()
-                            Text(formatDay(duration.days))
-                                .font(.title3)
-                        } else if duration.days > 0 {
-                            Text(formatDay(duration.days))
-                                .font(.title2)
-                                .bold()
-                        } else {
-                            Text(Texts.today)
-                                .font(.title2)
-                                .bold()
-                        }
+                    if duration.years > 0 {
+                        Text(formatYear(duration.years))
+                            .font(.title2)
+                            .bold()
+                        Text(formatMonth(duration.months))
+                            .font(.title3)
+                        Text(formatDay(duration.days))
+                            .font(.title3)
+                    } else if duration.months > 0 {
+                        Text(formatMonth(duration.months))
+                            .font(.title2)
+                            .bold()
+                        Text(formatDay(duration.days))
+                            .font(.title3)
+                    } else if duration.days > 0 {
+                        Text(formatDay(duration.days))
+                            .font(.title2)
+                            .bold()
+                    } else {
+                        Text(Texts.today)
+                            .font(.title2)
+                            .bold()
+                    }
     
                 }.foregroundStyle(.brandYellow)
                 
@@ -91,10 +91,10 @@ struct StreakComponents: View {
         
     }
     
+    /// Calculates the duration between two dates.
     func calculateDuration(from startDate: Date, to endDate: Date) -> (years: Int, months: Int, days: Int) {
         let calendar = Calendar.current
         
-        // Calcula o número de meses
         let components = calendar.dateComponents([.year, .month, .day], from: startDate, to: endDate)
         let months = components.month ?? 0
         let days = components.day ?? 0
@@ -104,14 +104,17 @@ struct StreakComponents: View {
         
     }
     
+    /// Formats the year component of the duration.
     func formatYear(_ years: Int) -> String {
         return years > 0 ? "\(years) \(years == 1 ? Texts.year : Texts.years)" : ""
     }
     
+    /// Formats the month component of the duration.
     func formatMonth(_ months: Int) -> String {
         return months > 0 ? "\(months) \(months == 1 ? Texts.month : Texts.months)" : ""
     }
     
+    /// Formats the day component of the duration.
     func formatDay(_ days: Int) -> String {
         return days > 0 ? "\(days) \(days == 1 ? Texts.day : Texts.days)" : ""
     }
@@ -121,3 +124,4 @@ struct StreakComponents: View {
 #Preview {
     StreakComponents()
 }
+

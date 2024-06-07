@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-// Este arquivo define a visualização da tela inicial do aplicativo.
-// A tela inclui informações do usuário e pode alterar dinamicamente a imagem de fundo com base no streak atual.
+/// The main view displaying streak and health-related information.
 struct HomeView: View {
     @State var user = DataManager.shared.userModel
     @State var background: Image = Image("homeBg1")
@@ -41,17 +40,18 @@ struct HomeView: View {
         
     }
     
-    func calculateDuration(from startDate: Date, to endDate: Date) -> (Int) {
+    /// Calculates the duration between two dates.
+    func calculateDuration(from startDate: Date, to endDate: Date) -> Int {
         let calendar = Calendar.current
         
-        // Calcula o número de meses
         let components = calendar.dateComponents([.day], from: startDate, to: endDate)
         
         let days = components.day ?? 0
         
-        return (days)
+        return days
     }
     
+    /// Changes the background image based on the duration of the streak.
     func changeBackground() {
         let duration = calculateDuration(from: user?.startStreak ?? .distantPast, to: Date())
         
@@ -76,3 +76,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Esta estrutura define um componente de progresso que exibe uma barra de progresso e informações relacionadas.
+/// Displays a progress component for health-related information.
 struct ProgressComponent: View {
     var title: String = Texts.title
     var porcentagem: Float = 0.5
@@ -44,3 +44,4 @@ struct ProgressComponent: View {
 #Preview {
     ProgressComponent()
 }
+

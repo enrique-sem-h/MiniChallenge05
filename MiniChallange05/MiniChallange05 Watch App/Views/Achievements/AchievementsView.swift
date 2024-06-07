@@ -1,5 +1,5 @@
 //
-//  AchievementView.swift  
+//  AchievementView.swift
 //  MiniChallange05 Watch App
 //
 //  Created by Kaua Miguel on 17/05/24.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-// Esta estrutura define uma visualização que exibe os achievements alcançados e não alcançados.
+/// Displays the achievements earned by the user.
 struct AchievementsView: View {
-    @State var releasedAchievements : [AchievementModel] = []
-    @State var unreleasedAchievements : [AchievementModel] = []
+    @State var releasedAchievements: [AchievementModel] = []
+    @State var unreleasedAchievements: [AchievementModel] = []
     @State var achievementObjects = AchievementObjects()
     
     var body: some View {
@@ -59,10 +59,21 @@ struct AchievementsView: View {
                                 .opacity(0.5)
                             
                         }
-                        .buttonStyle(PlainButtonStyle())
-                    })
-                    
+                    }
                 }
+                
+                Text(Texts.nextAchievements)
+                
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                    ForEach(unreleasedAchievements, id: \.id) { unreleasedAchievement in
+                        
+                        AchievementsComponent(achievementInfo: unreleasedAchievement)
+                            .foregroundColor(.brandYellow)
+                            .opacity(0.5)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                
             }
             .background(
                 LinearGradient(colors: [.achievementPurple,
@@ -80,3 +91,4 @@ struct AchievementsView: View {
 #Preview {
     AchievementsView()
 }
+

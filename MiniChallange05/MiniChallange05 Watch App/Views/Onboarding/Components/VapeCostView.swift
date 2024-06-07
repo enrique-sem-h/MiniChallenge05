@@ -7,15 +7,13 @@
 
 import SwiftUI
 
-// Esta estrutura define uma visualização para configurar o custo do vape usando SwiftUI.
-// A visualização permite ao usuário ajustar o custo médio do vape por sessão.
+/// Displays the view for selecting the cost of vaping.
 struct VapeCostView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     @Binding var viewAtual: Page
     let textConfig : TextConfig
-    
     var userPreferences: UserPreferences
     
     var body: some View {
@@ -114,3 +112,4 @@ struct VapeCostView: View {
     VapeCostView(tempVar: 2, defVar: .constant(200), viewAtual: .constant(.cigarettesPerPack), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }
+

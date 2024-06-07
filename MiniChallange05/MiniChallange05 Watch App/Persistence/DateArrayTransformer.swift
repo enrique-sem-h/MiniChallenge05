@@ -7,19 +7,21 @@
 
 import Foundation
 
-// Esta classe define um transformador de valor personalizado para converter entre um array de Date e Data.
-// É utilizado para armazenar e recuperar arrays de Date em formatos que o Core Data pode gerenciar.
+/// Value transformer to convert an array of Date objects to and from Data for storage.
 @objc(DateArrayTransformer)
 class DateArrayTransformer: ValueTransformer {
     
+    /// Indicates that reverse transformation is allowed.
     override class func allowsReverseTransformation() -> Bool {
         return true
     }
     
+    /// Specifies the transformed value class as NSData.
     override class func transformedValueClass() -> AnyClass {
         return NSData.self
     }
     
+    /// Transforms an array of Date objects to Data.
     override func transformedValue(_ value: Any?) -> Any? {
         guard let dateArray = value as? [Date] else { return nil }
         
@@ -32,6 +34,7 @@ class DateArrayTransformer: ValueTransformer {
         
     }
     
+    /// Reverses the transformation, converting Data back to an array of Date objects.
     override func reverseTransformedValue(_ value: Any?) -> Any? {
         guard let data = value as? Data else { return nil }
         
@@ -45,3 +48,4 @@ class DateArrayTransformer: ValueTransformer {
     }
     
 }
+

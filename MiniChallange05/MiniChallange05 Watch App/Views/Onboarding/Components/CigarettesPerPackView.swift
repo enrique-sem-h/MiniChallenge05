@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-// Esta estrutura define uma visualização para configurar o número de cigarros por maço usando SwiftUI.
-// A visualização permite ao usuário selecionar o número de cigarros por maço.
+/// Displays the view for selecting the number of cigarettes per pack.
 struct CigarettesPerPackView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
     let textConfig : TextConfig
-    
-    
     var userPreferences: UserPreferences
     
     var body: some View {
@@ -59,3 +56,4 @@ struct CigarettesPerPackView: View {
     CigarettesPerPackView(tempVar: 1, defVar: .constant(200), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }
+

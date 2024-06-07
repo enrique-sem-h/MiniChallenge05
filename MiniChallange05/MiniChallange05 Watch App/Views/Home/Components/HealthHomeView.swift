@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-// Esta estrutura define a visualização da tela de saúde, que exibe uma mensagem motivacional diária e informações de economia relacionadas ao abandono de hábitos prejudiciais à saúde.
-struct Updater: Codable { // a simple struct to validate if the health message has been updated today
+/// View displaying health-related information and motivation messages.
+struct Updater: Codable {
     var date: Date = .now
     var canUpdate: Bool = true
 }
@@ -50,7 +50,7 @@ struct HealthHomeView: View {
         }
     }
     
-    // checks if the message has been updated today
+    /// Checks if the message has been updated today.
     func checkUpdate(){
         let calendar = Calendar.current
         
@@ -65,7 +65,7 @@ struct HealthHomeView: View {
         }
     }
     
-    // updates the message for the day
+    /// Updates the message for the day.
     func updateMessage() {
         guard var updater = getUpdater() else { return }
         if updater.canUpdate {
@@ -77,7 +77,7 @@ struct HealthHomeView: View {
         }
     }
     
-    // retrieving updater from UserDefaults
+    /// Retrieves updater from UserDefaults.
     private func getUpdater() -> Updater? {
         if UserDefaults.standard.value(forKey: Texts.Keys.dailyMotivation.rawValue) != nil {
             if let data = UserDefaults.standard.object(forKey: Texts.Keys.dailyMotivation.rawValue) as? Data {
@@ -91,14 +91,14 @@ struct HealthHomeView: View {
         }
     }
     
-    // storing updater in UserDefaults
+    /// Stores updater in UserDefaults.
     private func setUpdater(newValue: Updater) {
         if let encodedData = try? JSONEncoder().encode(newValue) {
             UserDefaults.standard.setValue(encodedData, forKey: Texts.Keys.dailyMotivation.rawValue)
         }
     }
     
-    // retrieves user's savings for message
+    /// Retrieves user's savings for message.
     func retrieveSavings() -> Double {
         guard let userModel = DataManager.shared.userModel else { return 0 }
         var savings: Double = 0
@@ -113,5 +113,6 @@ struct HealthHomeView: View {
 
 
 #Preview {
-    HealthHomeView(messages: Texts.healthHomeMessages, text: Texts.healthHomeText)
+    HealthHomeView()
 }
+
