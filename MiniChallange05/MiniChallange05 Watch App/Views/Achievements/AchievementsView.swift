@@ -14,7 +14,6 @@ struct AchievementsView: View {
     @State var achievementObjects = AchievementObjects()
     
     var body: some View {
-            
             ZStack {
                 ScrollView {
                     Text(Texts.achievements)
@@ -40,7 +39,6 @@ struct AchievementsView: View {
                                     AchievementsComponent(achievementInfo: achiement)
                                         
                                 }
-                                
                             }
                             .buttonStyle(PlainButtonStyle())
                         })
@@ -74,7 +72,8 @@ struct AchievementsView: View {
             .onAppear(perform: {
                 achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
             })
-    
+            
+        
     }
 }
 

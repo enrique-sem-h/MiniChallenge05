@@ -12,15 +12,18 @@ struct AchievementsComponent: View {
     var achievementInfo : AchievementModel?
     
     var body: some View {
-        VStack {
+        VStack (spacing: 0){
             Image(uiImage: UIImage(named: "TimeBased")!)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: screenWidth / 2.4, height: screenHeight / 2)
             
             ProgressView(value: achievementInfo?.evaluateProgress())
                 .tint(.brandYellow)
                 .scaleEffect(CGSize(width: 0.7, height: 0.5))
+                .padding(-10)
                 
         }
-        .padding()
         
     }
 }
