@@ -7,14 +7,14 @@
 
 import SwiftUI
 
+/// View displaying the progress towards the next achievement.
 struct ConquestHomeView: View {
-    
     @State var porcentagem: Float = 0.8
-    @State var achievementText: String = "Complete seu primeiro ano sem fumar"
+    @State var achievementText: String = Texts.achievementText
     
     var body: some View {
         VStack {
-            Text("Próxima conquista")
+            Text(Texts.nextAchievement)
                 .lineLimit(1)
                 .font(.title3)
                 .padding(.bottom)
@@ -51,3 +51,4 @@ struct ConquestHomeView: View {
 #Preview {
     ConquestHomeView()
 }
+

@@ -7,31 +7,31 @@
 
 import SwiftUI
 
+/// Displays the view for selecting the number of cigarettes per pack.
 struct CigarettesPerPackView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
-    
+    let textConfig : TextConfig
     var userPreferences: UserPreferences
     
     var body: some View {
         ScrollView {
             VStack {
-                Text("Quantos cigarros tem no maço que você compra?")
+                Text(Texts.cigarettesPerPack)
                     .font(.title2)
-                    .minimumScaleFactor(0.7)
-                    .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                    .minimumScaleFactor(textConfig.scaleFactor)
+                    .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 
                 OnboardingPicker(selectedNumber: $tempVar)
-                    .frame(height: 85)
+                    .frame(height: textConfig.frameHeight)
                 
-                if tempVar > 1 {
-                    Text("\(tempVar) cigarros por maço")
-                        .italic()
-                } else {
-                    Text("\(tempVar) cigarro por maço")
-                        .italic()
-                }
+                HStack {
+                    Text("\(tempVar)")
+                        .foregroundStyle(.brandYellow)
+                    Text(Texts.returnCigarettesPerPack(number: tempVar))
+                }.italic()
+                
                 
                 GenericBackAndNextButton(fowardView: .packCost, backwardsView: .cigaretteCount , tempVar: $tempVar, defVar: $defVar)
                     .padding(.top)
@@ -39,16 +39,21 @@ struct CigarettesPerPackView: View {
             }
             
         }
-        
         .padding(.horizontal)
-        
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                                    .black.opacity(0.2),
+                                    .black], startPoint: .top, endPoint: .bottom)
+        )
         .onDisappear{
             userPreferences.cigarettesInPack = defVar
         }
+        
     }
 }
 
 #Preview {
-    CigarettesPerPackView(tempVar: 1, defVar: .constant(200), userPreferences: UserPreferences())
+    CigarettesPerPackView(tempVar: 1, defVar: .constant(200), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }
+

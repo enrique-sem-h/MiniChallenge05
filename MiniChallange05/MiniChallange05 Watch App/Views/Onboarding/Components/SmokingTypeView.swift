@@ -8,56 +8,61 @@
 import SwiftUI
 import WatchKit
 
+/// Displays the smoking type selection screen.
 struct SmokingTypeView: View {
     @Environment(PageManager.self) var pageManager
     var userPreferences: UserPreferences
+    let lineLimit = 2
+    let spacing: CGFloat = 10
+    let height = 40
+    let textConfig: TextConfig
     
     var body: some View {
         ScrollView {
             
-            Text("O que você fuma atualmente?")
+            Text(Texts.smokingType)
                 .font(.title2)
-                .frame(maxWidth: .infinity, maxHeight: 80, alignment: .leading)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
                 .padding(.bottom)
-                .minimumScaleFactor(0.7)
+                .minimumScaleFactor(textConfig.scaleFactor)
             
-            //Container with both buttons and texts
-            HStack {
-                
-                //Container with one button and one text
+            HStack(spacing: spacing) {
                 VStack {
-                    
-                    //Component with the button style in this screen
                     CigaretteTypeButton(cigarretTypeView: .cigaretteCount, userPreferences: userPreferences, type: .cigarette)
                         .environment(pageManager)
                     
-                    Text("Cigarro Convencional")
+                    Text(Texts.cigarette)
+                        .frame(width: textConfig.frameWidth)
                         .font(.caption)
                         .multilineTextAlignment(.center)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.7)
-                        .frame(height: 30)
+                        .lineLimit(lineLimit)
+                        .minimumScaleFactor(textConfig.scaleFactor)
                 }
                 
                 VStack {
                     CigaretteTypeButton(cigarretTypeView: .vapeFrequency, userPreferences: userPreferences, type: .eCigarette)
                         .environment(pageManager)
                     
-                    Text("Cigarro eletronico")
+                    Text(Texts.eCigarette)
+                        .frame(width: textConfig.frameWidth)
                         .multilineTextAlignment(.center)
                         .font(.caption)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.7)
-                        .frame(height: 30)
+                        .lineLimit(lineLimit)
+                        .minimumScaleFactor(textConfig.scaleFactor)
                 }
             }
+        }
+        .padding(.horizontal)
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                .black.opacity(0.2),
+                .black], startPoint: .top, endPoint: .bottom)
+        )
     
-        }.scenePadding(.horizontal)
-        
     }
 }
 
 #Preview {
-    SmokingTypeView(userPreferences: UserPreferences())
+    SmokingTypeView(userPreferences: UserPreferences(), textConfig: TextConfig())
         .environment(PageManager())
 }

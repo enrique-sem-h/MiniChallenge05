@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-//Aqui estará os states, Environments, e métodos de navegação
-
-//Navegação de possíveis telas
+/// Enum defining different pages of onboarding.
 enum Page {
     case presentation
     case smokingType
@@ -23,16 +21,19 @@ enum Page {
     case homeView
 }
 
+/// Manager for controlling the current page of the onboarding process.
 @Observable class PageManager {
     var page: Page = .presentation
 }
 
+/// A view that gathers all elements related to onboarding, including views and data.
 struct Onboard: View {
     @Environment(PageManager.self) var pageManager
     @State var defnumero: Int = 1
-    @State var viewAnterior:Page = .packCost
+    @State var viewAnterior: Page = .packCost
     var userPreferences = UserPreferences()
     var isOnboarding: Bool
+    let textConfig = TextConfig()
     
     // Serve to pass the date to all dates.
     @State var items: [Date] = [
@@ -51,31 +52,28 @@ struct Onboard: View {
         case .presentation:
             PresentationView()
         case .smokingType:
-            SmokingTypeView(userPreferences: userPreferences)
+            SmokingTypeView(userPreferences: userPreferences, textConfig: textConfig)
         case .cigaretteCount:
-            CigaretteCountView(defVar: $defnumero, userPreferences: userPreferences)
+            CigaretteCountView(defVar: $defnumero, userPreferences: userPreferences, textConfig: textConfig)
         case .vapeFrequency:
-            VapeFrequencyView(defVar: $defnumero, userPreferences: userPreferences)
+            VapeFrequencyView(defVar: $defnumero, textConfig: textConfig, userPreferences: userPreferences)
         case .cigarettesPerPack:
-            CigarettesPerPackView(defVar: $defnumero, userPreferences: userPreferences)
+            CigarettesPerPackView(defVar: $defnumero, textConfig: textConfig, userPreferences: userPreferences)
         case .packCost:
-            PackCostView(defVar: $defnumero, viewAtual: $viewAnterior, userPreferences: userPreferences)
+            PackCostView(defVar: $defnumero, viewAtual: $viewAnterior, textConfig: textConfig, userPreferences: userPreferences)
         case .vapeCost:
-            VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior, userPreferences: userPreferences)
+            VapeCostView(defVar: $defnumero, viewAtual: $viewAnterior, textConfig: textConfig, userPreferences: userPreferences)
         case .smokingHours:
-            SmokingHoursView(viewAnterior: $viewAnterior, userPreferences: userPreferences,
-                            items: $items, selectedItems: $selectedItems
-            )
+            SmokingHoursView(viewAnterior: $viewAnterior, textConfig: textConfig, userPreferences: userPreferences,
+                             items: $items, selectedItems: $selectedItems)
         case .createSmokingHour:
-            CreateSmokingHourView(
-                items: $items, selectedItems: $selectedItems
-            )
+            CreateSmokingHourView(items: $items, selectedItems: $selectedItems)
             
         case .homeView:
             ContentView()
                 .onAppear{
-                    UserDefaults.standard.setValue(true, forKey: "isOnboarding")
-            }
+                    UserDefaults.standard.setValue(true, forKey: Texts.Keys.isOnboarding.rawValue)
+                }
         }
     }
 }
@@ -84,3 +82,4 @@ struct Onboard: View {
     Onboard(isOnboarding: true)
         .environment(PageManager())
 }
+

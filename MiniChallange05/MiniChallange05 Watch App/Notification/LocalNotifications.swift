@@ -8,48 +8,59 @@
 import UserNotifications
 import Foundation
 
+/// Manages local notifications for the MiniChallange05 Watch App.
 final class LocalNotifications: NSObject {
     
-    let smokeHours = DataManager.shared.userModel?.hourSmoke
+    /// Shared instance of LocalNotifications.
+    static let localNotification = LocalNotifications()
     
-    private let smokedActionIdentifier: String = "SmokedID"
-    private let notSmokedActionIdentifier: String = "NotSmokedID"
-    private let categoryIdentifier: String = "categoryID"
+    /// Identifier for the action triggered when the user smoked.
+    private let smokedActionIdentifier: String = Texts.Keys.smokedID.rawValue
     
+    /// Identifier for the action triggered when the user did not smoke.
+    private let notSmokedActionIdentifier: String = Texts.Keys.notSmokedID.rawValue
+    
+    /// Identifier for the notification category.
+    private let categoryIdentifier: String = Texts.Keys.categoryID.rawValue
+    
+    /// Initializes LocalNotifications and requests user permission for notifications.
     override init() {
         super.init()
-        
         requestPermission { [weak self] granted in
-            if granted {
-                self?.schedule()
+            if !granted {
+                // Deal with the error
             }
         }
     }
     
+    /// Requests user permission for notifications.
+    /// - Parameter completion: A closure to be executed when the request is completed, providing a Boolean value indicating whether the permission was granted.
     func requestPermission(completion: @escaping (Bool) -> Void) {
         let current = UNUserNotificationCenter.current()
         current.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
-                print("Success in notification authorization")
                 completion(true)
             } else {
-                print("Failure in notification authorization")
                 completion(false)
             }
         }
         
-        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: "Fumei")
-        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: "Não Fumei")
+        let smokedButton = UNNotificationAction(identifier: smokedActionIdentifier, title: Texts.notificationYes)
+        let notSmokedButton = UNNotificationAction(identifier: notSmokedActionIdentifier, title: Texts.notificationNo)
         let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [smokedButton, notSmokedButton], intentIdentifiers: [])
         
         current.setNotificationCategories([category])
         current.delegate = self
     }
     
+    /// Schedules notifications based on user-defined smoking hours.
     func schedule() {
+        
+        let smokeHours = DataManager.shared.userModel?.hourSmoke
+        
         let current = UNUserNotificationCenter.current()
         
-        //Remove all notifications
+        // Remove all notifications
         current.removeAllPendingNotificationRequests()
         current.removeAllDeliveredNotifications()
         
@@ -58,18 +69,21 @@ final class LocalNotifications: NSObject {
             
             guard let smokedHours = smokeHours else {return}
             
+            let dispatchedGroup = DispatchGroup()
+            
             for smokeHour in smokedHours {
+                
                 let content = UNMutableNotificationContent()
-                content.title = "Notificação da pitada"
-                content.subtitle = "Responda: "
-                content.body = "Você fumou ? :((("
+                content.title = Texts.contentTitle
+                content.subtitle = ""
+                content.body = Texts.contentBody
                 content.categoryIdentifier = self.categoryIdentifier
                 
-                let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour, .minute, .second], from: smokeHour)
-                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: smokeHour)
+
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
                 
                 let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                
                 
                 current.add(request) { error in
                     if let error = error {
@@ -77,28 +91,28 @@ final class LocalNotifications: NSObject {
                     }
                 }
             }
+            
         }
     }
     
 }
 
+// MARK: - UNUserNotificationCenterDelegate
+
 extension LocalNotifications: UNUserNotificationCenterDelegate {
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) -> UNNotificationPresentationOptions {
         return [.banner, .sound]
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         if response.actionIdentifier == smokedActionIdentifier {
-            //Colocar a ação do usuário quando ele fumar
+            DataManager.shared.resetStreak()
         } else if response.actionIdentifier == notSmokedActionIdentifier {
-            //Colocar as ações a serem feitas quando ele não fumar
+            // Place actions to be performed when the user did not smoke
         }
         
         completionHandler()
     }
 }
-
-
-
-
 

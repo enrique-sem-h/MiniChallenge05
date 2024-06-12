@@ -7,43 +7,66 @@
 
 import SwiftUI
 
+/// Displays the achievements earned by the user.
 struct AchievementsView: View {
+    @State var releasedAchievements: [AchievementModel] = []
+    @State var unreleasedAchievements: [AchievementModel] = []
+    @State var achievementObjects = AchievementObjects()
+    
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Rectangle()
-                    .foregroundStyle( .background)
-                    .ignoresSafeArea()
+        ZStack {
+            ScrollView {
+                Text(Texts.achievements)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.title2)
+                    .padding()
+                    .fontWeight(.bold)
                 
-                ScrollView {
-                    Text("Conquistas")
+                //Achievements reached
+                if (!releasedAchievements.isEmpty){
                     
-                    Text("Minhas Conquistas")
-                    ForEach(0..<4) {_ in
-                        HStack {
-                            NavigationLink {
-                                AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))
-                            } label: {
-                                AchievementsComponent(enabled: true)
-                            }
-                            NavigationLink {
-                                AchievementDetail(achievement: .init(progress: 10, title: "aa", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))
-                            } label: {
-                                AchievementsComponent(enabled: true)
-                            }
-                        }
-                    }
+                    Text(Texts.myAchievements)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fontWeight(.bold)
+                        .padding()
                     
-                    Text("Próximas Conquistas")
-                    ForEach(0..<4) {_ in
-                        HStack {
-                            AchievementsComponent(enabled: false)
+                    LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())], content: {
+                        ForEach(releasedAchievements, id: \.id) { achiement in
                             
-                            AchievementsComponent(enabled: false)
+                            NavigationLink {
+                                AchievementDetail(achievement: achiement)
+                            } label: {
+                                AchievementsComponent(achievementInfo: achiement)
+                                
+                            }
                         }
-                    }
+                        .buttonStyle(PlainButtonStyle())
+                    })
                 }
+                
+                Text(Texts.nextAchievements)
+                
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                    ForEach(unreleasedAchievements, id: \.id) { unreleasedAchievement in
+                        
+                        AchievementsComponent(achievementInfo: unreleasedAchievement)
+                            .foregroundColor(.brandYellow)
+                            .opacity(0.5)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                
             }
+            .background(
+                LinearGradient(colors: [.achievementPurple,
+                                        .black.opacity(0.2),
+                                        .black], startPoint: .top, endPoint: .bottom)
+            )
+            .onAppear(perform: {
+                achievementObjects.separeAchievementObjects(released: &releasedAchievements, unreleased: &unreleasedAchievements)
+            })
+            
+            
         }
     }
 }
@@ -51,3 +74,4 @@ struct AchievementsView: View {
 #Preview {
     AchievementsView()
 }
+

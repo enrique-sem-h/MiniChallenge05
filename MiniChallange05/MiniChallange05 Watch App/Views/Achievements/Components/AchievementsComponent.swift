@@ -7,28 +7,24 @@
 
 import SwiftUI
 
+/// Displays achievement information including an image and a progress bar.
 struct AchievementsComponent: View {
-    var enabled:Bool
+    var achievementInfo : AchievementModel?
     
     var body: some View {
-        if enabled {
-            VStack {
-                Ellipse()
-                RoundedRectangle(cornerRadius: 7)
-            }
-            .padding()
-            .background(.blue.opacity(0.6))
-        } else {
-            VStack {
-                Ellipse()
-                RoundedRectangle(cornerRadius: 7)
-            }
-            .padding()
-            .background(.gray.opacity(0.6))
+        VStack (spacing: 0){
+            Image(uiImage: UIImage(named: "TimeBased")!)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: screenWidth / 2.4, height: screenHeight / 2)
+            
+            ProgressView(value: achievementInfo?.evaluateProgress())
+                .tint(.brandYellow)
+                .scaleEffect(CGSize(width: 0.7, height: 0.5))
+                .padding(-10)
+                
         }
+        
     }
 }
 
-#Preview {
-    AchievementsComponent(enabled: false)
-}

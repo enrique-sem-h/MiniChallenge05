@@ -7,38 +7,41 @@
 
 import SwiftUI
 
+/// Displays the view for selecting the frequency of vaping per day.
 struct VapeFrequencyView: View {
     @Environment(PageManager.self) var pageManager
     @State var tempVar: Int = 1
     @Binding var defVar: Int
-    
+    let textConfig : TextConfig
     var userPreferences: UserPreferences
     
     var body: some View {
         ScrollView {
             
-            Text("Quantas vezes por dia você costuma fumar?")
+            Text(Texts.vapeFrequencyQuestion)
                 .font(.title2)
-                .minimumScaleFactor(0.7)
-                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                .minimumScaleFactor(textConfig.scaleFactor)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.maxHeight, alignment: .leading)
             
             OnboardingPicker(selectedNumber: $tempVar)
-                .frame(height: 85)
+                .frame(height: textConfig.frameHeight)
             
-            if tempVar > 1 {
-                Text("\(tempVar) vezes por dia")
-                    .italic()
-            } else {
-                Text("\(tempVar) vezes por dia")
-                    .italic()
-            }
+            HStack {
+                Text("\(tempVar)")
+                    .foregroundStyle(.brandYellow)
+                Text(Texts.returnVapeFrequency(number: tempVar))
+            }.italic()
             
             GenericBackAndNextButton(fowardView: .vapeCost, backwardsView: .smokingType , tempVar: $tempVar, defVar: $defVar)
                 .padding(.top)
             
         }
         .padding(.horizontal)
-        
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                .black.opacity(0.2),
+                .black], startPoint: .top, endPoint: .bottom)
+        )
         .onDisappear{
             userPreferences.vapePerDay = defVar
         }
@@ -47,6 +50,7 @@ struct VapeFrequencyView: View {
 }
 
 #Preview {
-    VapeFrequencyView(tempVar: 2, defVar: .constant(200), userPreferences: UserPreferences())
+    VapeFrequencyView(tempVar: 2, defVar: .constant(200), textConfig: TextConfig(), userPreferences: UserPreferences())
         .environment(PageManager())
 }
+

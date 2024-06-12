@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+/// Displays the view for selecting smoking hours.
 struct SmokingHoursView: View {
     @Environment(PageManager.self) var pageManager
     @Binding var viewAnterior: Page
-    
+    let textConfig : TextConfig
     var userPreferences: UserPreferences
+    let notificationHandler = LocalNotifications()
     
     @Binding var items: [Date]
     @Binding var selectedItems: Set<Date>
@@ -19,10 +21,11 @@ struct SmokingHoursView: View {
     var body: some View {
         ScrollView {
             
-            Text("Em que horários você fuma?")
+            Text(Texts.smokingHoursQuestion)
                 .font(.title2)
-                .minimumScaleFactor(0.7)
-                .frame(maxWidth: .infinity, maxHeight: 100, alignment: .leading)
+                .minimumScaleFactor(textConfig.scaleFactor)
+                .frame(maxWidth: .infinity, maxHeight: textConfig.frameHeight, alignment: .leading)
+                .padding(.bottom)
             
             ForEach(items, id: \.self) { item in
                 RowRectangle(date: item, isSelected: selectedItems.contains(item)) {
@@ -39,15 +42,18 @@ struct SmokingHoursView: View {
                 pageManager.page = .createSmokingHour
             }, label: {
                 Image(systemName: "plus")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .bold()
                     .padding(15)
-                    .background(.achievementsGray)
+                    .background(Color(red: 68 / 255, green: 17 / 255, blue: 190 / 255, opacity: 0.4 / 1))
                     .clipShape(Circle())
             })
             .buttonStyle(PlainButtonStyle())
             .padding(.bottom)
             
             VStack {
-                Button("Finalizar") {
+                Button(Texts.done) {
                     
                     userPreferences.hourSmoke = Array(selectedItems)
                     
@@ -64,23 +70,34 @@ struct SmokingHoursView: View {
                         DataManager.shared.createUser()
                     }
                     
+                    notificationHandler.schedule()
                     pageManager.page = .homeView
                     
                 }
-                .background(Color.gray)
-                .foregroundStyle(.achievementsGray)
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255))
+                .foregroundStyle(.white)
                 .clipShape(Capsule())
                 
-                Button("Voltar") {
+                Button(Texts.back) {
                     pageManager.page = viewAnterior
                 }
-                
+                .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+                .foregroundStyle(.white)
+                .clipShape(Capsule())
             }
             .padding(.horizontal)
         }
+        .padding(.horizontal, 8)
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                .black.opacity(0.2),
+                .black], startPoint: .top, endPoint: .bottom)
+        )
+        
     }
 }
 
+/// Represents a row rectangle for displaying smoking hours.
 struct RowRectangle: View {
     var date: Date
     @State var isSelected: Bool
@@ -95,12 +112,17 @@ struct RowRectangle: View {
             Text(formatDate(date))
                 .foregroundStyle(.white)
             Spacer()
-            isSelected ? Image(systemName: "checkmark.circle") : Image(systemName: "circle")
+            Image(systemName: isSelected ? "checkmark" : "circle")
+                                .foregroundColor(isSelected ? .green : .primary)
         })
+        .background(Color.Resolved(red: 68 / 255, green: 17 / 255, blue: 190 / 255, opacity: 0.2 / 1))
         .buttonBorderShape(.roundedRectangle(radius: 6))
         
     }
     
+    /// Formats the given date into a string.
+    /// - Parameter date: The date to format.
+    /// - Returns: The formatted date string.
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.locale = .autoupdatingCurrent
@@ -112,7 +134,7 @@ struct RowRectangle: View {
 }
 
 #Preview {
-    SmokingHoursView(viewAnterior: .constant(.vapeCost), userPreferences: UserPreferences(), items: .constant([
+    SmokingHoursView(viewAnterior: .constant(.vapeCost), textConfig: TextConfig(), userPreferences: UserPreferences(), items: .constant([
         Calendar.current.date(bySettingHour: 7, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!,
         Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: Date())!,

@@ -7,33 +7,29 @@
 
 import SwiftUI
 
+/// Displays the user's health progress, including savings from not smoking.
 struct UserProgressView: View {
-    
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Rectangle()
-                    .foregroundStyle( .background)
-                    .ignoresSafeArea()
-                
-                ScrollView {
-                    
-                    ForEach( 0..<20) {_ in
-                        NavigationLink {
-                            ProgressDetailComponent()
-                        } label: {
-                            ProgressComponent(title: "pepinos", porcentagem: 0.7)
-                        }//Tá tendo bug com a navigationLink
-                        
-                    }
-                }
-                
+        ScrollView {
+            HStack {
+                Text(Texts.progress)
+                    .font(.title2)
+                    .bold()
+                Spacer()
             }
-            .navigationTitle("Progresso")
+            SavingsComponent()
+            
         }
+        .padding(.horizontal)
+        .background(
+            LinearGradient(colors: [.achievementPurple,
+                                    .black.opacity(0.2),
+                                    .black], startPoint: .top, endPoint: .bottom)
+        )
     }
 }
 
 #Preview {
     UserProgressView()
 }
+

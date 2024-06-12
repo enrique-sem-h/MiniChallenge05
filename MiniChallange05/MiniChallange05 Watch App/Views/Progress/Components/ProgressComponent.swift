@@ -7,8 +7,9 @@
 
 import SwiftUI
 
+/// Displays a progress component for health-related information.
 struct ProgressComponent: View {
-    var title: String = "Title"
+    var title: String = Texts.title
     var porcentagem: Float = 0.5
     
     var body: some View {
@@ -43,3 +44,4 @@ struct ProgressComponent: View {
 #Preview {
     ProgressComponent()
 }
+

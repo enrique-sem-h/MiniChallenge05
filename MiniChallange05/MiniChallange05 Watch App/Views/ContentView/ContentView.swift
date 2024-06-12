@@ -7,19 +7,20 @@
 
 import SwiftUI
 
+/// Main content view displaying a tab view with home, user progress, and achievements.
 struct ContentView: View {
-        
     var body: some View {
-        
-        TabView {
-            HomeView()
-//            UserProgressView()
-//            AchievementsView()
+        NavigationStack {
+            TabView {
+                HomeView()
+                UserProgressView()
+                AchievementsView()
+            }
         }
     }
-    
 }
 
 #Preview {
     ContentView()
 }
+

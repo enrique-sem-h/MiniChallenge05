@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view for creating a smoking hour.
 struct CreateSmokingHourView: View {
     @Environment(PageManager.self) var pageManager
     
@@ -20,13 +21,13 @@ struct CreateSmokingHourView: View {
             Button{
                 pageManager.page = .smokingHours
             } label: {
-                
                 Image(systemName: "xmark")
+                    .resizable()
+                    .bold()
+                    .frame(width: 17, height: 17)
                     .padding(.bottom)
-                
-            }.buttonStyle(PlainButtonStyle())
-            Spacer()
-            
+            }
+            .buttonStyle(PlainButtonStyle())
             if Locale.current.language.region == "US" && Locale.current.language.languageCode == "en" {
                 DatePicker("", selection: $data, displayedComponents: [.hourAndMinute])
             } else {
@@ -40,17 +41,16 @@ struct CreateSmokingHourView: View {
                         }
                     }
             }
-            
-            Button("Confirmar") {
+            Button(Texts.confirm) {
                 items.append(data)
                 selectedItems.insert(data)
                 pageManager.page = .smokingHours
             }
-            .background(Color.gray)
+            .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255))
             .foregroundStyle(.white)
             .clipShape(Capsule())
-            
         }
+        .padding(.horizontal)
     }
 }
 
@@ -60,3 +60,4 @@ struct CreateSmokingHourView: View {
     )
     .environment(PageManager())
 }
+

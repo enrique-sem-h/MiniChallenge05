@@ -7,9 +7,11 @@
 
 import Foundation
 
+/// Value transformer to convert an array of UUIDs to and from Data for storage.
 @objc(UUIDArrayTransformer)
 class UUIDArrayTransformer: ValueTransformer {
     
+    /// Transforms an array of UUIDs to Data.
     override func transformedValue(_ value: Any?) -> Any? {
         guard let uuid = value as? [UUID] else { return nil }
         
@@ -22,6 +24,7 @@ class UUIDArrayTransformer: ValueTransformer {
         
     }
     
+    /// Reverses the transformation, converting Data back to an array of UUIDs.
     override func reverseTransformedValue(_ value: Any?) -> Any? {
         guard let data = value as? Data else { return nil }
         
@@ -35,3 +38,4 @@ class UUIDArrayTransformer: ValueTransformer {
     }
     
 }
+

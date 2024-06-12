@@ -7,18 +7,21 @@
 
 import SwiftUI
 
+/// Width of the screen.
 let screenWidth = WKInterfaceDevice.current().screenBounds.width
+
+/// Height of the screen.
 let screenHeight = WKInterfaceDevice.current().screenBounds.height
 
-//Button with in the onboarding2 View with the same interface and just a different navigation behavior
-struct CigaretteTypeButton : View{
+/// Button for selecting cigarette type.
+struct CigaretteTypeButton : View {
     
     @Environment(PageManager.self) var pageManager : PageManager
     let cigarretTypeView : Page
     var userPreferences: UserPreferences
     var type: UserModel.SmokeType
     
-    var body: some View{
+    var body: some View {
         
         Button(action: {
             pageManager.page = cigarretTypeView
@@ -26,24 +29,22 @@ struct CigaretteTypeButton : View{
         }, label: {
             switch type {
             case .cigarette:
-                Image("CigaretteImage")
+                Image("Cigarette")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: screenWidth * 0.4)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
             case .eCigarette:
-                Image("VapeImage")
+                Image("E-Cig")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: screenWidth * 0.4)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
             }
         })
         .buttonStyle(PlainButtonStyle())
     }
 }
 
-//Generic button that push forward and backwards the flow of the onboarding
+/// Button for navigating between pages.
 struct GenericBackAndNextButton : View{
     
     @Environment(PageManager.self) var pageManager
@@ -54,18 +55,21 @@ struct GenericBackAndNextButton : View{
     
     var body: some View{
         VStack{
-            Button("Próximo") {
+            Button(Texts.next) {
                 defVar = tempVar
                 pageManager.page = fowardView
             }
-            .background(Color.gray)
+            .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255))
             .foregroundStyle(.white)
             .clipShape(Capsule())
             
-            Button("Voltar") {
+            Button(Texts.back) {
                 defVar = tempVar
                 pageManager.page = backwardsView
             }
+            .background(Color(red: 89 / 255, green: 53 / 255, blue: 233 / 255, opacity: 0.5 / 1))
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
             
         }
     }
@@ -75,3 +79,4 @@ struct GenericBackAndNextButton : View{
     GenericBackAndNextButton(fowardView: .cigarettesPerPack, backwardsView: .smokingType, tempVar: .constant(2), defVar: .constant(200))
         .environment(PageManager())
 }
+

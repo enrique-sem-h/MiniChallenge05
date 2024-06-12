@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//Colocar entre 1 e 20
+/// A picker used in onboarding for selecting numbers.
 struct OnboardingPicker: View {
     @Binding var selectedNumber: Int
     @State var label: String?

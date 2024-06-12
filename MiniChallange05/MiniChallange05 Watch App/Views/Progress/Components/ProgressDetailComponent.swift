@@ -7,12 +7,12 @@
 
 import SwiftUI
 
+/// Displays the detailed information about health progress.
 struct ProgressDetailComponent: View {
     @State var percentage: Float = 0.8
-    @State var healthType: String = "Oxigenação no sangue"
-    @State var aboutText: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
-    
-    @State var sourceText: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    @State var healthType: String = Texts.bloodOxygen
+    @State var aboutText: String = Texts.aboutText
+    @State var sourceText: String = Texts.sourceText
     
     var body: some View {
         
@@ -33,7 +33,7 @@ struct ProgressDetailComponent: View {
                 .font(.title2)
             
             HStack {
-                Text("About")
+                Text(Texts.about)
                     .font(.title3)
                 Spacer()
             }
@@ -42,7 +42,7 @@ struct ProgressDetailComponent: View {
             Text(aboutText)
             
             HStack {
-                Text("Source")
+                Text(Texts.source)
                     .font(.title3)
                 Spacer()
             }
@@ -57,3 +57,4 @@ struct ProgressDetailComponent: View {
 #Preview {
     ProgressDetailComponent()
 }
+

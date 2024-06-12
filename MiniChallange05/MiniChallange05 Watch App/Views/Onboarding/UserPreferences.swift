@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Class representing user preferences during onboarding.
 class UserPreferences {
     var smokingType: UserModel.SmokeType
     var cigarsPerDay: Int?
@@ -15,6 +16,7 @@ class UserPreferences {
     var smokeCost: Double
     var hourSmoke: [Date]
     
+    /// Initializes user preferences with default values.
     init() {
         self.smokingType = .cigarette
         self.smokeCost = 0
