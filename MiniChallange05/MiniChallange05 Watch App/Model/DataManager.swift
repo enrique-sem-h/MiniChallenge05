@@ -18,7 +18,7 @@ class DataManager {
     var userModel : UserModel?
     
     var containerURL: URL {
-        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.MiniChallenge05.Group10.watchkit")!
+        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.nicquit.widget")!
     }
     
     init() {
